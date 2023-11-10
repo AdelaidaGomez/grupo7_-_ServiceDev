@@ -1,0 +1,23 @@
+{
+  "name": "proyect",
+  "version": "1.0.0",
+  "description": "S P R I N T S --------------",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdelaidaGomez/grupo7_-_nombre-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdelaidaGomez/grupo7_-_nombre-/issues"
+  },
+  "homepage": "https://github.com/AdelaidaGomez/grupo7_-_nombre-#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
