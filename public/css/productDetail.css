@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+    margin: 0px; 
+    padding: 0px;
+}
+body{
+    max-width: 0 auto;
+}
+main{
+    /* background-color: green; */
+    background-color: #ebebeb;
+    width: 100vw;
+    padding-bottom: 20px;
+}
+/* all cards */
+.slide-content{
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* Main card */
+.card{
+    display: block;
+    background-color: white;
+    text-align: center;
+    width: 90%;
+    border-radius: 25px;
+    margin: auto;
+    padding-top: 50px;
+}
+.card-wrapper{
+    width: 187px;
+}
+/* profile photo */
+.card-img{
+    display: block;
+    border-radius: 50%;
+    height: 110px;
+    width: 120px;
+    position: relative;
+    top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Banner */
+.overlay{
+    display: block;
+    border-radius: 25px;
+    height: 110px;
+    width: 100%;
+    position: relative;
+    top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Description */
+.description{
+    font-size: 12px;
+    padding: 5px 10px 5px 10px;;
+}
+.name{
+    font-size: 25px;
+    font-weight: bold;
+}
+/* contact person logo */
+.fa-user-plus{
+    display: block;
+    position: relative;
+    top: 40px;
+    margin-left: 20px;
+    margin-right: auto;
+    /* margin-left: 75%; */
+}
