@@ -1,0 +1,29 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+/* Header */
+.logo{
+    width: 10%;
+    margin: auto;
+}
+
+
+/* Main */
+main{
+    width: 100%;
+    text-align: center;
+}
+
+h1{
+    font-family: 'EB Garamond', serif;
+}
+
+.lista-home li{
+    list-style: none;
+}
+
+.lista-home a{
+    text-decoration: none;
+}
