@@ -1,11 +1,11 @@
 # SERVICE-DEV
 
-<img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://i.postimg.cc/fbNK0mWN/logo-Principal.png" width="900" height="450">
+<img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://i.postimg.cc/fbNK0mWN/logo-Principal.png" width="505" height="379">
 
 ## S P R I N T S
 
 ### Colaboradores:
-- Adelaida Gomez Vieco**
+- Adelaida Gomez Vieco
 - Diana Paola Orjuela
 - Gustavo Bustamante
 - Martín Haimovich
@@ -14,17 +14,11 @@
 
 ## Wireframes
 
-- ####[Creado con Figma](https://www.figma.com/file/pqc8lVhQFlVaHW5h6H1BsW/WireFrames-ServeDev?type=design&node-id=101-14&mode=design&t=D8WlCbr0BG508v3L-4 "Figma")
+- #### [Creado con Figma](https://www.figma.com/file/pqc8lVhQFlVaHW5h6H1BsW/WireFrames-ServeDev?type=design&node-id=101-14&mode=design&t=D8WlCbr0BG508v3L-4 "Figma")
 
 ------------
 
-### Temática del sitio y público objetivo
-
-#### **Modelo 1**
-
-Servicedev se enfoca en buscar el mejor desarrollador para tus proyectos. A través de la página podrás encontrar desarrolladores no solo con experiencia en el campo de la programación, sino también con un bagaje de conocimientos previos en distintas disciplinas proporcionando un valor agregado a cada uno de los perfiles, podrás buscar en nuestra sección de desarrolladores el perfil que más se acople a los requerimientos de tu proyecto y clientes.
-
-#### **Modelo 2**
+### Temática del sitio
 
 Servicedev se enfoca en buscar el mejor desarrollador para tus proyectos. A través de la página
 podrás encontrar desarrolladores no solo con experiencia en el campo de la programación, sino 
@@ -33,14 +27,6 @@ agregado a cada uno de los perfiles, podrás buscar en nuestra sección de desar
 perfil que más se acople a los requerimientos de tu proyecto y clientes.
 
 ### Público objetivo
-
-#### **Modelo 1**
-
-El público al que va dirigida la página es muy diverso y de cualquier edad, haciendo foco en los principales protagonistas: clientes y desarrolladores. 
-Nuestros clientes pueden ser empresas o personas que esten buscando desarrolladores para agregar funcionalidad a sus proyectos.
-Como desarrolladores nos dirijimos a aquellas personas que quieran trabajar en modo freelancer, donde son contratados por un tiempo determinado para llevar adelante un proyecto, dar a conocer sus trabajos y generar así una red de conexiones dentro del mundo de la programación.
-
-#### **Modelo 2**
 
 El público al que va dirigida la página es muy diverso y de cualquier edad, haciendo foco en 
 los principales protagonistas: clientes y desarrolladores. 
@@ -78,22 +64,32 @@ Y por último en **[Freelancer.com](https://www.freelancer.com/ "Freelancer.com"
 - **Adelaida Gómez**
 Me gradue de Psicologia, pero actualmente trabajo como desarrolladora IOS, me encantan los animales, especialmente los perros y soy apasionada por el diseño UI/UX. Me encanta jugar futbol o volley y soy fan de Formula 1.
 
+------------
+
 - **Eduardo Condori**
 Soy Profesor de Educación Física e Instructor de Musculación entre otras actividades relacionadas a la actividad física y salud. Actualmente me desempeño como vendedor en un local de articulos deportivos en Córdoba, Argentina.
 
+------------
+
 - **Martin Haimovich**
 Estudiante avanzado de Ingenieria de Sonido en UNTREF y trabajo haciendo envios, mensajerias y traslados en automovil. Vivo en Buenos Aires, Argentina.
+
+------------
 
 - **Roxana Sandrigo**
 Soy médica, en ejercicio desde hace 17 años, atiendo como médico de familia, además soy auditora en la Obra Social más grande de América Latina (Pami) y también Subcomisario de Policía, ámbito en el cual me desempeño como médico laboral. 
 Me gustan mucho los desafíos y aprender sobre temáticas exponencialmente diferentes a mi campo laboral actual.
 
+------------
+
 - **Gustavo Bustamante**
 
 <img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://i.postimg.cc/yd6M4WGF/perfil-digital-house.jpg" width="150" height="300">
 
-Buenass gente, tengo 19 años y soy de Venezuela. Desde hace un par de meses me llama la atención todo lo relacionado a la tecnología y programación en general.
+- Buenass gente, tengo 19 años y soy de Venezuela. Desde hace un par de meses me llama la atención todo lo relacionado a la tecnología y programación en general.
 Como dato curioso... Conocí Digital House gracias a mi hermano mayor que anteriormente estudió acá y bueno, ahora me toca a mí :D.
+
+------------
 
 - **Diana Paola Orjuela**
 Graduada como Ingenieria de Sistemas con Especialización en Proyectos Informaticos y Certificada en Testing Foundations ISTQB, llevo 13 años colaborando en proyectos de desarrollo desde el equipo de pruebas funcionales; me gusta entender la lógica de reglas de negocio, analizar escenarios y flujos en los aplicativos, poder detectar fallos complejose identificar la causa/raiz y contribuir a su solución.
