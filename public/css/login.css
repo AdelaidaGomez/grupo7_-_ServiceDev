@@ -1,0 +1,34 @@
+/* COLORES {
+color: #313438;
+color: #4963BA;
+color: #33577D;
+color: #4980B1;
+color: #8092A4;
+}
+ */
+
+body {
+    font-family: 'EB Garamond', serif;
+    background: url(../images/fondo-login.jpg) no-repeat center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.foto-login {
+    width: 320px;
+    height: 420px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70% 30%;
+}   
+
+.foto-login avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+}
