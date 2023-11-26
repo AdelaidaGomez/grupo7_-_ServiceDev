@@ -11,17 +11,29 @@
         <h1>Register</h1>
     </header>
     <main>
-               
+        <form activon="" method="POST">
         <!-- Registro de datos -->
         <section>
+            <h3>Registro Perfil</h3>
             <span><label>Nombres:</label> </span>
-            <span><label></label> Apellidos:</label></span>     
-            <div><label>Contraseña:</label></div>
-            <span><label>Descripción:</label></span>
-            <span><label>Adjuntar foto perfil:</label></span>
-                
-
+            <input type="text" name="nombre" value="nombre" placeholder="Nombre" required>
+            <span><label></label> Apellidos:</label></span> 
+            <input type="text" name="apellido" value="apellido" required>
+            <div><label>Fecha nacimiento:</label> </div>
+            <input type="date" name="fecha-nace" value="fecha-nace" required>
+            <span><label></label> Profesión:</label></span> 
+            <input type="text" name="profesion" value="profesion" required>
         </section>
+
+        <section>
+            <h3 for="perfil">Descripción Perfil:</h3>
+            <div><input type="textarea" name="perfil" value="perfil" placeholder="Ingrese brevemente su perfil"></div>
+          
+            <div><label>Adjuntar foto perfil:</label></div>
+            <span><input type="file" name="foto" accept=".jpg"></span>
+        
+
+        </form>     
     </main>
 </body>
 </html>
