@@ -72,3 +72,19 @@ main{
     margin-right: auto;
     /* margin-left: 75%; */
 }
+
+/* Service Dev Product */
+.service-center {
+    text-align: center;
+}
+
+/* CSS de Imagen principal Logo */
+.logo-principal {
+    display: block;
+    user-select: auto;
+    margin: auto;
+    cursor: pointer;
+    background-color: hsl(0, 0%, 90%);
+    width: 505px;
+    height: 379px;
+} 
