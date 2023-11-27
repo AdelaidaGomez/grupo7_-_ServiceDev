@@ -3,31 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/register.css" rel="stylesheet" />
+    
     <title>Service Dev - Register</title>
 </head>
 <body>
     <header>
-        <img src="/img/logoPrincipal.png" alt="logo">
-        <h1>Register</h1>
+      
     </header>
     <main>
-        <form activon="" method="POST">
+        <form activon="/register.html" method="POST">
         <!-- Registro de datos -->
-        <section>
-            <h3>Registro Perfil</h3>
-            <span><label>Nombres:</label> </span>
-            <input type="text" name="nombre" value="nombre" placeholder="Nombre" required>
-            <span><label></label> Apellidos:</label></span> 
-            <input type="text" name="apellido" value="apellido" required>
-            <div><label>Fecha nacimiento:</label> </div>
-            <input type="date" name="fecha-nace" value="fecha-nace" required>
-            <span><label></label> Profesión:</label></span> 
-            <input type="text" name="profesion" value="profesion" required>
+        <section class="section-datos">
+            <h2>Registro Perfil</h2>
+            <div class="espacio"><label for="nombre">Nombres:</label>
+                <input class="border-input" type="text" name="nombre" required>
+            </div>
+            <div class="espacio"><label for="apellido">Apellidos:</label>
+                <input type="text" name="apellido" required>
+            </div> 
+            <div class="espacio"><label for="fecha-nace">Fecha nacimiento:</label>
+                <input type="date" name="fecha-nace" value="fecha-nace" required>
+            </div>
+
+            <div class="espacio"><label for="profesion">Profesión:</label> 
+                <input type="text" name="profesion"  required>
+            </div>
         </section>
 
-        <section>
-            <h3 for="perfil">Descripción Perfil:</h3>
-            <div><input type="textarea" name="perfil" value="perfil" placeholder="Ingrese brevemente su perfil"></div>
+        <section class="section-datos">
+            <h2 for="perfil">Descripción Perfil:</h2>
+            <textarea placeholder="Escriba brevemente su perfil" name="perfil"></textarea>
           
             <div><label>Adjuntar foto perfil:</label></div>
             <span><input type="file" name="foto" accept=".jpg"></span>
