@@ -5,12 +5,58 @@
 }
 body{
     max-width: 0 auto;
+    height: 100vh;
+    background-image: url(../images/bg1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+/* header */
+.main-header{
+    height: 12%;
+    display: flex;
+    align-items: end;
+    padding: 0px 10px 10px 10px;
+    border-bottom: solid  #666 1px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgb(87, 100, 122, 34%) ;
+}
+.header-logo{
+    max-width: 30%;
+    max-height: 30%;
+}
+.logo-container{
+    display: block;
+    max-width: 50%;
+    text-align: left;
+}
+.logo-container p{
+    font-size: 10px;
+}
+nav {
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
+    color: black;
+    font-size: 12px;
+}
+nav ul li:hover{
+    color: #4B6973;
+}
+/* Main */
 main{
-    /* background-color: green; */
-    background-color: #ebebeb;
     width: 100vw;
     padding-bottom: 20px;
+}
+.titulo-productDetail{
+    border-left: solid 1px #4C6772;
+    color: #0D1634;
+    margin: 10px;
+    padding: 10px;
 }
 /* all cards */
 .slide-content{
@@ -18,73 +64,270 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    overflow-y: scroll;
+    max-height: 866px;
 }
 /* Main card */
 .card{
-    display: block;
-    background-color: white;
-    text-align: center;
-    width: 90%;
-    border-radius: 25px;
-    margin: auto;
-    padding-top: 50px;
+    width: 400px;
+    height: 230px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10% 0% 0% 10%;
+    margin-bottom: 10px;
+    margin-left: 20%;
 }
+/* Background de cada carta */
+.card1{
+    background-image: url(../images/background-profile4.jpg);
+}
+.card2{
+    background-image: url(../images/background-profile3.jpg);
+}
+.card3{
+    background-image: url(../images/background-profile2.jpg);
+}
+.card4{
+    background-image: url(../images/background-profile1.jpg);
+}
+.card5{
+    background-image: url(../images/background-profile5.jpg);
+}
+.card6{
+    background-image: url(../images/background-profile6.jpg);
+}
+.card7{
+    background-image: url(../images/background-profile7.jpg);
+}
+
 .card-wrapper{
-    width: 187px;
+    width: 100%;
+    display: flex;
 }
 /* profile photo */
 .card-img{
-    display: block;
     border-radius: 50%;
-    height: 110px;
-    width: 120px;
-    position: relative;
-    top: 40px;
-    margin-left: auto;
-    margin-right: auto;
-}
-/* Banner */
-.overlay{
-    display: block;
-    border-radius: 25px;
-    height: 110px;
-    width: 100%;
-    position: relative;
-    top: 10px;
-    margin-left: auto;
-    margin-right: auto;
+    height: 80px;
+    width: 92px;
+    margin: 40px 0px 10px 30px;
 }
 /* Description */
 .description{
     font-size: 12px;
-    padding: 5px 10px 5px 10px;;
+    color: #fff;
+    padding: 5px 10px 5px 30px;
+    max-height: 10%;
 }
 .name{
-    font-size: 25px;
-    font-weight: bold;
+    color: #fff;
+    font-weight: 600;
+    font-size: 30px;
+    margin-left: 30px;
 }
-/* contact person logo */
-.fa-user-plus{
-    display: block;
-    position: relative;
-    top: 40px;
-    margin-left: 20px;
-    margin-right: auto;
-    /* margin-left: 75%; */
+/* contact person button */
+.button{
+    display: flex;
+    margin-right: 5%;
+    justify-content: flex-end;
+    margin-top: -110px;
+    margin-bottom: 75px;
 }
-
-/* Service Dev Product */
-.service-center {
+.button input{
+    height: 100%;
+    width: 30%;
+    outline: none;
+    color: black;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: #fff;
+    opacity: 70%;
+    padding: 5px;
+    transition: all;
+}
+.button input:hover{
+    background: #EFCDA7;
+}
+/* Footer */
+.main-container-footer{
     text-align: center;
+    margin-top: 10px;
+    justify-content: center;
+    background-color: #000;
+}
+.sub-section-footer{
+    padding: 0px 10px;
+}
+.main-container-footer h2{
+    color: #fff;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+.main-container-footer h4{
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.main-container-footer p{
+    color: #fff;
+    font-size: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+/* Footer Icons */
+.fa-handshake{
+    color: #F7D5AD;
+    margin-bottom: 5px;
+}
+.fa-newspaper{
+    color: #F7D5AD;
+    margin-bottom: 5px;
+}
+.fa-lock{
+    color: #F7D5AD;
+    margin-bottom: 5px;
+}
+.fa-circle-info{
+    color: #F7D5AD;
+    margin-bottom: 5px;
 }
 
-/* CSS de Imagen principal Logo */
-.logo-principal {
-    display: block;
-    user-select: auto;
-    margin: auto;
-    cursor: pointer;
-    background-color: hsl(0, 0%, 90%);
-    width: 505px;
-    height: 379px;
-} 
+/* Tablet Navigation */
+@media (min-width: 768px){
+    /* Header */
+    .main-header{
+        align-items: flex-end;
+        padding: 0px 10px 10px 10px;
+    }
+    nav ul li{
+        margin-right: 60px;
+    }
+    .header-logo{
+        max-width: 40%;
+        max-height: 40%;
+    }
+    .logo-container{
+        display: block;
+        max-width: 50%;
+        text-align: center;
+        margin-left: -95px;
+    }
+    .logo-container p{
+        font-size: 15px;
+    }
+    /* main */
+    .main-container{
+        margin-bottom: -150px;
+    }
+    /* Body title */
+    .titulo-productDetail{
+        font-size: 40px;
+        margin: 20px;
+    }
+    /* Cards */
+    .slide-content{
+        justify-content: space-between;
+        margin-top: 80px;
+        overflow-y: scroll;
+        max-height: 642px;
+    }
+    .slide-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .card-wrapper{
+        width: 50%;
+    }
+    .card{
+        background-position: center;
+        background-size: cover;
+        border-radius: 10% 10% 10% 10%;
+        margin-bottom: 10px;
+        margin: 15px;
+    }
+    /* Footer */
+    .main-container-footer{
+        margin-top: 282px;
+    }
+    .sub-main-footer-section{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    .main-container-footer h4{
+        color: #fff;
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+    .sub-section-footer{
+        margin: 25px;
+    }
+    /* Footer Icons */
+    .fa-handshake{
+        color: #F7D5AD;
+        margin-bottom: 5px;
+        font-size: 30px;
+    }
+    .fa-newspaper{
+        color: #F7D5AD;
+        margin-bottom: 5px;
+        font-size: 30px;
+    }
+    .fa-lock{
+        color: #F7D5AD;
+        margin-bottom: 5px;
+        font-size: 30px;
+    }
+    .fa-circle-info{
+        color: #F7D5AD;
+        margin-bottom: 5px;
+        font-size: 30px;
+    }
+}
+/* Desktop Navigation */
+@media (min-width: 1024px){
+    /* Header */
+    nav ul li{
+        margin-right: 20vw;
+    }
+    .logo-container{
+        display: block;
+        max-width: 20%;
+        text-align: center;
+        margin-left: -100px;
+    }
+    /* Main */
+    .titulo-productDetail{
+        padding: 10px;
+        font-size: 60px;
+        margin-right: 70px;
+    }
+    .main-container{
+        display: flex;
+        align-items: center;
+    }
+    .slide-content{
+        margin-top: 10px;
+        max-height: 740px;
+        justify-content: start;
+    }
+    .card-wrapper{
+        width: 30%;
+    }
+    .card{
+        margin-left: 0px;
+    }
+    .button input{
+        width: 35%;
+    }
+    .description{
+        max-height: 5px;
+    }
+    /* Footer */
+    .main-container-footer{
+        margin-top: 400px;
+    }
+}
