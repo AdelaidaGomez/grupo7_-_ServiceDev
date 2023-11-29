@@ -1,35 +1,97 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/login.css">
-    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="/css/prueba.css">
+<!-- Tipografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Lato:ital,wght@1,100&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+<!-- Iconos -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Login</title>
+
 </head>
+
 <body>
-    <div class="foto-login">
-        <img class="avatar" src="/public/images/foto-login.png" alt="foto-logo">
-        <div class="cuadro-login">
-        <h1>Iniciar sesión</h1>
-        <form>
+    <header>
 
-            <!-- Nombre de usuario -->
-            <label for="username">Nombre de usuario</label>
-            <input type="text" placeholder="Usuario">
-
-            <!-- Contraseña -->
-            <label for="password">Contraseña</label>
-            <input type="password" placeholder="Contraseña">
-
-            <input type="submit" value="Registrarse">
-
-            <a href="#">Olvidaste tu contraseña?</a>
-            <a href="#">No tenés cuenta? Registrate</a>
+        <div>
+            <a href="/">
+                    <img src="/images/logoPrincipal.png" alt="logo">
+            </a>
         </div>
 
-        </form>
-    </div>
+        <nav class="top-nav">
+            <ul class="top-nav-li">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Quiero contratar</a></li>
+                <li><a href="#">Quiero trabajar</a></li>
+                <li><a href="#">Iniciar sesion</a></li>
+                <li><a href="#">Registrarse</a></li>
+            </ul>
+    </header>
+<!-------------------------------- MAIN --------------------------------------->
+    <main>
+        <div class="container-form">
+<!-- Texto izquierda -->
+            <div class="information">
+
+                <div class="info-childs">
+
+                    <h2>ServDevolper</h2>
+
+                    <p>ACA INFORMACION DE LA PAGINA</p>
+
+                </div>
+
+            </div>
+<!-- Texto derecha -->
+            <div class="form-information">
+
+                <div class="form-information-childs">
+
+                    <h2>Iniciar Sesion</h2>
+
+                    <div class="iconos">
+                        <i class='bx bxl-gmail' ></i>
+                        <i class='bx bxl-github' ></i>
+                        <i class='bx bxl-linkedin' ></i>
+                    </div>
+
+                    <p>o usa tu usuario para ingresar</p>
+
+                    <form class="form">
+
+                        <label>
+                            <i class='bx bx-user' ></i>
+                            <input type="text" placeholder="Usuario">
+                        </label>
+
+                        <label>
+                            <i class='bx bx-key' ></i>
+                            <input type="password" placeholder="Contraseña">
+                        </label>
+
+                        <input type="submit" value="Registrarse">
+
+                    </form>
+
+                </div>
+                
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
 
 </body>
+
 </html>

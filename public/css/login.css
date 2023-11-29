@@ -1,34 +1,202 @@
-/* COLORES {
-color: #313438;
-color: #4963BA;
-color: #33577D;
-color: #4980B1;
-color: #8092A4;
-}
- */
-
-body {
-    font-family: 'EB Garamond', serif;
-    background: url(../images/fondo-login.jpg) no-repeat center top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.foto-login {
-    width: 320px;
-    height: 420px;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
+/* Universales */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    padding: 70% 30%;
-}   
+    font-family: 'EB Garamond', serif;
+}
 
-.foto-login avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: absolute;
+/* HEADER */
+header {
+    display: flex;
+}
+
+img {
+    width: 10%;
+    margin: 20px;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.top-nav ul {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.top-nav li {
+    margin: 5px;
+}
+
+/* MAIN */
+body main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(/images/fondo-negro.jpg);
+    background-size: cover;
+}
+
+.container-form {
+    display: flex;
+    max-width: 900px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, .1);
+    transition: all 1s ease;
+    margin: 10px;
+}
+
+/* TEXTO IZQUIERDA */
+.information {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    text-align: center;
+    background-color: grey;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.info-childs {
+    width: 100%;
+    padding: 0 30px;
+}
+
+.info-childs h2 {
+    font-size: 2.5rem;
+    color: blue;
+}
+
+.info-childs p {
+    margin: 5px;
+    color: black;
+}
+
+/* TEXTO DERECHA */
+
+.form-information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left: 4px solid #000; /* ver como achicar la linea */
+}
+
+.form-information-childs {
+    padding: 0 30px;
+}
+
+.form-information-childs h2 {
+    color: red;
+    font-size: 2rem;
+}
+
+.form-information-childs p {
+    color: green;
+}
+/* Iconos */
+.iconos {
+    margin: 15px 0px;
+}
+
+.iconos i {
+    border-radius: 50px;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: all 1s ease;
+    color: black;
+    border: solid thin grey;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, rgba(0, 0, 0, .1));
+}
+
+.iconos i:hover {
+    background-color: black;
+    color: white
+}
+/* Formularios */
+form {
+    margin: 30px 0 0 0;
+}
+
+.form label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    padding: 0 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, rgba(0, 0, 0, .1));
+}
+
+.form label input {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(231, 231, 231);
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: black;
+    margin-left: 10px;
+    margin-right: 0px;
+}
+/* Boton registrarse */
+.form input[type="submit"] {
+    background-color: grey;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, rgba(0, 0, 0, .1));
+}
+
+.form input[type="submit"]:hover {
+    background-color: black;
+    color: white
+} 
+
+/* Media queries */
+
+@media screen and (max-width:750px) {
+    html {
+        font-size: 12px;
+    }
+    
+}
+
+@media screen and (max-width:580px) {
+    html {
+        font-size: 10px;
+    }
+    .container-form {
+        height: auto;
+        flex-direction: column;
+    }
+    .information {
+        width: 100%;
+        padding: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0;
+    }
+    .form-information {
+        width: 100%;
+        padding: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+    }
 }
