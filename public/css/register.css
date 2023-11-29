@@ -13,18 +13,41 @@ body {
     width: 100%;
     padding: 0px;
     margin: 0px;
+    background: linear-gradient(to top #33577D 70%, #4980B1 50%, #8092A4 25% )
 
 }
 
-.section-datos {
+.section-datos1 {
    max-width: 50%;
    background-color: #8092a4;
     padding: 15px;
     margin: 12px;
     box-sizing: border-box;
     color: white;
+    align-items: center;
+    text-align: left;
+    color: black;
+    margin-right: 0;
+    border-right: 1px;
+    align-content: center;
+    
 
 }
+
+.section-datos2 {
+    max-width: 50%;
+    background-color: #8092a4;
+     padding: 15px;
+     margin: 12px;
+     box-sizing: border-box;
+     color: white;
+     align-items: center;
+     text-align: left;
+     color: black;
+     margin-left: 0;
+     
+ 
+ }
 
 .espacio {
     padding-bottom: 5px;
@@ -32,6 +55,19 @@ body {
 }
 
 .border-input {
-    border-radius: 25%;
-    width: 25%
+    border-radius: 1%;
+    width: 70%;
+    
+    
 }
+
+.contenedor-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+   
+   
+
+}
+

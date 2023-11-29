@@ -14,30 +14,36 @@
     <main>
         <form activon="/register.html" method="POST">
         <!-- Registro de datos -->
-        <section class="section-datos">
-            <h2>Registro Perfil</h2>
-            <div class="espacio"><label for="nombre">Nombres:</label>
-                <input class="border-input" type="text" name="nombre" required>
-            </div>
-            <div class="espacio"><label for="apellido">Apellidos:</label>
-                <input type="text" name="apellido" required>
-            </div> 
-            <div class="espacio"><label for="fecha-nace">Fecha nacimiento:</label>
-                <input type="date" name="fecha-nace" value="fecha-nace" required>
-            </div>
 
-            <div class="espacio"><label for="profesion">Profesión:</label> 
-                <input type="text" name="profesion"  required>
-            </div>
+        <section class="contenedor-flex">
+            <section class="section-datos1">
+                <h2>ServiceDev</h2>
+            </section>
+
+            <section class="section-datos2">
+                <h2>Registro Perfil</h2>
+                <div class="espacio"><label for="nombre">Nombres:</label>
+                    <input class="border-input" type="text" name="nombre" required>
+                </div>
+                <div class="espacio"><label for="apellido">Apellidos:</label>
+                    <input class="border-input" type="text" name="apellido" required>
+                </div> 
+                <div class="espacio"><label for="fecha-nace">Fecha nacimiento:</label>
+                    <input class="border-input" class="border-input" type="date" name="fecha-nace" value="fecha-nace" required>
+                </div>
+
+                <div class="espacio"><label for="profesion">Profesión:</label> 
+                    <input class="border-input" class="border-input" type="text" name="profesion"  required>
+                </div>
+                <div><h2 for="perfil">Descripción Perfil:</h2>
+                    <textarea placeholder="Escriba brevemente su perfil" name="perfil" rows="5" cols="30" ></textarea>
+                </div>
+            
+                <div>
+                    <label>Adjuntar foto perfil:</label>
+                    <input type="file" name="foto" accept=".jpg">
+                </div>
         </section>
-
-        <section class="section-datos">
-            <h2 for="perfil">Descripción Perfil:</h2>
-            <textarea placeholder="Escriba brevemente su perfil" name="perfil"></textarea>
-          
-            <div><label>Adjuntar foto perfil:</label></div>
-            <span><input type="file" name="foto" accept=".jpg"></span>
-        
 
         </form>     
     </main>
