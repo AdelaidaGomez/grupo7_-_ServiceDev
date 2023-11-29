@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #141C29;
+}
+
+img {
+    max-width: 40%;
+    max-height: 40%;
+    border-radius: 20px 20px 20px 20px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    font-size: 12px;
+}
+nav ul li:hover{
+    color: #4B6973;
+}
+
+
+/* header */
+.main-header{
+    height: 12%;
+    display: flex;
+    align-items: end;
+    padding: 0px 10px 10px 10px;
+    border-bottom: solid  #666 1px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgb(87, 100, 122, 34%) ;
+}
+.header-logo{
+    max-width: 30%;
+    max-height: 30%;
+}
+
+/* HEADER */
+
+.logo-container{
+    display: block;
+    max-width: 50%;
+    text-align: left;
+}
+
+.logo-container p{
+    font-size: 10px;
+}
+
+/* Tablet Navigation */
+@media (min-width: 768px){
+    /* Header */
+    .main-header{
+        align-items: flex-end;
+        padding: 0px 10px 10px 10px;
+    }
+    nav ul li{
+        margin-right: 60px;
+    }
+    .header-logo{
+        max-width: 40%;
+        max-height: 40%;
+    }
+    .logo-container{
+        display: block;
+        max-width: 50%;
+        text-align: center;
+        margin-left: -95px;
+    }
+    .logo-container p{
+        font-size: 15px;
+    }
+    }
+
+/* Desktop Navigation */
+@media (min-width: 1024px){
+    /* Header */
+    nav ul li{
+        margin-right: 20vw;
+    }
+    .logo-container{
+        display: block;
+        max-width: 20%;
+        text-align: center;
+        margin-left: -100px;
+    }
+    }
+
+/* Footer */
+
+.main-container-footer{
+    text-align: center;
+    margin-top: 10px;
+    justify-content: center;
+    background-color: #000;
+}
+
+.sub-section-footer{
+    padding: 0px 10px;
+}
+
+.main-container-footer h2{
+    color: #fff;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main-container-footer h4{
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.main-container-footer p{
+    color: #fff;
+    font-size: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Footer Icons */
+
+/* Footer */
+.main-container-footer{
+    margin-top: 282px;
+}
+.sub-main-footer-section{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.main-container-footer h4{
+    color: #fff;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.sub-section-footer{
+    margin: 25px;
+}
+
+/* Footer */
+.main-container-footer{
+    margin-top: 400px;
+}
+
+/* Footer Icons */
+.fa-handshake{
+    color: #F7D5AD;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+.fa-newspaper{
+    color: #F7D5AD;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+.fa-lock{
+    color: #F7D5AD;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+.fa-circle-info{
+    color: #F7D5AD;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
