@@ -4,82 +4,150 @@
     box-sizing: border-box;
 }
 
-
 body{
+    width: 100%;
+    height: 100%;
     color: white;
-    background-color: #4980b1;
+    background: linear-gradient(to top, #313438, #4980b1);
 }
 
-/* Header */
-header{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #fff;    
+/* MAIN */
+main{
+    width: 100vw;
+    background: linear-gradient(to top, #313438, #4980b1);
+    margin: auto;
+    padding-block: 16px;
+    padding-inline: 16px;
 }
 
 .logo{
-    width: 200px;
+    position: absolute;
+    bottom: 200px;
+    opacity: 0.35;
+    text-align: center;
 }
+
 
 .imagen{
     width: 100%;
-    height: 100px;
-    margin: auto;
+    height: 450px;
+    filter: invert(100%);    
 }
 
+.titulo-texto{
+    text-align: center;
+}
+
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 22px;
+}
+
+.nosotros{
+    margin-top: 60px;
+    text-align: center;
+}
+
+p{
+    font-size: 15px;
+}
+
+/* Hamburguesa */
 .hamburguesa{
     display: block;
     color: #4963ba;
     font-size: 25px;
-    max-width: 25px;
-    padding: 10px 10px;
-    margin-right: 10px;
+    max-width: 50px;
+    padding: 10px 20px;
+    background-color: #8092a4;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 20px;
+    padding-block: 16px;
+    padding-inline: 16px;
 }
 
-.logo-menu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-/* Main */
-main{
-    background-color: #4980b1;
-    color: #313438;
-    width: 100%;
-    text-align: center;
-    margin-top: 100px;
-}
-
-h1{
-    font-family: 'EB Garamond', serif;
-}
-
-h3{
-    margin-top: 40px;
-}
-
+/* Menu */
 .lista-home{
     display: none;
 }
 
 
-/* VISTA MODO TABLET */
+/* FOOTER */
+.footer{
+    background-color: #313438;
+    padding-block: 16px;
+    padding-inline: 16px;
+    text-align: center;
+    justify-content: center;
+}
+.sub-section-footer{
+    padding: 0px 10px;
+}
+.main-container-footer h2{
+    color: #fff;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+.main-container-footer h4{
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.main-container-footer p{
+    color: #fff;
+    font-size: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+/* Footer Icons */
+.fa-handshake{
+    color: #F7D5AD;
+    margin-bottom: 5px;
+}
+.fa-newspaper{
+    color: #F7D5AD;
+    margin-bottom: 5px;
+}
+.fa-lock{
+    color: #F7D5AD;
+    margin-bottom: 5px;
+}
+.fa-circle-info{
+    color: #F7D5AD;
+    margin-bottom: 5px;
+}
+
+
+/* VISTA TABLET */
 @media (min-width: 770px) {
 
-/* Header */
+h1{
+    font-size: 55px;
+}
+h2{
+    font-size: 25px;
+}
+h3{
+    font-size: 23px;
+}
+p{
+    font-size: 20px;
+}
+
+
+    /* Desaparece la hamburguesa */
 .hamburguesa{
     display: none;
 }
 
-/* Main */
+/* Aparece el menu completo */
 .lista-home{
     display: flex;
     justify-content: space-evenly;
-    margin-top: 80px;
-    
+    margin-top: 80px;    
 }
 
 .lista-home li{
@@ -88,10 +156,9 @@ h3{
 
 .lista-home a{
     text-decoration: none;
-    color: #313438;
+    color: #fff;
     background-color: #4963ba;
-    border-radius: 4px;
-
+    padding: 10px;
+    border-radius: 6px;
 }
-
 }
