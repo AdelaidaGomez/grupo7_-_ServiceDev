@@ -24,7 +24,6 @@ main{
     position: absolute;
     bottom: 200px;
     opacity: 0.35;
-    text-align: center;
 }
 
 
@@ -65,8 +64,8 @@ p{
     margin: auto;
     margin-top: 30px;
     border-radius: 20px;
-    padding-block: 16px;
-    padding-inline: 16px;
+    padding-block: 14px;
+    padding-inline: 14px;
 }
 
 /* Menu */
@@ -85,20 +84,20 @@ p{
 }
 .sub-section-footer{
     padding: 0px 10px;
+    margin-top: 20px;    
 }
 .main-container-footer h2{
     color: #fff;
     padding-top: 10px;
     margin-bottom: 10px;
 }
-.main-container-footer h4{
-    color: #fff;
-    font-size: 15px;
-    margin-bottom: 10px;
+.main-container-footer h4{    
+    display: none;
 }
 .main-container-footer p{
     color: #fff;
     font-size: 10px;
+    margin-top: 20px;
     margin-bottom: 5px;
     text-align: left;
 }
@@ -156,9 +155,90 @@ p{
 
 .lista-home a{
     text-decoration: none;
+    font-size: 18px;
     color: #fff;
     background-color: #4963ba;
-    padding: 10px;
+    padding: 11px;
     border-radius: 6px;
 }
+
+/* FOOTER */
+.main-container-footer{
+    margin-top: 150px;
 }
+
+.sub-main-footer-section{
+    display: flex;
+    justify-content: space-around;  
+}
+}
+
+/* VISTA COMPUTADORA */
+@media (min-width: 1024px){
+
+/* MAIN */
+h1{
+    font-size: 90px;
+}
+h2{
+    font-size: 40px;
+}
+h3{
+    font-size: 35px;
+}
+p{
+    font-size: 25px;
+}
+
+.lista-home{
+    margin-top: 150px;
+}
+
+.lista-home a{
+    font-size: 30px;
+}
+
+.lista-home a:hover{
+    background-color: gold;
+    padding: 20px;
+}
+
+.lista-home a{
+    transition: all 450ms;
+}
+
+/* FOOTER */
+footer{
+    height: 400px;
+}
+
+.main-container-footer{
+    margin-top: 200px;
+}
+.sub-main-footer-section{
+    display: flex;
+    justify-content: space-around;    
+}
+.main-container-footer h4{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.sub-section-footer:hover{
+    padding: 20px;
+}
+
+.main-container-footer h4:hover{
+    color: gold;
+}
+
+.sub-section-footer, .main-container-footer h4{
+    transition: all 450ms;
+}
+
+}
+
+
+
