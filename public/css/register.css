@@ -13,38 +13,51 @@ body {
     width: 100%;
     padding: 0px;
     margin: 0px;
-    background: linear-gradient(to top #33577D 70%, #4980B1 50%, #8092A4 25% )
+    /*background: linear-gradient(to top #33577D 70%, #4980B1 50%, #8092A4 25% );*/
+    background-image: url(/images/fondo1.jpg);
 
 }
 
 .section-datos1 {
    max-width: 50%;
-   background-color: #8092a4;
-    padding: 15px;
+   background-color: rgba(255,255,255,0.2);
+   backdrop-filter: blur(5px);
+    padding: 40px;
     margin: 12px;
     box-sizing: border-box;
-    color: white;
     align-items: center;
-    text-align: left;
+    text-align: center;
     color: black;
     margin-right: 0;
-    border-right: 1px;
+    border-left: solid 1px rgba(255,255,255,0.5);
+    border-top: solid 1px rgba(255,255,255,0.5);
+    border-bottom: solid 1px rgba(255,255,255,0.5);
+    border-right: 0;
     align-content: center;
+    border-radius: 2px;
+
+    
     
 
 }
 
 .section-datos2 {
     max-width: 50%;
-    background-color: #8092a4;
+    /*background-color: #8092a4;*/
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(5px);
      padding: 15px;
      margin: 12px;
      box-sizing: border-box;
-     color: white;
      align-items: center;
      text-align: left;
      color: black;
      margin-left: 0;
+     border-radius: 2px;
+     border-left: 0;
+     border-top: solid 1px rgba(255,255,255,0.5);
+     border-bottom: solid 1px rgba(255,255,255,0.5);
+     border-right: solid 1px rgba(255,255,255,0.5);
      
  
  }
