@@ -9,29 +9,43 @@
 /* HEADER */
 header {
     display: flex;
+    width: 100%;
+    overflow: hidden;
+    background-color: #313438;
+    margin-bottom: 0px;
 }
 
 img {
     width: 10%;
     margin: 20px;
+    line-height: 200px;
+    float: left;
+    filter: invert(100%);
 }
 
-.top-nav {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
+.head {
+    width: 90%;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
 }
 
-.top-nav ul {
-    display: flex;
-    align-items: center;
-    margin: 5px;
-    padding: 0px;
-    list-style-type: none;
+header nav {
+    float: right;
+    line-height: 200px;
 }
 
-.top-nav li {
-    margin: 5px;
+header nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    background-color: grey;
+    border-radius: 50px;
 }
 
 /* MAIN */
@@ -57,10 +71,10 @@ body main {
 /* TEXTO IZQUIERDA */
 .information {
     display: flex;
-    width: 40%;
+    width: 50%;
     align-items: center;
     text-align: center;
-    background-color: grey;
+    background-color: transparent;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -72,12 +86,13 @@ body main {
 
 .info-childs h2 {
     font-size: 2.5rem;
-    color: blue;
+    color: white;
 }
 
 .info-childs p {
     margin: 5px;
-    color: black;
+    color: white;
+    font-size: 2rem;
 }
 
 /* TEXTO DERECHA */
@@ -86,9 +101,9 @@ body main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    width: 55%;
     text-align: center;
-    background-color: white;
+    background-color: transparent;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-left: 4px solid #000; /* ver como achicar la linea */
@@ -99,17 +114,29 @@ body main {
 }
 
 .form-information-childs h2 {
-    color: red;
+    color: white;
     font-size: 2rem;
 }
 
 .form-information-childs p {
-    color: green;
+    color: white;
 }
 /* Iconos */
+.iconito {
+    border-radius: 50px;
+    padding: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: all 1s ease;
+    color: white;
+    border: solid thin grey;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, rgba(0, 0, 0, .1));
+}
+
 .iconos {
     margin: 15px 0px;
 }
+
 
 .iconos i {
     border-radius: 50px;
@@ -117,7 +144,7 @@ body main {
     cursor: pointer;
     margin: 0 10px;
     transition: all 1s ease;
-    color: black;
+    color: white;
     border: solid thin grey;
     box-shadow: 0 2px 5px rgba(0, 0, 0, rgba(0, 0, 0, .1));
 }
@@ -153,7 +180,7 @@ form {
 }
 /* Boton registrarse */
 .form input[type="submit"] {
-    background-color: grey;
+    background-color: #313438;
     color: #fff;
     border-radius: 20px;
     border: none;
@@ -170,17 +197,12 @@ form {
 
 /* Media queries */
 
-@media screen and (max-width:750px) {
-    html {
-        font-size: 12px;
-    }
-    
-}
 
 @media screen and (max-width:580px) {
     html {
         font-size: 10px;
     }
+    /* MAIN */
     .container-form {
         height: auto;
         flex-direction: column;
@@ -198,5 +220,21 @@ form {
         padding: 20px;
         border-bottom-left-radius: 20px;
         border-top-right-radius: 0px;
+        border-left-color: transparent;
     }
+}
+
+/* Vista Desktop */
+@media screen and (min-width:770px) {
+    html {
+        font-size: 12px;
+    }
+
+    /* header */
+    header{
+        width: 100%;
+        text-align: center;
+        line-height: 100px;
+    }
+
 }
