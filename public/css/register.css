@@ -8,15 +8,19 @@
 
 
 body {
-    font-family: Garamond, serif;
+    font-family: 'EB Garamond', serif;
     background-color:  #313438;
     width: 100%;
     padding: 0px;
     margin: 0px;
     /*background: linear-gradient(to top #33577D 70%, #4980B1 50%, #8092A4 25% );*/
-    background-image: url(/images/fondo1.jpg);
+    background-image: url(/images/fondo1.jpg) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
 
 }
+
+/* MAIN */
 
 .section-datos1 {
    max-width: 50%;
@@ -64,12 +68,20 @@ body {
 
 .espacio {
     padding-bottom: 5px;
+    font-weight: bold;
+    color: white
   
 }
 
+.foto-perfil {
+    color:#fff;
+    font-size: 10px
+}
+
 .border-input {
-    border-radius: 1%;
-    width: 70%;
+    border-radius: 50px;
+    width: 50%;
+    border: solid thin grey;
     
     
 }
@@ -78,9 +90,101 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+
     
-   
-   
+}
+
+.textarea {
+    border-radius: 5px;
+    border: solid thin grey;
+
+}
+.button {
+    border-radius: 50px;
+    border: solid thin grey;
+    text-align: center;
+    padding: 10px 15px;
+    
+}
+
+.button :hover {
+    transition: black 3ms;
+}
+
+/* Iconos Main */
+.fa-user {
+    color: black;
+}
+
+.fa-cake-candles {
+    color: black
+}
+
+.fa-user-tie {
+    color: black;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #313438;
+    padding-block: 2px;
+    padding-inline: 16px;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    height: auto;
+    
+}
+
+.main-container-footer h4{    
+    display: none;
+}
+
+/* Footer Icons */
+.fa-handshake{
+    color: #F7D5AD;
+    margin-bottom: 5px;
+}
+.fa-newspaper{
+    color: #F7D5AD;
+    margin-bottom: 5px;
+}
+.fa-lock{
+    color: #F7D5AD;
+    margin-bottom: 5px;
+}
+.fa-circle-info{
+    color: #F7D5AD;
+    margin-bottom: 5px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 770px)
+{
+
+    /* FOOTER */
+.main-container-footer{
+    margin-top: 150px;
+}
+
+.sub-main-footer-section{
+    display: flex;
+    justify-content: space-around;  
+}
 
 }
 
+@media (min-width: 1024px)
+{
+
+.main-container-footer h4 {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}    
+
+}
