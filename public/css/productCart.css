@@ -2,18 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
 }
 body {
     font-family: 'Space Grotesk', sans-serif;
-    background-color: #141C29;
+    background-color: beige;
 }
 
 nav ul li{
     list-style: none;
     display: inline-block;
     margin-right: 10px;
-    color: white;
     font-size: 12px;
 }
 
@@ -66,7 +64,7 @@ h1 {
 }
 
 .contenedor {
-    background-color: #f5f3f3;
+    background-color: rgb(87, 100, 122, 34%);
 }
 
 .contenedor nav {
@@ -74,7 +72,7 @@ h1 {
     display: flex;
     justify-content: flex-end;
     padding: 15px;
-    background-color: #fff;
+    background-color: rgb(87, 100, 122, 34%);
     margin-bottom: 30px;
     color: #333;
 }
@@ -196,6 +194,50 @@ h1 {
 
 /* ----------------------------------- */
 
+/* Footer */
+.main-container-footer{
+    text-align: center;
+    margin-top: 10px;
+    justify-content: center;
+    background-color: #000;
+}
+.sub-section-footer{
+    padding: 0px 10px;
+}
+.main-container-footer h2{
+    color: #fff;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+.main-container-footer h4{
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.main-container-footer p{
+    color: #fff;
+    font-size: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+/* Footer Icons */
+.fa-handshake{
+    color: #F7D5AD;
+    margin-bottom: 5px;
+}
+.fa-newspaper{
+    color: #F7D5AD;
+    margin-bottom: 5px;
+}
+.fa-lock{
+    color: #F7D5AD;
+    margin-bottom: 5px;
+}
+.fa-circle-info{
+    color: #F7D5AD;
+    margin-bottom: 5px;
+}
+
 /* Tablet Navigation */
 @media (min-width: 768px){
     /* Header */
@@ -219,7 +261,43 @@ h1 {
     .logo-container p{
         font-size: 15px;
     }
+
+    /* Footer */
+    .sub-main-footer-section{
+        display: flex;
+        text-align: center;
+        justify-content: center;
     }
+    .main-container-footer h4{
+        color: #fff;
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+    .sub-section-footer{
+        margin: 25px;
+    }
+    /* Footer Icons */
+    .fa-handshake{
+        color: #F7D5AD;
+        margin-bottom: 5px;
+        font-size: 30px;
+    }
+    .fa-newspaper{
+        color: #F7D5AD;
+        margin-bottom: 5px;
+        font-size: 30px;
+    }
+    .fa-lock{
+        color: #F7D5AD;
+        margin-bottom: 5px;
+        font-size: 30px;
+    }
+    .fa-circle-info{
+        color: #F7D5AD;
+        margin-bottom: 5px;
+        font-size: 30px;
+    }
+}
 
 /* Desktop Navigation */
 @media (min-width: 1024px){
@@ -233,81 +311,7 @@ h1 {
         text-align: center;
         margin-left: -100px;
     }
+    
+    /* Footer */
+
     }
-
-/* Footer */
-
-.main-container-footer{
-    text-align: center;
-    margin-top: 10px;
-    justify-content: center;
-    background-color: #000;
-}
-
-.sub-section-footer{
-    padding: 0px 10px;
-}
-
-.main-container-footer h2{
-    color: #fff;
-    padding-top: 10px;
-    margin-bottom: 10px;
-}
-
-.main-container-footer h4{
-    color: #fff;
-    font-size: 15px;
-    margin-bottom: 10px;
-}
-
-.main-container-footer p{
-    color: #fff;
-    font-size: 10px;
-    margin-bottom: 5px;
-    text-align: left;
-}
-
-/* Footer Icons */
-
-/* Footer */
-
-.sub-main-footer-section{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-.main-container-footer h4{
-    color: #fff;
-    font-size: 17px;
-    margin-bottom: 10px;
-}
-
-.sub-section-footer{
-    margin: 25px;
-}
-
-/* Footer */
-
-
-/* Footer Icons */
-.fa-handshake{
-    color: #F7D5AD;
-    margin-bottom: 5px;
-    font-size: 30px;
-}
-.fa-newspaper{
-    color: #F7D5AD;
-    margin-bottom: 5px;
-    font-size: 30px;
-}
-.fa-lock{
-    color: #F7D5AD;
-    margin-bottom: 5px;
-    font-size: 30px;
-}
-.fa-circle-info{
-    color: #F7D5AD;
-    margin-bottom: 5px;
-    font-size: 30px;
-}
-
