@@ -18,6 +18,12 @@
 
 ------------
 
+## Tablero de trabajo
+
+- #### [Creado con Trello](https://trello.com/b/0Ry472m3/grupo7servicedev "Trello")
+
+------------
+
 ### Temática del sitio
 
 Servicedev se enfoca en buscar el mejor desarrollador para tus proyectos. A través de la página

@@ -31,6 +31,7 @@ main{
     width: 100%;
     height: 450px;
     filter: invert(100%);    
+    
 }
 
 .titulo-texto{
@@ -123,6 +124,10 @@ p{
 /* VISTA TABLET */
 @media (min-width: 770px) {
 
+.imagen{
+    margin-left: 100px;
+}
+
 h1{
     font-size: 55px;
 }
@@ -177,6 +182,10 @@ p{
 @media (min-width: 1024px){
 
 /* MAIN */
+.imagen{
+    margin-left: 200px;
+}
+
 h1{
     font-size: 90px;
 }
