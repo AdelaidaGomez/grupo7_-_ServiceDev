@@ -4,7 +4,8 @@
   "description": "S P R I N T S --------------",
   "main": "app.js",
   "scripts": {
-    "test": "node src/app.js"
+    "start": "node src/app.js",
+    "test": "nodemon src/app.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/AdelaidaGomez/grupo7_-_nombre-#readme",
   "dependencies": {
+    "ejs": "^3.1.9",
     "express": "^4.18.2"
   }
 }

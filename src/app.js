@@ -6,31 +6,22 @@ const app = express();
 const path = require("path");
 
 // Usando recursos estáticos.
-const publicFolderPath = path.resolve(__dirname, "../public")
-app.use(express.static(publicFolderPath));
+app.use(express.static('./public'))
+// const publicFolderPath = path.resolve(__dirname, "../public")
+// app.use(express.static(publicFolderPath));
 
 // Ponemos a escuchar el servidor
 app.listen(3050, () => {
     console.log("Servidor corriendo en http://localhost:3050")
 });
 
-// Definimos las rutas a los distintos pedidos que nuestro sitio sabe responder
-app.get("/", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "views/index.html"))
-})
+// Manejando rutas con MVC
+// Requerimos los routers que vamos a necesitar (Uno por cada archivo)
+const mainPageRouter = require('../routers/mainPageRouter.js')
 
-app.get("/login.html", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "views/login.html"))
-})
-
-app.get("/productCart.html", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "views/productCart.html"))
-})
-
-app.get("/productDetail.html", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "views/productDetail.html"))
-})
-
-app.get("/register.html", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "views/register.html"))
-})
+// Generamos la ruta segun los routers
+app.use('/', mainPageRouter)
+app.use('/register', mainPageRouter)
+app.use('/login', mainPageRouter)
+app.use('/productDetail', mainPageRouter)
+app.use('/productCart', mainPageRouter)
