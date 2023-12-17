@@ -10,7 +10,6 @@
 - Gustavo Bustamante
 - Martín Haimovich
 - Eduardo Condori
-- Roxana Elizabeth Sandrigo
 
 ## Wireframes
 
@@ -82,15 +81,7 @@ Estudiante avanzado de Ingenieria de Sonido en UNTREF y trabajo haciendo envios,
 
 ------------
 
-- **Roxana Sandrigo**
-Soy médica, en ejercicio desde hace 17 años, atiendo como médico de familia, además soy auditora en la Obra Social más grande de América Latina (Pami) y también Subcomisario de Policía, ámbito en el cual me desempeño como médico laboral. 
-Me gustan mucho los desafíos y aprender sobre temáticas exponencialmente diferentes a mi campo laboral actual.
-
-------------
-
 - **Gustavo Bustamante**
-
-<img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://i.postimg.cc/yd6M4WGF/perfil-digital-house.jpg" width="150" height="300">
 
 - Buenass gente, tengo 19 años y soy de Venezuela. Desde hace un par de meses me llama la atención todo lo relacionado a la tecnología y programación en general.
 Como dato curioso... Conocí Digital House gracias a mi hermano mayor que anteriormente estudió acá y bueno, ahora me toca a mí :D.
