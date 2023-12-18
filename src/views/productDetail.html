@@ -10,128 +10,130 @@
     <title>ProductDetail</title>
 </head>
 <body>
-        <header>
-            <div class="main-header">
-                <div class="logo-container">
-                    <img class="header-logo" src="/images/logo-principal.png" alt="Logo">
-                    <p>Service-Dev</p>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href=""></a>HOME</li>
-                        <li><a href=""></a>REGION</li>
-                        <li><a href=""></a>ABOUT</li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+    <!-- Header section -->
+    <header class="header">
+        <a href="#" class="logo">
+            <img class="logo-image" src="images/logo-principal.png" alt="Logo">
+        </a>
+        <!-- NavBar -->
+        <nav class="navbar">
+            <a href="#home">Inicio</a>
+            <a href="#services">Desarrolladores</a>
+            <a href="#logIn">Registrarse</a>
+            <a href="#register">LogIn</a>
+        </nav>
+        <!-- Icons -->
+        <div class="icons">
+            <div> <i class="fa-solid fa-cart-shopping" id="cart-btn"></i> </div>
+            <div> <i class="fa-solid fa-bars" id="allServices-btn"></i> </div>
+        </div>
+    </header>
 
     <main>
-        <div class="main-container">
-            <h2 class="titulo-productDetail">Busca el mejor desarrollador para tu proyecto</h2>
-            <div class="slide-content">
-                <div class="card-wrapper">
-                    <div class="card card1">
-                        <div class="card-content">
-                            <img src="/images/person1.png" alt="" class="card-img">
-                            <div class="button">
-                                <input type="submit" value="Contactar">
-                            </div>
-                            <h1 class="name">Tatiana Mejia</h1>
-                            <p class="description">Creative web developer dedicated to building and optimizing the performance of user-centric, high-impact websites.</p>
-                        </div>
+        <!-- Services Carts secction -->
+        <section class="allServices" id="allServices">
+         <h1 class="heading">Desarroladores</h1>
+         <h1 class="segundaLinea">Para tus Proyectos</h1>
+            <div class="box-container">
+
+                <!-- Each Card Service -->
+                <div class="box">
+                    <div class="icons">
+                        <div> <i class="fa-solid fa-cart-shopping" id="cart-btn"></i> </div>
+                        <div><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                    <h3>Tatiana Mejia</h3>
+                    <p>Creative web developer dedicated to building and optimizing the performance of user-centric, high-impact websites.</p>
+                    <img src="images/person1.png" class="profilePhoto" alt=""> 
+                    <div class="price">$15.99 /h</div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
                     </div>
                 </div>
 
-                <!-- Second image -->
-                <div class="card-wrapper">
-                    <div class="card card2">
-                        <div class="card-content">
-                            <img src="/images/person2.png" alt="" class="card-img">
-                            <div class="button">
-                                <input type="submit" value="Contactar">
-                            </div>
-                            <h1 class="name">Mariana Gomez</h1>
-                            <p class="description">I am a Python developer with 7 years of experience in the field. I have a strong background in Python development, focus on developing web apps using Django framework.</p>
-                        </div>
+                <div class="box">
+                    <div class="icons">
+                        <div> <i class="fa-solid fa-cart-shopping" id="cart-btn"></i> </div>
+                        <div><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                    <h3>Mariana Gomez</h3>
+                    <p>I am a Python developer with 7 years of experience in the field. I have a strong background in Python development, focus on developing web apps using Django framework.</p>
+                    <img src="images/person2.png" class="profilePhoto" alt=""> 
+                    <div class="price">$15.99 /h</div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
                     </div>
                 </div>
 
-                <!-- third image -->
-                <div class="card-wrapper">
-                    <div class="card card3">
-                        <div class="card-content">
-                            <img src="/images/person3.png" alt="" class="card-img">
-                            <div class="button">
-                                <input type="submit" value="Contactar">
-                            </div>
-                            <h1 class="name">Juan Duque</h1>
-                            <p class="description">Hi there. I'm a freelance Web Developer that specializes in Squarespace. If you want some extra customization for your page, or you want to set it up the first time, I'm your guy!</p>
-                        </div>
+                <div class="box">
+                    <div class="icons">
+                        <div> <i class="fa-solid fa-cart-shopping" id="cart-btn"></i> </div>
+                        <div><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                    <h3>Juan Duque</h3>
+                    <p>Hi there. I'm a freelance Web Developer that specializes in Squarespace. If you want some extra customization for your page, or you want to set it up the first time, I'm your guy!</p>
+                    <img src="images/person3.png" class="profilePhoto" alt=""> 
+                    <div class="price">$15.99 /h</div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
                     </div>
                 </div>
 
-                <!-- four image -->
-                <div class="card-wrapper">
-                    <div class="card card4">
-                        <div class="card-content">
-                            <img src="/images/person4.png" alt="" class="card-img">
-                            <div class="button">
-                                <input type="submit" value="Contactar">
-                            </div>
-                            <h1 class="name">Martin Sagalo</h1>
-                            <p class="description">Soy capaz de conceptualizar y desarrollar ideas creativas que cumplan con sus objetivos. Diseño logotipos, identidad corporativa, folletos, catálogos, carteles, anuncio y mas!</p>
-                        </div>
+                <div class="box">
+                    <div class="icons">
+                        <div> <i class="fa-solid fa-cart-shopping" id="cart-btn"></i> </div>
+                        <div><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                    <h3>Martin Sagalo</h3>
+                    <p>Soy capaz de conceptualizar y desarrollar ideas creativas que cumplan con sus objetivos. Diseño logotipos, identidad corporativa, folletos, catálogos, carteles, anuncio y mas!</p>
+                    <img src="images/person4.png" class="profilePhoto" alt=""> 
+                    <div class="price">$15.99 /h</div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
                     </div>
                 </div>
 
-                <!-- Five image -->
-                <div class="card-wrapper">
-                    <div class="card card5">
-                        <div class="card-content">
-                            <img src="/images/person5.png" alt="" class="card-img">
-                            <div class="button">
-                                <input type="submit" value="Contactar">
-                            </div>
-                            <h1 class="name">Esteban Rojas</h1>
-                            <p class="description">Soy ingeniero en sistemas con gran experiencia! Ademas cuento con un gran equipo en varias áreas del desarrollo de software! Estamos a la orden!</p>
-                        </div>
+                <div class="box">
+                    <div class="icons">
+                        <div> <i class="fa-solid fa-cart-shopping" id="cart-btn"></i> </div>
+                        <div><i class="fa-solid fa-eye"></i></div>
                     </div>
-                </div>
-
-                <!-- Six image -->
-                <div class="card-wrapper">
-                    <div class="card card6">
-                        <div class="card-content">
-                            <img src="/images/person6.png" alt="" class="card-img">
-                            <div class="button">
-                                <input type="submit" value="Contactar">
-                            </div>
-                            <h1 class="name">Alexa Llano</h1>
-                            <p class="description">Profesional en SEO y desarrollo web he logrado completar más de 100 proyectos y con calificaciones de más de 100 clientes satisfechos con 5 estrellas.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Seven image -->
-                <div class="card-wrapper">
-                    <div class="card card7">
-                        <div class="card-content">
-                            <img src="/images/person7.png" alt="" class="card-img">
-                            <div class="button">
-                                <input type="submit" value="Contactar">
-                            </div>
-                            <h1 class="name">Camila Castañeda</h1>
-                            <p class="description">Desarrolladora de Escritorio y web especializado en aplicaciones e integraciones empresariales , con experiencia de mas de 15 años implementando soluciones a la medida de administracion</p>
-                        </div>
+                    <h3>Esteban Rojas</h3>
+                    <p>Soy ingeniero en sistemas con gran experiencia! Ademas cuento con un gran equipo en varias áreas del desarrollo de software! Estamos a la orden!</p>
+                    <img src="images/person5.png" class="profilePhoto" alt=""> 
+                    <div class="price">$15.99 /h</div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
-
+    <!-- Footer -->
     <footer>
         <div class="main-container-footer">
             <h2>Contactanos</h2>
+
             <div class="sub-main-footer-section">
                 <div class="sub-section-footer">
                     <i class="fa-solid fa-handshake"></i>
@@ -153,7 +155,7 @@
                     <h4>Ayuda</h4>
                 </div>
             </div>
-            <p>Copyright ©&nbsp;2023-2024 Service-Dev</p>
+            <p>Copyright 2023-2024 ServiceDev</p>
         </div>
     </footer>
 </body>
