@@ -13,6 +13,14 @@ const servicesController = {
     },
     productCart: function(req, res) {
       res.render('productCart');
+    },
+    detail: function(req, res) {
+        const services = JSON.parse(fs.readFileSync(servicesFilePath, 'utf-8'))
+        //encontramos el id del servicio
+        const singleService = services.find(service => {
+            return service.id == req.params.id
+        })
+        res.render('serviceDetail', {singleService: singleService})
     }
   };
   
