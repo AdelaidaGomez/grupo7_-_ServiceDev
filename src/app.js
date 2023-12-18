@@ -23,6 +23,10 @@ app.listen(3050, () => {
     console.log("Servidor corriendo en http://localhost:3050")
 });
 
+//Para tomar los datos del body (service create form)
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+
 // Manejando rutas con MVC
 // Requerimos los routers que vamos a necesitar (Uno por cada archivo)
 const mainPageRouter = require('../routers/mainPageRouter.js');

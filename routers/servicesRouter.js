@@ -10,5 +10,9 @@ router.get('/productCart', servicesController.productCart); //Recordar que para 
 
 router.get('/serviceDetail/:id/', servicesController.detail)
 
+// Ruteo de formulario create
+router.get("/create", servicesController.create) // Para devolverle al usuario el formulario para crear servicio
+router.post("/create", servicesController.processCreate) // Para agregar el servicio creado
+
 // Exportamos Router
 module.exports = router;

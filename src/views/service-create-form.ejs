@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/services.css">
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/d517d5ff3f.js" crossorigin="anonymous"></script>
+    <title>Service create form</title>
+    </head>
+
+<body>
+    <header class="header">
+        <%- include('./partials/header') %>
+    </header>
+
+    <main>
+        <div class="formulario-con-titulo">
+            <div class="titulo">
+                <h2>Creación del servicio</h2>
+            </div>
+            <div class="formulario">
+                <form action="/service/create" method="POST"></form>       
+                    <!-- Nombre del servicio -->
+                    <div class="control-form">
+                        <input type="text" name="name" placeholder="Nombre del servicio" class="control">
+                        <label>Nombre del servicio</label>
+                    </div>    
+                    <!-- Descripcion -->
+                    <div class="control-form">
+                        <textarea name="description" id="description" class="form-input"></textarea>
+                        <label>Descripción</label>
+                    </div>
+                    <!-- Imagen -->
+                    <div class="control-form">
+                        <input type="file" name="image" accept=".jpg">
+                        <label>Imagen</label>
+                    </div> 
+                    <!-- Categoria -->
+                    <div class="control-form">
+                        <label for="category" class="form-label">Categoría:</label>
+						<select name="category" id="category" class="form-input">
+							<option value="">Elegí</option>
+							<option value="in-sale">En oferta</option>
+							<option value="visited">Últimos agregados</option>
+						</select>
+                    </div>
+                    <!-- Colores -->
+                    <div class="control-form">
+                        <input type="text" name="colors" placeholder="Colores" class="control">
+                        <label>Colores</label>
+                    </div>
+                    <!-- Precio -->
+                    <div class="control-form">
+                        <input type="tel" name="price" placeholder="Precio" class="control">
+                        <label>Precio</label>
+                    </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <%- include('./partials/footer') %>
+    </footer>
+</body>
+</html>
