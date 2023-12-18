@@ -10,6 +10,14 @@ app.use(express.static('./public'))
 // const publicFolderPath = path.resolve(__dirname, "../public")
 // app.use(express.static(publicFolderPath));
 
+// ubicacion de los template engine
+app.set("views", path.join(__dirname, "views"));
+
+// Configuracion del express cual es el motor de plantillas, dos parametros string:
+// 1. variable de las vistas y 
+// 2.motor de plantilla
+app.set("view engine", "ejs");
+
 // Ponemos a escuchar el servidor
 app.listen(3050, () => {
     console.log("Servidor corriendo en http://localhost:3050")
@@ -17,11 +25,13 @@ app.listen(3050, () => {
 
 // Manejando rutas con MVC
 // Requerimos los routers que vamos a necesitar (Uno por cada archivo)
-const mainPageRouter = require('../routers/mainPageRouter.js')
+const mainPageRouter = require('../routers/mainPageRouter.js');
+const productRouter = require('../routers/productRouter.js');
+const userRouter = require('../routers/userRouter.js');
 
 // Generamos la ruta segun los routers
-app.use('/', mainPageRouter)
-app.use('/register', mainPageRouter)
-app.use('/login', mainPageRouter)
-app.use('/productDetail', mainPageRouter)
-app.use('/productCart', mainPageRouter)
+app.use('/', mainPageRouter);
+app.use('/register', userRouter);
+app.use('/login', userRouter);
+app.use('/productDetail', productRouter);
+app.use('/productCart', productRouter);
