@@ -26,12 +26,14 @@ app.listen(3050, () => {
 // Manejando rutas con MVC
 // Requerimos los routers que vamos a necesitar (Uno por cada archivo)
 const mainPageRouter = require('../routers/mainPageRouter.js');
-const productRouter = require('../routers/productRouter.js');
 const userRouter = require('../routers/userRouter.js');
+const servicesRouter = require('../routers/servicesRouter.js'); //Ruta para los Servicios
+
+
 
 // Generamos la ruta segun los routers
 app.use('/', mainPageRouter);
 app.use('/register', userRouter);
 app.use('/login', userRouter);
-app.use('/productDetail', productRouter);
-app.use('/productCart', productRouter);
+app.use('/services', servicesRouter);
+app.use('/productCart', servicesRouter);

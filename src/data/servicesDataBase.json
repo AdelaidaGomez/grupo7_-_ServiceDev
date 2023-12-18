@@ -1,0 +1,51 @@
+[
+    {
+     "id": 1,
+     "name": "Tatiana Mejia",
+     "price": 15.06,
+     "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+     "image": "person1.png"
+    },
+    {
+     "id": 2,
+     "name": "Tatiana Mejia",
+     "price": 15.06,
+     "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+     "image": "person2.png"
+    },
+    {
+     "id": 3,
+     "name": "Tatiana Mejia",
+     "price": 15.06,
+     "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+     "image": "person3.png"
+    },
+    {
+     "id": 4,
+     "name": "Tatiana Mejia",
+     "price": 15.06,
+     "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+     "image": "person4.png"
+    },
+    {
+     "id": 5,
+     "name": "Tatiana Mejia",
+     "price": 15.06,
+     "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+     "image": "person5.png"
+    },
+    {
+     "id": 6,
+     "name": "Tatiana Mejia",
+     "price": 15.06,
+     "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+     "image": "person6.png"
+    },
+    {
+     "id": 7,
+     "name": "Tatiana Mejia",
+     "price": 15.06,
+     "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+     "image": "person7.png"
+    }
+]
