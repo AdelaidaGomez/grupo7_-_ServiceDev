@@ -97,6 +97,7 @@ body {
 .textarea {
     border-radius: 5px;
     border: solid thin grey;
+    width: 100px;
 
 }
 .button {
