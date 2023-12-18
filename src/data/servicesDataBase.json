@@ -3,49 +3,49 @@
      "id": 1,
      "name": "Tatiana Mejia",
      "price": 15.06,
-     "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+     "description": "Experimentada desarrolladora full-stack con amplia experiencia en el ecosistema de Python. Especializada en la creación de aplicaciones escalables y eficientes, desde el back-end hasta el front-end. Destrezas adicionales incluyen la gestión de bases de datos y la implementación de soluciones de seguridad.",
      "image": "person1.png"
     },
     {
      "id": 2,
-     "name": "Tatiana Mejia",
-     "price": 15.06,
-     "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+     "name": "Mariana Gómez",
+     "price": 20.06,
+     "description": "Desarrolladora front-end altamente hábil con enfoque en tecnologías JavaScript. Especializada en la creación de interfaces de usuario atractivas y altamente interactivas. Profundo conocimiento de frameworks modernos como React y Angular, con experiencia en optimización de rendimiento y diseño centrado en el usuario (UX/UI).",
      "image": "person2.png"
     },
     {
      "id": 3,
-     "name": "Tatiana Mejia",
-     "price": 15.06,
-     "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+     "name": "Juan Duque",
+     "price": 35.00,
+     "description": "Apasionado desarrollador iOS con experiencia destacada en SwiftUI. Capaz de crear experiencias de usuario fluidas y modernas en el ecosistema de Apple. Amplios conocimientos en desarrollo de aplicaciones móviles, así como en diseño de interfaces y experiencia de usuario.",
      "image": "person3.png"
     },
     {
      "id": 4,
-     "name": "Tatiana Mejia",
-     "price": 15.06,
-     "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+     "name": "Juan Camilo Mejia",
+     "price": 22.45,
+     "description": "Profesional en desarrollo de software con experiencia probada en liderazgo de equipos. Habilidades para coordinar y dirigir proyectos de principio a fin. Especializado en fomentar un ambiente de trabajo colaborativo y eficiente, asegurando entregas de alta calidad dentro de plazos establecidos.",
      "image": "person4.png"
     },
     {
      "id": 5,
-     "name": "Tatiana Mejia",
-     "price": 15.06,
-     "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+     "name": "Melissa Vasquez",
+     "price": 28.09,
+     "description": "Arquitecta de sistemas con enfoque en desarrollo back-end y diseño de infraestructuras robustas. Experiencia en la creación de soluciones escalables y de alto rendimiento. Competente en el manejo de bases de datos complejas y optimización de consultas.",
      "image": "person5.png"
     },
     {
      "id": 6,
-     "name": "Tatiana Mejia",
-     "price": 15.06,
-     "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+     "name": "Laura Acevedo",
+     "price": 33.06,
+     "description": "Desarrolladora móvil versátil con experiencia en React Native, abordando tanto plataformas iOS como Android. Especializada en el desarrollo eficiente de aplicaciones multiplataforma, con habilidades destacadas en la optimización del rendimiento y la integración de API.",
      "image": "person6.png"
     },
     {
      "id": 7,
-     "name": "Tatiana Mejia",
-     "price": 15.06,
-     "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+     "name": "Paulina Vieco",
+     "price": 12.06,
+     "description": "Desarrolladora web con fuerte enfoque en la seguridad. Especializado en la creación de aplicaciones web seguras y resistentes a ataques. Amplios conocimientos en frameworks como Django y Express, con experiencia en pruebas de penetración y aseguramiento de la calidad del código.",
      "image": "person7.png"
     }
 ]

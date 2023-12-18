@@ -11,22 +11,9 @@
 </head>
 <body>
     <!-- Header section -->
+
     <header class="header">
-        <a href="#" class="logo">
-            <img class="logo-image" src="images/logo-principal.png" alt="Logo">
-        </a>
-        <!-- NavBar -->
-        <nav class="navbar">
-            <a href="#home">Inicio</a>
-            <a href="#services">Desarrolladores</a>
-            <a href="#logIn">Registrarse</a>
-            <a href="#register">LogIn</a>
-        </nav>
-        <!-- Icons -->
-        <div class="icons">
-            <div> <i class="fa-solid fa-cart-shopping" id="cart-btn"></i> </div>
-            <div> <i class="fa-solid fa-bars" id="allServices-btn"></i> </div>
-        </div>
+        <%- include('./partials/header') %>
     </header>
 
     <main>
@@ -54,7 +41,6 @@
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star-half-stroke"></i>
                         </div>
-
                     </div>
                 <% }); %>
             </div>
@@ -62,32 +48,7 @@
     </main>
     <!-- Footer -->
     <footer>
-        <div class="main-container-footer">
-            <h2>Contactanos</h2>
-
-            <div class="sub-main-footer-section">
-                <div class="sub-section-footer">
-                    <i class="fa-solid fa-handshake"></i>
-                    <h4>Trabaja con nosotros</h4>
-                </div>
-    
-                <div class="sub-section-footer">
-                    <i class="fa-solid fa-newspaper"></i>
-                    <h4>Términos y condiciones</h4>
-                </div>
-    
-                <div class="sub-section-footer">
-                    <i class="fa-solid fa-lock"></i>
-                    <h4>Privacidad</h4>
-                </div>
-    
-                <div class="sub-section-footer">
-                    <i class="fa-solid fa-circle-info"></i>
-                    <h4>Ayuda</h4>
-                </div>
-            </div>
-            <p>Copyright 2023-2024 ServiceDev</p>
-        </div>
+        <%- include('./partials/footer') %>
     </footer>
 </body>
 </html>
