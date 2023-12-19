@@ -7,13 +7,13 @@ const path = require('path')
 let userController = {
       login: function(req, res) {
         //res.sendFile(path.resolve(__dirname, '../src/views/login.html'))
-        res.render('login.ejs')
+        res.render('login')
     },
     register: function(req, res) {
         //res.sendFile(path.resolve(__dirname, '../src/views/register.ejs'))
-        res.render('register.ejs')
+        res.render('register')
     },
  }
 
 // Exportamos 
-module.exports = userController
+module.exports = userController;

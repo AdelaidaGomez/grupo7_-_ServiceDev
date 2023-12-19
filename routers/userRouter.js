@@ -3,11 +3,11 @@ const express = require('express')
 const router = express.Router()
 
 // Requerimos el objeto literal desde controllers
-const userController = require('../controller/userController.js')
+const userController = require('../controller/userController.js');
 
-router.get('/register', userController.register)
-router.get('/login', userController.login)
+router.get('/register', userController.register);
+router.get('/login', userController.login);
 
 
 // Exportamos Router
-module.exports = router
+module.exports = router;

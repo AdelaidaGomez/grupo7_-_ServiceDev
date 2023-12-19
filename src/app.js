@@ -18,10 +18,6 @@ app.set("views", path.join(__dirname, "views"));
 // 2.motor de plantilla
 app.set("view engine", "ejs");
 
-// Ponemos a escuchar el servidor
-app.listen(3050, () => {
-    console.log("Servidor corriendo en http://localhost:3050")
-});
 
 //Para tomar los datos del body (service create form)
 app.use(express.urlencoded({extended: false}));
@@ -41,3 +37,8 @@ app.use('/register', userRouter);
 app.use('/login', userRouter);
 app.use('/services', servicesRouter);
 app.use('/productCart', servicesRouter);
+
+// Ponemos a escuchar el servidor
+app.listen(3050, () => {
+    console.log("Servidor corriendo en http://localhost:3050")
+});

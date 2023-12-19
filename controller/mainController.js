@@ -17,6 +17,7 @@ let mainController = {
         //res.sendFile(path.resolve(__dirname, '../src/views/register.ejs'))
         res.render('register')
     }
+    
 }
 
 // Exportamos 

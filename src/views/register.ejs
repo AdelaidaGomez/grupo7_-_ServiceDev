@@ -6,22 +6,29 @@
     <link href="./css/register.css" rel="stylesheet" />
      <!-- Iconos de font awesome -->
      <script src="https://kit.fontawesome.com/2913a10df8.js" crossorigin="anonymous"></script>
+     <!--Tipologia-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Lato:ital,wght@1,100&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     
     <title>Service Dev - Register</title>
 </head>
 <body>
-    <header>
-      
+    
+    <header class="header">
+        <%- include('./partials/header') %>
     </header>
+      
     <main>
-        <form activon="/register.html" method="POST">
+       
         <!-- Registro de datos -->
-
+        <form class="form" activon="/register.html" method="POST"> 
         <section class="contenedor-flex">
             <section class="section-datos1">
-                <h2>ServiceDev</h2>
+                <h2>ServDevolper</h2>
             </section>
 
+           
             <section class="section-datos2">
                 
                 <h2>Registro Perfil</h2>
@@ -33,13 +40,13 @@
                 
                 <div class="espacio">
                     <label><i class="fa-solid fa-cake-candles"></i>
-                        <input class="border-input" type="date" name="fecha-nace" placeholder="Fecha bacimiento" required>
+                        <input class="border-input" type="date" name="fecha-nace" placeholder="Fecha nacimiento" required>
                              
                     </label>
                 </div>
 
                 <div class="espacio">
-                    <label><i class="fa-solid fa-user-tie" style="color: #0d0d0d;"></i>
+                    <label><i class="fa-solid fa-user-tie"></i>
                         <input class="border-input" type="text" name="profesion"  placeholder="Profesión" required>
                     </label> 
                 </div>
@@ -55,12 +62,13 @@
                 <div>
                 <button class="button" type="submit" class="button-style">Registrarme</button>
                 </div>
-        </section>
+            </section>   
 
-        </form>     
+        </form>
+     
     </main>
 
-    <!-- FOOTER -->
+    <!-- FOOTER
     <footer class="footer">
         <div class="main-container-footer">
             <h2>Contáctanos</h2>
@@ -88,5 +96,9 @@
             <p>Copyright ©&nbsp;2023-2024 Service-Dev</p>
         </div>
     </footer>
+-->
+<footer>
+    <%- include('./partials/footer') %>
+</footer>
 </body>
 </html>

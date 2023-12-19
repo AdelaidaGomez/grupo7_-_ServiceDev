@@ -1,0 +1,43 @@
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    border-bottom: 2px solid #569ddc;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+/* logo Image */
+.header .logo img {
+    height: 6rem;
+    filter: invert(1);
+}
+/* NavBar Header */
+.header .navbar {
+    display: none;
+}
+.header .navbar a {
+    display: block;
+    margin: 1.5rem;
+    padding: .5rem;
+    font-size: 1rem;
+}
+.header .navbar a:hover {
+    color: #569ddc;
+    border-bottom: .1rem solid #569ddc;
+    padding-bottom: .5rem;
+}
+/* Header icons */
+.header .icons {
+    display: flex;
+}
+.header .icons div {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.0rem;
+    margin-left: 2rem;
+}
+.header .icons div:hover{
+    color: #569ddc;
+}
