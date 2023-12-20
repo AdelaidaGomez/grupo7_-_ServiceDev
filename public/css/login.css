@@ -1,4 +1,4 @@
-/* Universales */
+/* ---------------------------------Universales-------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -6,53 +6,9 @@
     font-family: 'EB Garamond', serif;
 }
 
-/* HEADER */
+/* ------------------------------HEADER---------------------------------- */
 
-img {
-    width: 15%;
-    margin: 15px;
-    line-height: 200px;
-    float: left;
-    filter: invert(100%);
-}
-
-header {
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    z-index: 99;
-    box-shadow: 0 0 10px #000;
-    background: rgba(0, 0, 0, 0);
-}
-
-header ul {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-}
-
-header ul li {
-    list-style: none;
-}
-
-header ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
-    text-transform: uppercase;
-    padding: 10px 15px;
-    transition: all 1s ease;
-    color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, rgba(0, 0, 0, .1));
-}
-
-header ul li a:hover {
-    background-color: grey;
-    border-radius: 50px;
-}
+/* UNIFICADO en Header.css */
 
 /* MAIN */
 body main {
@@ -60,7 +16,7 @@ body main {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url(/images/fondo-negro.jpg);
+    background-image: url(/images/fondito.avif);
     background-size: cover;
 }
 
@@ -127,7 +83,7 @@ body main {
 .form-information-childs p {
     color: white;
 }
-/* Iconos */
+/* -------------------------------Iconos----------------------------- */
 .iconito {
     border-radius: 50px;
     padding: 5px;
@@ -159,7 +115,7 @@ body main {
     background-color: black;
     color: white
 }
-/* Formularios */
+/* -------------------------------Formularios------------------------------- */
 form {
     margin: 30px 0 0 0;
 }
@@ -201,19 +157,14 @@ form {
     color: white
 } 
 
-/* Media queries */
+/* ------------------------------Media queries------------------------------- */
 
 
 @media screen and (max-width:580px) {
-    html {
-        font-size: 10px;
+    body {
+        font-size: 12px;
     }
 
-    /* HEADER */
-
-    header ul {
-        width: 100%;
-    }
     /* MAIN */
     .container-form {
         height: auto;
@@ -238,15 +189,7 @@ form {
 
 /* Vista Desktop */
 @media screen and (min-width:770px) {
-    html {
-        font-size: 12px;
+    body {
+        font-size: 15px;
     }
-
-    /* header */
-    header{
-        width: 100%;
-        text-align: center;
-        line-height: 100px;
-    }
-
 }
