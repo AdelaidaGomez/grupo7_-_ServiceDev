@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service Dev - Home</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <!-- tipografias google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,32 +58,10 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
-        <div class="main-container-footer">
-            <h2>Contáctanos</h2>
-            <div class="sub-main-footer-section">
-                <div class="sub-section-footer">
-                    <i class="fa-solid fa-handshake"></i>
-                    <h4>Trabaja con nosotros</h4>
-                </div>
-    
-                <div class="sub-section-footer">
-                    <i class="fa-solid fa-newspaper"></i>
-                    <h4>Términos y condiciones</h4>
-                </div>
-    
-                <div class="sub-section-footer">
-                    <i class="fa-solid fa-lock"></i>
-                    <h4>Privacidad</h4>
-                </div>
-    
-                <div class="sub-section-footer">
-                    <i class="fa-solid fa-circle-info"></i>
-                    <h4>Ayuda</h4>
-                </div>
-            </div>
-            <p>Copyright ©&nbsp;2023-2024 Service-Dev</p>
-        </div>
+    <footer>
+
+        <%- include('./partials/footer.ejs') %>
+
     </footer>
 </body>
 </html>

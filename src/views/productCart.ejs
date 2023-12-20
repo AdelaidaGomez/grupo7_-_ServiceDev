@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/productCart.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <!-- Iconos con Font Awesome -->
     <script src="https://kit.fontawesome.com/bb4291841a.js" crossorigin="anonymous"></script>
     <title>Carrito de Compras</title>
@@ -112,31 +115,9 @@
     </main>
 
     <footer>
-        <div class="main-container-footer">
-            <h2>Contactanos</h2>
-            <div class="sub-main-footer-section">
-                <div class="sub-section-footer">
-                    <i class="fa-solid fa-handshake"></i>
-                    <h4>Trabaja con nosotros</h4>
-                </div>
-    
-                <div class="sub-section-footer">
-                    <i class="fa-solid fa-newspaper"></i>
-                    <h4>Términos y condiciones</h4>
-                </div>
-    
-                <div class="sub-section-footer">
-                    <i class="fa-solid fa-lock"></i>
-                    <h4>Privacidad</h4>
-                </div>
-    
-                <div class="sub-section-footer">
-                    <i class="fa-solid fa-circle-info"></i>
-                    <h4>Ayuda</h4>
-                </div>
-            </div>
-            <p>Copyright ©&nbsp;2023-2024 Service-Dev</p>
-        </div>
+
+        <%- include('./partials/footer.ejs') %>
+
     </footer>
     
 </body>

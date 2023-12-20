@@ -11,6 +11,10 @@ body{
     background: linear-gradient(to top, #000, #313438);
 }
 
+/* HEADER */
+
+/* Unificado en header.css */
+
 /* MAIN */
 main{
     width: 100vw;
@@ -74,53 +78,6 @@ p{
     display: none;
 }
 
-
-/* FOOTER */
-.footer{
-    background-color: #000;
-    padding-block: 16px;
-    padding-inline: 16px;
-    text-align: center;
-    justify-content: center;
-}
-.sub-section-footer{
-    padding: 0px 10px;
-    margin-top: 20px;    
-}
-.main-container-footer h2{
-    color: #fff;
-    padding-top: 10px;
-    margin-bottom: 10px;
-}
-.main-container-footer h4{    
-    display: none;
-}
-.main-container-footer p{
-    color: #fff;
-    font-size: 10px;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    text-align: left;
-}
-/* Footer Icons */
-.fa-handshake{
-    color: #F7D5AD;
-    margin-bottom: 5px;
-}
-.fa-newspaper{
-    color: #F7D5AD;
-    margin-bottom: 5px;
-}
-.fa-lock{
-    color: #F7D5AD;
-    margin-bottom: 5px;
-}
-.fa-circle-info{
-    color: #F7D5AD;
-    margin-bottom: 5px;
-}
-
-
 /* VISTA TABLET */
 @media (min-width: 770px) {
 
@@ -168,15 +125,8 @@ p{
 }
 
 /* FOOTER */
-.main-container-footer{
-    margin-top: 150px;
-}
 
-.sub-main-footer-section{
-    display: flex;
-    justify-content: space-around;  
-}
-}
+/* Unificado en footer.css */
 
 /* VISTA COMPUTADORA */
 @media (min-width: 1024px){
@@ -215,39 +165,3 @@ p{
 .lista-home a{
     transition: all 450ms;
 }
-
-/* FOOTER */
-footer{
-    height: 400px;
-}
-
-.main-container-footer{
-    margin-top: 200px;
-}
-.sub-main-footer-section{
-    display: flex;
-    justify-content: space-around;    
-}
-.main-container-footer h4{
-    display: block;
-    color: #fff;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.sub-section-footer:hover{
-    padding: 20px;
-}
-
-.main-container-footer h4:hover{
-    color: #2da0c3;
-}
-
-.sub-section-footer, .main-container-footer h4{
-    transition: all 450ms;
-}
-
-}
-
-
-
