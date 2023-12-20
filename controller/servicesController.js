@@ -5,7 +5,7 @@ const path = require('path')
 const servicesFilePath = path.join(__dirname, '../src/data/servicesDataBase.json')
 
 // Creamos el objeto literal que nos permite navegar dentro del home en diferentes items
-const servicesController = {
+let servicesController = {
     allProducts: function(req, res) {
         //Utilizamos el archivo JSON Para mostrar los productos
         const services = JSON.parse(fs.readFileSync(servicesFilePath, 'utf-8'))
