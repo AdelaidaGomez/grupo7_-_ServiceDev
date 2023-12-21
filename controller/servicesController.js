@@ -38,7 +38,7 @@ let servicesController = {
             colors: req.body.colors,
             price: req.body.price,
         }
-        services.push(newServece); // Pusheo el objeto literal al array
+        services.push(newService); // Pusheo el objeto literal al array
         fs.writeFileSync(servicesFilePath, JSON.stringify(services, null, " ")); // Transformo a JSON y sobreescribo el JSON
         res.redirect("/"); // Mostramos al usuario la vista principal
     }
