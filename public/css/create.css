@@ -1,0 +1,160 @@
+/**************** header *****************/
+.imagen{
+    width: 100%;
+    height: 5px;
+    margin: auto;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(/images/fondito.avif);
+    background-size: cover;
+}
+
+/* Universales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'EB Garamond', serif;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* MAIN */
+
+form {
+    margin: 30px 0 0 0;
+}
+
+.form label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 150px;
+    border-radius: 20px;
+    padding: 0 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, rgba(0, 0, 0, .1));
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(231, 231, 231);
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: black;
+    margin-left: 10px;
+    margin-right: 0px;
+}
+.section-datos1 {
+   max-width: 50%;
+   background-color: rgba(255,255,255,0);
+   /*backdrop-filter: blur(5px);*/
+    padding: 40px;
+    margin: 12px;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-right: 0;
+    border-right: solid 5px black;
+    align-content: center;
+    border-radius: 2px;
+}
+
+.section-datos2 {
+    max-width: 50%;
+    /*background-color: #8092a4;*/
+    background-color: rgba(255,255,255,0);
+    /*backdrop-filter: blur(5px);*/
+     padding-top: 15px;
+     padding-bottom: 15px;
+     padding-left: 35px;
+     margin: 12px;
+     box-sizing: border-box;
+     align-items: center;
+     text-align: left;
+     color: white;
+     margin-left: 0;
+     border-radius: 2px;
+     border-left: 0;
+
+    }
+
+    .espacio {
+        padding-bottom: 5px;
+        font-weight: bold;
+        color: white
+      
+    }
+    
+    .foto-perfil {
+        color:#fff;
+        font-size: 15px
+    }
+    
+    .border-input {
+        border-radius: 50px;
+        padding: 5px;
+        cursor: pointer;
+        margin: 0 10px;
+        transition: all 1s ease;
+        color: white;
+        border: solid thin grey;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, rgba(0, 0, 0, .1));
+        
+        
+    }
+    
+    .contenedor-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    
+        
+    }
+    
+    .textarea {
+        border-radius: 5px;
+        border: solid thin grey;
+        width: 100%;
+    
+    }
+    
+    .button {
+        border-radius: 50px;
+        border: solid thin grey;
+        align-items: center;
+        padding: 10px 15px;
+        background-color: #313438;
+        color: #fff;
+        margin-top: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, rgba(0, 0, 0, .1));
+        width: 100%;
+      
+    }
+    
+    
+    .button :hover {
+        transition: black 3ms;
+    }
+    
+    /* Iconos Main */
+    .fa-user {
+        color: white;
+    }
+    
+    .fa-cake-candles {
+        color: white;
+    }
+    
+    .fa-user-tie {
+        color: white;
+    }
+
