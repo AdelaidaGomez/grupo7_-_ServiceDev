@@ -9,7 +9,7 @@ let mainController = {
         //res.sendFile(path.resolve(__dirname, '../src/views/index.html'))
         res.render('index')
     },
-    login: function(req, res) {
+    /*login: function(req, res) {
         //res.sendFile(path.resolve(__dirname, '../src/views/login.html'))
         res.render('login')
     },
@@ -17,6 +17,7 @@ let mainController = {
         //res.sendFile(path.resolve(__dirname, '../src/views/register.ejs'))
         res.render('register')
     }
+    */
     
 }
 

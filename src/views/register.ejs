@@ -39,30 +39,43 @@
                 <h2>Registro Perfil</h2>
                 <div class="espacio">
                     <label><i class="fa-solid fa-user"></i>
-                        <input class="border-input" type="text" name="nombre" placeholder="Nombre Completo">
+                        <input class="border-input" type="text" name="nombre" placeholder="Nombre Completo" minlength="8"
+                        maxlength="60">
                     </label>
                 </div>
                 
                 <div class="espacio">
                     <label><i class="fa-solid fa-cake-candles"></i>
-                        <input class="border-input" type="date" name="fecha-nace" placeholder="Fecha nacimiento" required>
+                        <input class="border-input" type="email" name="email" placeholder="email" required>
                              
                     </label>
                 </div>
 
                 <div class="espacio">
                     <label><i class="fa-solid fa-user-tie"></i>
-                        <input class="border-input" type="text" name="profesion"  placeholder="Profesión" required>
+                        <input class="border-input" type="password" name="contraseña"  placeholder="Contraseña" minlength="8"
+                        maxlength="12" required >
                     </label> 
                 </div>
-                <div><h2 for="perfil">Descripción Perfil:</h2>
-                    <textarea class="textarea" placeholder="Escriba brevemente su perfil" name="perfil" rows="5" cols="30" ></textarea>
+
+                <div class="espacio">
+                    <label><i class="fa-solid fa-user-tie"></i>
+                        <input class="border-input" type="password" name="confirmar-contraseña"  placeholder="Confirmar contraseña" minlength="8"
+                        maxlength="12" required>
+                    </label> 
                 </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="tipo-usuario" value="ofrecer">
+                        Ofrecer Servicio
+                        <input name="tipo-usuario"  type="radio" value="solicitar">
+                        Solicitar Servicio
+                    </label>
+
+                </div>
+                          
             
-                <div class="foto-perfil">
-                    <label>Adjuntar foto perfil:</label>
-                    <input type="file" name="foto" accept=".jpg">
-                </div>
 
                 <div>
                 <button class="button" type="submit" class="button-style">Registrarme</button>

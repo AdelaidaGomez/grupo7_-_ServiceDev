@@ -1,12 +1,21 @@
+// Exportamos Router
+module.exports = router;
+
 const express = require('express')
 // Requerimos el router desde express
 const router = express.Router()
 
-// Requerimos el objeto literal desde controllers
+// Requerimos el objeto literal para products desde controllers
 const userController = require('../controller/userController.js');
 
-router.get('/register', userController.register);
-router.get('/login', userController.login);
+router.get('/login', userController.login); // todos los servicios, recordar que como es otro archivo se inicia con / ya ue definimos en app que tiene /services 
+router.get('/register', userController.register); //Recordar que para entrar a este la ruta debe ser: Servido/services/productCart
+
+
+
+
+
+// Ruteo de formulario create
 
 
 // Exportamos Router
