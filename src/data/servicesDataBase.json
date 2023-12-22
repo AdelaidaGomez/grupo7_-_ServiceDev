@@ -4,6 +4,7 @@
      "name": "Tatiana Mejia",
      "price": 15.06,
      "description": "Experimentada desarrolladora full-stack con amplia experiencia en el ecosistema de Python. Especializada en la creación de aplicaciones escalables y eficientes, desde el back-end hasta el front-end. Destrezas adicionales incluyen la gestión de bases de datos y la implementación de soluciones de seguridad.",
+     "profesion": "Desarroladora Full Stack",
      "image": "person1.png"
     },
     {
@@ -11,6 +12,7 @@
      "name": "Mariana Gómez",
      "price": 20.06,
      "description": "Desarrolladora front-end altamente hábil con enfoque en tecnologías JavaScript. Especializada en la creación de interfaces de usuario atractivas y altamente interactivas. Profundo conocimiento de frameworks modernos como React y Angular, con experiencia en optimización de rendimiento y diseño centrado en el usuario (UX/UI).",
+     "profesion": "Desarroladora Front-End",
      "image": "person2.png"
     },
     {
@@ -18,6 +20,7 @@
      "name": "Juan Duque",
      "price": 35.00,
      "description": "Apasionado desarrollador iOS con experiencia destacada en SwiftUI. Capaz de crear experiencias de usuario fluidas y modernas en el ecosistema de Apple. Amplios conocimientos en desarrollo de aplicaciones móviles, así como en diseño de interfaces y experiencia de usuario.",
+     "profesion": "Desarrolador IOS",
      "image": "person3.png"
     },
     {
@@ -25,6 +28,7 @@
      "name": "Juan Camilo Mejia",
      "price": 22.45,
      "description": "Profesional en desarrollo de software con experiencia probada en liderazgo de equipos. Habilidades para coordinar y dirigir proyectos de principio a fin. Especializado en fomentar un ambiente de trabajo colaborativo y eficiente, asegurando entregas de alta calidad dentro de plazos establecidos.",
+     "profesion": "Desarrolador De Software",
      "image": "person4.png"
     },
     {
@@ -32,6 +36,7 @@
      "name": "Melissa Vasquez",
      "price": 28.09,
      "description": "Arquitecta de sistemas con enfoque en desarrollo back-end y diseño de infraestructuras robustas. Experiencia en la creación de soluciones escalables y de alto rendimiento. Competente en el manejo de bases de datos complejas y optimización de consultas.",
+     "profesion": "Desarroladora Back-End",
      "image": "person5.png"
     },
     {
@@ -39,6 +44,7 @@
      "name": "Laura Acevedo",
      "price": 33.06,
      "description": "Desarrolladora móvil versátil con experiencia en React Native, abordando tanto plataformas iOS como Android. Especializada en el desarrollo eficiente de aplicaciones multiplataforma, con habilidades destacadas en la optimización del rendimiento y la integración de API.",
+     "profesion": "Desarroladora React Native",
      "image": "person6.png"
     },
     {
@@ -46,6 +52,7 @@
      "name": "Paulina Vieco",
      "price": 12.06,
      "description": "Desarrolladora web con fuerte enfoque en la seguridad. Especializado en la creación de aplicaciones web seguras y resistentes a ataques. Amplios conocimientos en frameworks como Django y Express, con experiencia en pruebas de penetración y aseguramiento de la calidad del código.",
+     "profesion": "Desarroladora Seguridad",
      "image": "person7.png"
     }
 ]

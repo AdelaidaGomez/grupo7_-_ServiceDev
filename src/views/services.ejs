@@ -32,13 +32,15 @@
                 <% services.forEach(service => { %>
                     <div class="box">
                         <div class="icons">
+                            <!-- En este item es donde se debe agregar el servicio al productCart -->
                             <div> <i class="fa-solid fa-cart-shopping" id="cart-btn"></i> </div>
                             <div>
-                                <a href="./serviceDetail/<%= service.id %>">
+                                <a href="./services/serviceDetail/<%= service.id %>%>">
                                     <i class="fa-solid fa-eye"></i>
                                 </a>
                             </div>
                         </div>
+                        <h3><%= service.profesion %></h3>
                         <h3><%= service.name %></h3>
                         <p><%= service.description %></p>
                         <img src="images/<%= service.image %>" class="profilePhoto" alt=""> 

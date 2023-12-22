@@ -109,6 +109,17 @@ body {
 /* .allServices .box-container .box:hover > *{
     color: black;
 } */
+
+.allServices div a {
+    text-decoration: none;
+    color: white
+}
+.allServices .box-container .box .icons a i:hover{
+    /* fff */
+    color: #1b1c1d;
+}
+
+
 .allServices .box-container .box .icons:hover > *{
     color: #1b1c1d;
 }
