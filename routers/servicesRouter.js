@@ -14,5 +14,9 @@ router.get('/serviceDetail/:id', servicesController.detail)
 router.get("/create", servicesController.create) // Para devolverle al usuario el formulario para crear servicio
 router.post("/create", servicesController.processCreate) // Para agregar el servicio creado
 
+// Ruteo de formulario edit
+router.get("/edit/:id", servicesController.edit) // Para devolverle al usuario el formulario para editar servicio
+router.put("/edit/:id", servicesController.processEdit) // Para actualizar el producto editado
+
 // Exportamos Router
 module.exports = router;

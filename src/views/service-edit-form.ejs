@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Lato:ital,wght@1,100&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     
-    <title>Editar producto</title>
+    <title>Editar servicio</title>
 </head>
 <body>
     <header class="header">
@@ -21,7 +21,53 @@
     </header>
 
     <main>
-
+        <div class="formulario-con-titulo">
+            <div class="titulo">
+                <h2 class="products-title"> Estas editando: <i><%= serviceToEdit.name %></i></h2>
+            </div>
+            <div class="formulario">
+                <form class="form" action="/service/edit/<%= serviceToEdit.id %> ?_method=PUT" method="POST"></form>       
+                    <!-- Nombre del servicio -->
+                    <div class="control-form">
+                        <input type="text" name="name" placeholder="Nombre del servicio" class="control" value="<%=serviceToEdit.name%>" >
+                        <label>Nombre del servicio</label>
+                    </div>    
+                    <!-- Descripcion -->
+                    <div class="control-form">
+                        <textarea name="description" id="description" class="form-input"> <%= serviceToEdit.description %> </textarea>
+                        <label>Descripción</label>
+                    </div>
+                    <!-- Imagen -->
+                    <div class="control-form">
+                        <input type="file" name="image" accept=".jpg">
+                        <label>Imagen</label>
+                    </div> 
+                    <!-- Categoria -->
+                    <div class="control-form">
+                        <label for="category" class="form-label">Categoría:</label>
+						<select name="category" id="category" class="form-input">
+							<option value="">Elegí</option>
+							<option value="in-sale">En oferta</option>
+							<option value="visited">Últimos agregados</option>
+						</select>
+                    </div>
+                    <!-- Profesion -->
+                    <div class="control-form">
+                        <input type="text" name="profesion" placeholder="Profesion" class="control" value="<%=serviceToEdit.profesion%>">
+                        <label>Profesion</label>
+                    </div>
+                    <!-- Precio -->
+                    <div class="control-form">
+                        <input type="tel" name="price" placeholder="Precio" class="control" value="<%=serviceToEdit.price%>">
+                        <label>Precio</label>
+                    </div>
+                    <!-- Boton editar servicio -->
+                    <div>
+                        <button class="button" type="submit" class="button-style">Editar</button>
+                    </div>
+            </div>
+            
+        </div>
     </main>
 
 
