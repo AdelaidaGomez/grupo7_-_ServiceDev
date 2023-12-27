@@ -1,0 +1,11 @@
+[
+    {
+    "id": 1,
+    "name": "Tatiana Mejia",
+    "email": "tatiana.mejia@gmail.com",
+    "password": "prueba_pass",
+    "confirm_pass": "rueba_pass",
+    "ofrecer_serv": true,
+    "solicitar_serv": false
+   }
+]
