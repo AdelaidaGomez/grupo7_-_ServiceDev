@@ -19,7 +19,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 
-//Para tomar los datos del body (service create form)
+//Para tomar los datos del body del formulario (service create form)
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
