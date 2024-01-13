@@ -23,6 +23,10 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
+// Para poder usar los metodos PUT y DELETE
+const methodOverride = require("method-override");
+app.use(methodOverride("_method"));
+
 // Manejando rutas con MVC
 // Requerimos los routers que vamos a necesitar (Uno por cada archivo)
 const mainPageRouter = require('../routers/mainPageRouter.js');

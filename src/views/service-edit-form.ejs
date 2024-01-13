@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/create.css">
+    <link rel="stylesheet" href="/css/serviceCreate.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
     <!-- Icons -->
@@ -13,66 +13,107 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Lato:ital,wght@1,100&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     
-    <title>Editar servicio</title>
-</head>
+    <title>Service edit form</title>
+    </head>
+
 <body>
+
     <header class="header">
+
         <%- include('./partials/header') %>
+
     </header>
 
     <main>
-        <div class="formulario-con-titulo">
-            <div class="titulo">
-                <h2 class="products-title"> Estas editando: <i><%= serviceToEdit.name %></i></h2>
+        <div class="container-form">
+<!-- Texto izquierda -->
+            <div class="information">
+
+                <div class="info-childs">
+
+                    <h2>Edición de servicio</h2>
+
+                </div>
+
             </div>
-            <div class="formulario">
-                <form class="form" action="/service/edit/<%= serviceToEdit.id %> ?_method=PUT" method="POST"></form>       
-                    <!-- Nombre del servicio -->
-                    <div class="control-form">
-                        <input type="text" name="name" placeholder="Nombre del servicio" class="control" value="<%=serviceToEdit.name%>" >
-                        <label>Nombre del servicio</label>
-                    </div>    
+<!-- Texto derecha -->
+            <div class="form-information">
+
+                <div class="form-information-childs">
+
+                    <h2>Usted se encuentra editando a: <i><%=serviceToEdit.name%></i></h2>
+
+                    <form action="/services/edit/<%= serviceToEdit.id %>?_method=PUT" method="POST" class="form">
+
+                        <!-- Nombre del servicio -->
+
+                        <label>Nombre del servicio  
+                            <input type="text" name="name" placeholder="Nombre del servicio" class="control" value="<%=serviceToEdit.name%>">
+                        </label>
+                          
+
                     <!-- Descripcion -->
-                    <div class="control-form">
-                        <textarea name="description" id="description" class="form-input"> <%= serviceToEdit.description %> </textarea>
-                        <label>Descripción</label>
-                    </div>
+                        <label>Descripción
+                            <input type="textarea" name="description" id="description" class="form-input" value="<%=serviceToEdit.description%>"></input>
+                        </label>
+
+
                     <!-- Imagen -->
-                    <div class="control-form">
-                        <input type="file" name="image" accept=".jpg">
-                        <label>Imagen</label>
-                    </div> 
+
+                        <label>Imagen
+                            <input type="file" name="image" accept=".jpg">
+                        </label>
+
                     <!-- Categoria -->
-                    <div class="control-form">
-                        <label for="category" class="form-label">Categoría:</label>
+
+                        <label>Categoría:
 						<select name="category" id="category" class="form-input">
 							<option value="">Elegí</option>
 							<option value="in-sale">En oferta</option>
 							<option value="visited">Últimos agregados</option>
 						</select>
-                    </div>
-                    <!-- Profesion -->
-                    <div class="control-form">
-                        <input type="text" name="profesion" placeholder="Profesion" class="control" value="<%=serviceToEdit.profesion%>">
-                        <label>Profesion</label>
-                    </div>
+                    </label>
+
+                    <!-- Conocimiento -->
+
+                        <label>Especialidad
+                            <input type="text" name="colors" placeholder="Ej: fullstack, SQL, etc" class="control" value="<%=serviceToEdit.profesion%>">
+                        </label>
+
                     <!-- Precio -->
-                    <div class="control-form">
-                        <input type="tel" name="price" placeholder="Precio" class="control" value="<%=serviceToEdit.price%>">
-                        <label>Precio</label>
-                    </div>
-                    <!-- Boton editar servicio -->
-                    <div>
-                        <button class="button" type="submit" class="button-style">Editar</button>
-                    </div>
+
+                        <label>Precio
+                            <input type="tel" name="price" placeholder="Precio" class="control" value="<%=serviceToEdit.price%>">
+                        </label>
+                    
+                    <!-- Boton agregar producto -->
+
+                    <input type="submit" value="Editar">
+
+                    </form>
+
+                </div>
+                
             </div>
-            
+
         </div>
+
     </main>
 
-
+    <!-- Footer -->
     <footer>
         <%- include('./partials/footer') %>
     </footer>
 </body>
 </html>
+
+
+<form method="" action="">
+
+    Tipo de servicio:
+
+    <input name="Ofrecer-servicio" type="checkbox" />Ofrecer servicio
+    
+    <input name="Solicitar-servicio" type="checkbox" />Solicitar servicio
+    
+    </form>

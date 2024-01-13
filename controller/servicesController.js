@@ -29,14 +29,15 @@ let servicesController = {
         // Traigo constante de servicios y transformo al JSON en un array
         const services = JSON.parse(fs.readFileSync(servicesFilePath, 'utf-8'));
         // Incluyo la info del formulario y creo el objeto literal a sumar al array
+        console.log(req.body);
         const newService = {
             id: services[services.length - 1].id + 1,   // Tomo el ultimo servicio, agarro su id y le sumo 1.
             name: req.body.name,
             description: req.body.description,
-            image: "person1.png",
+            image: req.file.filename,
             category: req.body.category,
             colors: req.body.colors,
-            price: req.body.price,
+            price: req.body.price
         }
         services.push(newService); // Pusheo el objeto literal al array
         fs.writeFileSync(servicesFilePath, JSON.stringify(services, null, " ")); // Transformo a JSON y sobreescribo el JSON
@@ -58,8 +59,8 @@ let servicesController = {
         const id = req.params.id;
         let serviceToEdit = services.find(service => service.id == id);
         // Creo el producto "nuevo" que va a reemplazar al anterior
-        const editService = {
-            id: services.id,
+        serviceToEdit = {
+            id: serviceToEdit.id,
             name: req.body.name,
             description: req.body.description,
             image: "person1.png",
@@ -75,8 +76,8 @@ let servicesController = {
         services[indice] = serviceToEdit;
         // Sobreescribo el JSON
         fs.writeFileSync(servicesFilePath, JSON.stringify(services, null, " "));
-        // Redirecciono al home
-        res.redirect("/");
+        // Redirecciono a la pagina de productos
+        res.redirect("/services");
 
     }
 };
