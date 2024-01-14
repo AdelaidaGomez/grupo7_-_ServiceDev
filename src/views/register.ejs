@@ -27,7 +27,7 @@
     <main>
        
         <!-- Registro de datos -->
-        <form class="form" activon="/register" method="POST"> 
+        <form class="form" activon="/register" method="POST" enctype="multipart/form-data"> 
         <section class="contenedor-flex">
             <section class="section-datos1">
                 <h2>ServDevolper</h2>
@@ -62,6 +62,12 @@
                     <label><i class="fa-solid fa-key"></i>  
                         <input class="border-input" type="password" name="confirm_pass"  placeholder="Confirmar contraseña" minlength="8"
                         maxlength="12" required>
+                    </label> 
+                </div>
+
+                <div class="espacio">
+                    <label for="foto_usuario"><i class="fa-solid fa-camera"></i>
+                        <input  type="file" name="foto_usuario"  placeholder="Foto perfil">
                     </label> 
                 </div>
 
