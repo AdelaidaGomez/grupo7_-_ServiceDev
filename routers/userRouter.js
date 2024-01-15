@@ -4,6 +4,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 
+
 // Requerimos el objeto literal para products desde controllers
 const userController = require('../controller/userController.js');
 

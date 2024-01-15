@@ -4,6 +4,9 @@ const fs = require('fs');
 // Modulo nativo para manejar las rutas de los archivos html con sendFile
 const path = require('path')
 
+// Requerir el modulo de encriptamiento
+//const bycrypt = require('bycryptjs')
+
 // Trabajando con el archivo JSON 
 const userFilePath = path.join(__dirname, '../src/data/userDataBase.json')
 
@@ -26,8 +29,8 @@ let userController = {
              id: users[users.length - 1].id + 1,   // Tomo el ultimo usuario, consulto su id y le sumo 1.
              name: req.body.name,
              email: req.body.email,
-             password: req.body.password,
-             confirm_pass: req.body.confirm_pass,
+             password: bycrypt.hashSync(req.body.password,10),
+             confirm_pass: bycrypt.hashSync(req.body.confirm_pass,10),
              type_user: req.body.type_user,
            
          }
