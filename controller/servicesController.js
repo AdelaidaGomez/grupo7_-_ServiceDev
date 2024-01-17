@@ -41,7 +41,7 @@ let servicesController = {
         }
         services.push(newService); // Pusheo el objeto literal al array
         fs.writeFileSync(servicesFilePath, JSON.stringify(services, null, " ")); // Transformo a JSON y sobreescribo el JSON
-        res.redirect("/"); // Mostramos al usuario la vista principal
+        res.redirect("/services"); // Mostramos al usuario la vista principal
     },
     edit: function (req, res) {
         // Traigo constante de servicios y transformo al JSON en un array
@@ -63,7 +63,7 @@ let servicesController = {
             id: serviceToEdit.id,
             name: req.body.name,
             description: req.body.description,
-            image: "person1.png",
+            image: req.file != undefined ? req.file.filename : serviceToEdit.image,
             category: req.body.category,
             profesion: req.body.profesion,
             price: req.body.price,

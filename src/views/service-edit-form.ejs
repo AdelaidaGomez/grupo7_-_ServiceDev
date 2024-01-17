@@ -43,7 +43,7 @@
 
                     <h2>Usted se encuentra editando a: <i><%=serviceToEdit.name%></i></h2>
 
-                    <form action="/services/edit/<%= serviceToEdit.id %>?_method=PUT" method="POST" class="form">
+                    <form action="/services/edit/<%= serviceToEdit.id %>?_method=PUT" method="POST" class="form" enctype="multipart/form-data">
 
                         <!-- Nombre del servicio -->
 
@@ -60,9 +60,9 @@
 
                     <!-- Imagen -->
 
-                        <label>Imagen
-                            <input type="file" name="image" accept=".jpg">
-                        </label>
+                    <label>Imagen
+                        <input type="file" name="image" accept=".jpg">
+                    </label>
 
                     <!-- Categoria -->
 
@@ -86,7 +86,7 @@
                             <input type="tel" name="price" placeholder="Precio" class="control" value="<%=serviceToEdit.price%>">
                         </label>
                     
-                    <!-- Boton agregar producto -->
+                    <!-- Boton editar producto -->
 
                     <input type="submit" value="Editar">
 

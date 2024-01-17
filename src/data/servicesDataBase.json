@@ -57,18 +57,36 @@
  },
  {
   "id": 8,
-  "name": "asd123",
-  "description": "Recibido",
-  "image": "person1.png",
+  "name": "Juan",
+  "description": "estudiante",
+  "image": "image-1705518719925.jpg",
   "category": "",
-  "price": "50000"
+  "price": "30000"
  },
  {
   "id": 9,
-  "name": "Pedro",
-  "description": "",
-  "image": "person1.png",
+  "name": "martin",
+  "description": "estudiante",
+  "image": "image-1705519070062.jpg",
   "category": "",
-  "price": ""
+  "price": "30000"
+ },
+ {
+  "id": 10,
+  "name": "Hola",
+  "description": "",
+  "image": "image-1705519172525.jpg",
+  "category": "",
+  "colors": "",
+  "price": "20000"
+ },
+ {
+  "id": 11,
+  "name": "Juana",
+  "description": "estudiante",
+  "image": "image-1705519199210.jpg",
+  "category": "",
+  "colors": "",
+  "price": "20000"
  }
 ]

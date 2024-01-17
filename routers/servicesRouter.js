@@ -37,7 +37,7 @@ router.post("/create", uploadFile.single("image"), servicesController.processCre
 
 // Ruteo de formulario edit
 router.get("/edit/:id", servicesController.edit) // Para devolverle al usuario el formulario para editar servicio
-router.put("/edit/:id", servicesController.processEdit) // Para actualizar el producto editado
+router.put("/edit/:id", uploadFile.single("image"), servicesController.processEdit) // Para actualizar el producto editado
 
 // Exportamos Router
 module.exports = router;
