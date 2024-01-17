@@ -1,7 +1,7 @@
 // Requerimos express y lo ejecutamos para tener disponibles todos los metodos que vamos a precisar
 const express = require("express");
 const app = express();
-const bycrypt = require('bycryptjs');
+const bycrypt = require('bcryptjs');
 
 // Modulo nativo para manejar las rutas de los archivos
 const path = require("path");
