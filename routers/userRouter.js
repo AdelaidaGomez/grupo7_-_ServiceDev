@@ -13,7 +13,7 @@ const multer = require('multer');
 
 //configuración de variable multer donde se especifica ruto de almacenamiento y nombre de archivo
 const multerStorage = multer.diskStorage( {
-    destination: (req, file, storageDetination) => {
+    destination: (req, file, storageDestination) => {
         const folder = path.join(__dirname, '../public/image/registerImage');
         storageDestination(null, folder)
     },

@@ -65,18 +65,23 @@ de las entregas.
 **Retrospective Sprint 4**
 
 **1.Comenzar a hacer.**
-- 
+- Coordinar el trabajo grupal en un mismo archivo, teniendo en cuenta la comunicación oportuna para subir cambios.
+- Identificar los procesos faltantes para integrar todo lo que ya se lleva implementado, que no se detalla puntualmente en los sprint.
+- Trabajo en parejas en una sola implementación
+- Comunicación en el grupo de whatsapp de las tareas realizadas o pendientes en el momento
 
 
 **2. Hacer más.**
--	
+- Avanzar más seguido en las tareas al inicio del sprint para no acumular tareas y compromisos al finalizar sprint
+- Confirmar las tareas asignadas en el grupo de whatsapp para los que no asistieron a la reunión de seguimiento
 
 
-**3.	Continuar haciendo.**
--	
+**3. Continuar haciendo.**
+- Reuniones semanales de seguimiento
+- Comunicación en el grupo de whatsapp para subir cambios al repositorio sin afectacióna los demas
 
-**4.	Hacer menos.**
-
+**4. Hacer menos.**
+- Trabajar menos individualmente  
 
 **5. Dejar de hacer.**
-- 
+- Incluir aspectos adicionales sin antes haber finalizado con los items propios del sprint
