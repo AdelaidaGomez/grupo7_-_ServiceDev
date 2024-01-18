@@ -88,5 +88,14 @@
   "category": "",
   "colors": "",
   "price": "20000"
+ },
+ {
+  "id": 12,
+  "name": "Pepep",
+  "description": "lalalala",
+  "image": "image-1705536138386.jpg",
+  "category": "in-sale",
+  "colors": "Nada",
+  "price": "1000"
  }
 ]

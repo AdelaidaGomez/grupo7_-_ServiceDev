@@ -11,7 +11,7 @@ const userController = require('../controller/userController.js');
 // Requerimos multer para cargar archvios de imagen desde cliente a servidor
 const multer = require('multer');
 
-//configuración de variable multer donde se especifica ruto de almacenamiento y nombre de archivo
+//configuración de variable multer donde se especifi    ca ruto de almacenamiento y nombre de archivo
 const multerStorage = multer.diskStorage( {
     destination: (req, file, storageDestination) => {
         const folder = path.join(__dirname, '../public/image/registerImage');

@@ -163,10 +163,20 @@ body {
     padding: 2rem 0;
 }
 
-.action-button-edit:hover{
-    margin: 20px;
+.action-button-edit{
+    background-color: #a2b8cd;
     color: black;
-    background-color: yellow
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin: 1.5rem;
+    padding: .5rem;
+    font-size: 1rem;
+}
+
+.action-button-edit:hover{
+    background-color: white;
+    color: #fff;
+
 }
 
 
