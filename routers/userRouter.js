@@ -12,15 +12,20 @@ const userController = require('../controller/userController.js');
 const multer = require('multer');
 
 //configuración de variable multer donde se especifi    ca ruto de almacenamiento y nombre de archivo
-const multerStorage = multer.diskStorage( {
+const multerStorage = multer.diskStorage({
     destination: (req, file, storageDestination) => {
-        const folder = path.join(__dirname, '../public/image/registerImage');
+        const folder = path.join(__dirname, '../public/images/registerImage');
         storageDestination(null, folder)
     },
-    fielname: (req, file, nameImage ) => {
-        const image = Date.now() + path.extname(file.originalname);
-        nameImage(null,image );
-    },
+   
+    /*fielname: (req, file, nameImage ) => {
+        const image = file.fieldname + "-" + Date.now() + path.extname(file.originalname);
+        nameImage(null,image);
+    },*/
+    filename: function(req, file, imgName) {
+        // Definimos el nombre que tendrán los archivos
+        imgName(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname));
+    }
 }  )
 
 const upload = multer({storage : multerStorage});

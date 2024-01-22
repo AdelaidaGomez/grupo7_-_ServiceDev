@@ -1,5 +1,6 @@
 const express = require('express')
 const fs = require('fs');
+const bcrypt = require('bcryptjs');
 
 // Modulo nativo para manejar las rutas de los archivos html con sendFile
 const path = require('path')
@@ -29,13 +30,14 @@ let userController = {
              id: users[users.length - 1].id + 1,   // Tomo el ultimo usuario, consulto su id y le sumo 1.
              name: req.body.name,
              email: req.body.email,
-             password: bycrypt.hashSync(req.body.password,10),
-             confirm_pass: bycrypt.hashSync(req.body.confirm_pass,10),
+             password: bcrypt.hashSync(req.body.password,10), 
+             confirm_pass: bcrypt.hashSync(req.body.confirm_pass,10),
+             foto_usuario: req.file.filename,
              type_user: req.body.type_user,
            
          }
          users.push(newUser); // Pusheo el objeto literal al array de usuarios
-         fs.appendFileSync(userFilePath, JSON.stringify(users, null, " ")); // Transformo a JSON y sobreescribo el JSON
+         fs.writeFileSync(userFilePath, JSON.stringify(users, null, " ")); // Transformo a JSON y sobreescribo el JSON
          res.redirect("/"); // Mostramos al usuario la vista principal
          
     }

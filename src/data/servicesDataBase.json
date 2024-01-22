@@ -97,5 +97,23 @@
   "category": "in-sale",
   "colors": "Nada",
   "price": "1000"
+ },
+ {
+  "id": 13,
+  "name": "Desarrollador junior back",
+  "description": "Ingeniero de Software con especializacion en desarrollo java",
+  "image": "image-1705875219149.jpg",
+  "category": "in-sale",
+  "colors": "Backend",
+  "price": "150"
+ },
+ {
+  "id": 14,
+  "name": "santiago rojas",
+  "description": "Diseñador UX/UI",
+  "image": "image-1705889226272.jpg",
+  "category": "in-sale",
+  "colors": "Diseñador",
+  "price": "200"
  }
 ]
