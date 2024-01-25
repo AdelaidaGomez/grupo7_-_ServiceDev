@@ -35,8 +35,8 @@ let servicesController = {
             name: req.body.name,
             description: req.body.description,
             image: req.file.filename,
-            category: req.body.category,
-            colors: req.body.colors,
+            /* category: req.body.category, */
+            especialidad: req.body.especialidad,
             price: req.body.price
         }
         services.push(newService); // Pusheo el objeto literal al array
@@ -64,8 +64,8 @@ let servicesController = {
             name: req.body.name,
             description: req.body.description,
             image: req.file != undefined ? req.file.filename : serviceToEdit.image,
-            category: req.body.category,
-            profesion: req.body.profesion,
+            /* category: req.body.category, */
+            especialidad: req.body.especialidad,
             price: req.body.price,
         }
         // Buscamos la posicion del producto a editar

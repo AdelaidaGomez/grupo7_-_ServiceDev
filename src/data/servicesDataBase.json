@@ -50,17 +50,18 @@
  {
   "id": 7,
   "name": "Paulina Vieco",
-  "price": 12.06,
   "description": "Desarrolladora web con fuerte enfoque en la seguridad. Especializado en la creación de aplicaciones web seguras y resistentes a ataques. Amplios conocimientos en frameworks como Django y Express, con experiencia en pruebas de penetración y aseguramiento de la calidad del código.",
-  "profesion": "Desarroladora Seguridad",
-  "image": "person7.png"
+  "image": "person7.png",
+  "category": "",
+  "especialidad": "Desarroladora Seguridad",
+  "price": "12.06"
  },
  {
   "id": 8,
   "name": "Juan",
-  "description": "estudiante",
+  "description": "estudiante de dH",
   "image": "image-1705518719925.jpg",
-  "category": "",
+  "especialidad": "fullstack",
   "price": "30000"
  },
  {
@@ -93,9 +94,9 @@
   "id": 12,
   "name": "Pepep",
   "description": "lalalala",
-  "image": "image-1705536138386.jpg",
-  "category": "in-sale",
-  "colors": "Nada",
+  "image": "image-1706150249677.jpg",
+  "category": "",
+  "especialidad": "SQL",
   "price": "1000"
  },
  {

@@ -29,8 +29,10 @@
                             <div> <i class="fa-solid fa-cart-shopping" id="cart-btn"></i> </div>
                         </div>
                         <h3><%= singleService.name %></h3>
-                        <p><%= singleService.description %></p>
+                        <div class="price"><%= singleService.especialidad %></div>
                         <img src="/images/<%= singleService.image %>" class="profilePhoto" alt="Profile Photo"> 
+                        <br>
+                        <p><%= singleService.description %></p>
                         <div class="price"><%= singleService.price %> /h</div>
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
