@@ -41,6 +41,12 @@
 
                     <p>Bienvenidos</p>
 
+                    <% if (locals.old) { %>
+                        <div>
+                            <h3>Hola <%=old.name%>!</h3>
+                        </div>
+                    <% } %>
+
                 </div>
 
             </div>
@@ -59,16 +65,26 @@
 
                     <p>o usa tu usuario para ingresar</p>
 
-                    <form class="form">
+                    <form action="/login" method="POST" class="form">
 
                         <label>
                             <i class='bx bx-user iconito' ></i>
-                            <input type="text" placeholder="Usuario">
+                            <input type="email" id="email" name="email" placeholder="email" value="<%= locals.old ? old.email : null %>">
+                            <% if (locals.errors && errors.email) { %>
+                                <div>
+                                    <p><%= errors.email %></p>
+                                </div>
+                            <% } %>
                         </label>
 
                         <label>
                             <i class='bx bx-key iconito' ></i>
-                            <input type="password" placeholder="Contraseña">
+                            <input type="password" id="password" name="password" placeholder="Contraseña" value="<%= locals.old ? old.password : null %>">
+                            <% if (locals.errors && errors.password) { %>
+                                <div>
+                                    <p><%= errors.password %></p>
+                                </div>
+                            <% } %>
                         </label>
 
                         <input type="submit" value="Registrarse">

@@ -11,11 +11,26 @@ const path = require('path')
 // Trabajando con el archivo JSON 
 const userFilePath = path.join(__dirname, '../src/data/userDataBase.json')
 
+// Requerimos el atributo "validation result" del modulo "express validator" para validaciones login
+const {validationResult} = require("express-validator");
+
 // Creamos el objeto literal que nos permite navegar dentro del home en diferentes items
 let userController = {
-      login: function(req, res) {
+/*     login: function(req, res) {
         //res.sendFile(path.resolve(__dirname, '../src/views/login.html'))
-        res.render('login')
+        res.render("login");
+    }, */
+    login: function(req, res) {
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {     // Si tenemos errores, entonces convertimos el resultado a un objeto literal y se lo pasamos a la vista (formulario + mensaje del error)
+            res.render("login", {old: req.body});
+        }
+        else {
+            res.render("login", {
+                errors: errors.mapped(),
+                old: req.body // Lo que escribió el usuario en el body
+            })
+        }
     },
     register: function(req, res) {
         //res.sendFile(path.resolve(__dirname, '../src/views/register.ejs'))
