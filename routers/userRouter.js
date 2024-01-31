@@ -31,14 +31,19 @@ const multerStorage = multer.diskStorage({
 const upload = multer({storage : multerStorage});
 
 // VALIDACIONES
-const {body} = require("express-validator");
+const {check} = require("express-validator");
 const validacionesLogin = [
-    body("email").notEmpty().withMessage("Debe completar el campo de email").bail().isEmail().withMessage("El email no es válido"),
-    body("password").notEmpty().withMessage("Debe completar el campo de contraseña").bail().isLength({min: 5})
+    check("email").notEmpty().withMessage("Debe completar el campo de email").bail().isEmail().withMessage("El email no es válido"),
+    check("password").notEmpty().withMessage("Debe completar el campo de contraseña").bail().isLength({min: 5})
 ]
+/* const {body} = require("express-validator");
+const validacionesLogin = [
+    body("email").notEmpty().withMessage("campo vacio"),
+    body("password").notEmpty().withMessage("campo vacio 2")
+] */
 
 router.get('/', userController.login); // LOGIN. todos los servicios, recordar que como es otro archivo se inicia con / ya ue definimos en app que tiene /services 
-router.post("/", validacionesLogin, userController.login); // Ruteo de validacion de login
+router.post("/", validacionesLogin, userController.processLogin); // Ruteo de validacion de login
 router.get('/register', userController.register); //Recordar que para entrar a este la ruta debe ser: Servido/services/productCart
 router.post('/register', upload.single('foto_usuario'), userController.createRegister); //se establece el metodo post para enviar los datos registrados en el formulario
 // Ruteo de formulario create

@@ -16,21 +16,53 @@ const {validationResult} = require("express-validator");
 
 // Creamos el objeto literal que nos permite navegar dentro del home en diferentes items
 let userController = {
-/*     login: function(req, res) {
+    login: function(req, res) {
         //res.sendFile(path.resolve(__dirname, '../src/views/login.html'))
         res.render("login");
-    }, */
-    login: function(req, res) {
+    },
+    processLogin: function(req, res) {
         let errors = validationResult(req);
         if (errors.isEmpty()) {     // Si tenemos errores, entonces convertimos el resultado a un objeto literal y se lo pasamos a la vista (formulario + mensaje del error)
             res.render("login", {old: req.body});
         }
         else {
+            console.log(errors.mapped());
             res.render("login", {
                 errors: errors.mapped(),
                 old: req.body // Lo que escribió el usuario en el body
             })
         }
+        // Traemos usuarios del JSON
+        
+        // Validacion contraseña encriptada
+
+        // Paso 1 antes del middleware (ruta huespedes y usuarios)
+
+        /* if (errors.isEmpty()) {
+            let usersJSON = fs.readFileSync("userDataBase.json", {errors})
+            let users;
+            if (usersJSON == "") {
+                users = [];
+            } else {
+                users = JSON.parse(usersJSON);
+            } 
+            
+            for (let i=0; i < userDataBase.length; i++) {
+                if (users[i].email == req.body.email) {
+                    if (bcrypt.compareSync(req.body.password, usuarioALoguearse)) {
+                        let usuarioALoguearse = users[i];
+                        break;
+                    }
+                }
+            }
+
+            if (usuarioALoguearse == undefined) {
+                return res.render("login", {errors: [{msg: "credenciales incorrectas"}]})
+            }
+            req.session()
+        } else {
+            return res.render("login", {errors: errors});
+        } */
     },
     register: function(req, res) {
         //res.sendFile(path.resolve(__dirname, '../src/views/register.ejs'))

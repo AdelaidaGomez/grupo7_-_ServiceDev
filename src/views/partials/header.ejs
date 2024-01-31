@@ -5,13 +5,28 @@
         <img class="logo-image" src="/images/logo-principal.png" alt="Logo">
     </a>
     <!-- NavBar -->
-    <nav class="navbar">
+    <% if (locals.user) { %>
+        <nav class="navbar">
+            <a href="/">Inicio</a>
+            <a href="/services">Desarrolladores</a>
+            <a href="/services/create">Nuevo Servicio</a>
+            <a href="/services/productCart">Carrito de compras</a>
+        </nav>
+        <% } else { %>
+            <nav class="navbar">
+                <a href="/">Inicio</a>
+                <a href="/services">Desarrolladores</a>
+                <a href="/register/register">Registrarse</a>
+                <a href="/login">LogIn</a>
+            </nav>
+    <% } %>
+    <!-- <nav class="navbar">
         <a href="/">Inicio</a>
         <a href="/services">Desarrolladores</a>
-        <a href="/register">Registrarse</a>
+        <a href="/register/register">Registrarse</a>
         <a href="/login">LogIn</a>
         <a href="/services/create">Nuevo Servicio</a>
-    </nav>
+    </nav> -->
     <!-- Icons -->
     <div class="icons">
         
