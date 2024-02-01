@@ -6,6 +6,9 @@ const bycrypt = require('bcryptjs');
 // Modulo nativo para manejar las rutas de los archivos
 const path = require("path");
 
+// Requerimos session
+const session = require("express-session");
+
 // Usando recursos estáticos.
 app.use(express.static('./public'))
 // const publicFolderPath = path.resolve(__dirname, "../public")
@@ -19,6 +22,12 @@ app.set("views", path.join(__dirname, "views"));
 // 2.motor de plantilla
 app.set("view engine", "ejs");
 
+// Usamos el session
+app.use(session({
+    secret: "secreto",
+    resave: false,
+    saveUninitialized: false,
+}));
 
 //Para tomar los datos del body del formulario (service create form)
 app.use(express.urlencoded({extended: false}));

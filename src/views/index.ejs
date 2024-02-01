@@ -40,6 +40,14 @@
         </p>
         </div>
         </div>
+        
+        <div>
+        <% if (locals.usuarioLogueado) { %>
+            <div>
+                <h3>Hola <%=locals.usuarioLogueado.name%>!</h3>
+            </div>
+        <% } %>
+        </div>
 
         <!-- Hamburguesa -->
         <div class="hamburguesa">

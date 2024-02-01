@@ -1,31 +1,6 @@
 [
  {
   "id": 1,
-  "name": "diana paola orjuela",
-  "email": "paolin92@hotmail.com",
-  "password": "danna2017",
-  "confirm_pass": "danna2017",
-  "type_user": "ofrecer"
- },
- {
-  "id": 2,
-  "name": "Tatiana Mejia",
-  "email": "tatiana.mejia@gmail.com",
-  "password": "prueba_pass",
-  "confirm_pass": "rueba_pass",
-  "ofrecer_serv": true,
-  "solicitar_serv": false
- },
- {
-  "id": 3,
-  "name": "diana paola orjuela",
-  "email": "paolin92@hotmail.com",
-  "password": "danna2017",
-  "confirm_pass": "danna2017",
-  "type_user": "ofrecer"
- },
- {
-  "id": 4,
   "name": "Danna Gallego",
   "email": "danna@gmail.com",
   "password": "$2a$10$qOPn9z1zy/lN/Lvu1FAE0eatoHXq1p/ohpKYOIpp3bGmBDkR1oBi6",
@@ -34,7 +9,7 @@
   "type_user": "solicitar"
  },
  {
-  "id": 5,
+  "id": 2,
   "name": "salome lozano",
   "email": "salome@gmail.com",
   "password": "$2a$10$FLLRR6qnslXz48M4O1zsQe59aYdF8qkWpbJCH853Oj8BYz1WA8aJO",
@@ -43,7 +18,7 @@
   "type_user": "solicitar"
  },
  {
-  "id": 6,
+  "id": 3,
   "name": "Jimena lago",
   "email": "jimena@gmail.com",
   "password": "$2a$10$GmgQniO2/UGRlYQRMpb/wurFdk.oczgcymUjON8KhAAO8KTEDDAxu",

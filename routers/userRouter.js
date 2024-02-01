@@ -11,6 +11,10 @@ const userController = require('../controller/userController.js');
 // Requerimos multer para cargar archvios de imagen desde cliente a servidor
 const multer = require('multer');
 
+// MIDDLEWARES
+let guestMiddleware = require("../middlewares/guestMiddleware");
+
+
 //configuración de variable multer donde se especifi    ca ruto de almacenamiento y nombre de archivo
 const multerStorage = multer.diskStorage({
     destination: (req, file, storageDestination) => {
@@ -42,9 +46,9 @@ const validacionesLogin = [
     body("password").notEmpty().withMessage("campo vacio 2")
 ] */
 
-router.get('/', userController.login); // LOGIN. todos los servicios, recordar que como es otro archivo se inicia con / ya ue definimos en app que tiene /services 
+router.get('/', guestMiddleware, userController.login); // LOGIN. todos los servicios, recordar que como es otro archivo se inicia con / ya ue definimos en app que tiene /services 
 router.post("/", validacionesLogin, userController.processLogin); // Ruteo de validacion de login
-router.get('/register', userController.register); //Recordar que para entrar a este la ruta debe ser: Servido/services/productCart
+router.get('/register', guestMiddleware, userController.register); //Recordar que para entrar a este la ruta debe ser: Servido/services/productCart
 router.post('/register', upload.single('foto_usuario'), userController.createRegister); //se establece el metodo post para enviar los datos registrados en el formulario
 // Ruteo de formulario create
 

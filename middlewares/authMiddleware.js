@@ -1,10 +1,8 @@
 function authMiddleware(req, res, next) {
-    let user = true;
-    if (req.body) {
-        res.locals.user = usuarioALoguearse;
+    if (req.session.usuarioLogueado != undefined) {
         next();
     } else {
-        res.render("header")
+        return res.redirect("login")
     }
 }
 

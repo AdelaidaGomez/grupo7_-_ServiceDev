@@ -26,7 +26,6 @@ let userController = {
             res.render("login", {old: req.body});
         }
         else {
-            console.log(errors.mapped());
             res.render("login", {
                 errors: errors.mapped(),
                 old: req.body // Lo que escribió el usuario en el body
@@ -38,8 +37,8 @@ let userController = {
 
         // Paso 1 antes del middleware (ruta huespedes y usuarios)
 
-        /* if (errors.isEmpty()) {
-            let usersJSON = fs.readFileSync("userDataBase.json", {errors})
+        if (errors.isEmpty()) {
+            let usersJSON = fs.readFileSync("userDataBase.json", {encoding: "utf-8"})
             let users;
             if (usersJSON == "") {
                 users = [];
@@ -59,10 +58,11 @@ let userController = {
             if (usuarioALoguearse == undefined) {
                 return res.render("login", {errors: [{msg: "credenciales incorrectas"}]})
             }
-            req.session()
+            req.session.usuarioLogueado = usuarioALoguearse;
+            res.render("index");
         } else {
             return res.render("login", {errors: errors});
-        } */
+        }
     },
     register: function(req, res) {
         //res.sendFile(path.resolve(__dirname, '../src/views/register.ejs'))
@@ -89,6 +89,5 @@ let userController = {
          
     }
  }
-
 // Exportamos 
 module.exports = userController;

@@ -4,8 +4,9 @@ const router = express.Router()
 
 // Requerimos el objeto literal desde controllers
 const mainController = require('../controller/mainController.js');
+const authMiddleware = require('../middlewares/authMiddleware.js');
 
-router.get('/', mainController.mainPage);
+router.get('/', authMiddleware, mainController.mainPage);
 
 
 
