@@ -6,6 +6,8 @@ function userLoggedMiddleware(req, res, next) {
     //Si tenemos a alguien en sesion cambiamos el valor de la variable
     if (req.session.userLogged) {
         res.locals.isLogged = true
+        //Podemos pasarlo a una variable local para tener la info de sesion
+        req.locals.userLogged = req.session.userLogged
     }
 
     next()
