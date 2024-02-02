@@ -4,24 +4,53 @@
     <a href="/" class="logo">
         <img class="logo-image" src="/images/logo-principal.png" alt="Logo">
     </a>
+    <!-- Condicional verificando si el usuario ya esta logheado -->
     <!-- NavBar -->
-    <% if (locals.usuarioLogueado) { %>
+    <% if(locals.isLogged) { %>
         <nav class="navbar">
             <a href="/">Inicio</a>
             <a href="/services">Desarrolladores</a>
             <a href="/services/create">Nuevo Servicio</a>
-            <a href="/services/productCart">Carrito de compras</a>
-            <h3>Hola <%=locals.usuarioLogueado.name%>!</h3>
         </nav>
-        <% } else { %>
-            <nav class="navbar">
-                <a href="/">Inicio</a>
-                <a href="/services">Desarrolladores</a>
-                <a href="/register/register">Registrarse</a>
-                <a href="/login">LogIn</a>
-            </nav>
+        <!-- Icons -->
+        <div class="icons">
+            <div> 
+                <a href="/services/productCart"><i class="fa-solid fa-cart-shopping" id="cart-btn"></i> </a> 
+            </div>
+            <div> 
+                <i class="fa-solid fa-bars" id="allServices-btn"></i> 
+            </div>
+        </div>
+        
+    <% } else { %>
+
+        <nav class="navbar">
+            <a href="/">Inicio</a>
+            <a href="/services">Desarrolladores</a>
+            <a href="/register/register">Registrarse</a>
+            <a href="/login">LogIn</a>
+        </nav>
+
+        <!-- Icons -->
+        <div class="icons">
+            <div> 
+                <i class="fa-solid fa-bars" id="allServices-btn"></i> 
+            </div>
+        </div>
+
     <% } %>
-    <!-- <nav class="navbar">
+
+    
+    
+        <!-- <nav class="navbar">
+            <a href="/">Inicio</a>
+            <a href="/services">Desarrolladores</a>
+            <a href="/services/create">Nuevo Servicio</a>
+            <a href="/services/productCart">Carrito de compras</a>
+            
+        </nav>
+
+    <nav class="navbar">
         <a href="/">Inicio</a>
         <a href="/services">Desarrolladores</a>
         <a href="/register/register">Registrarse</a>
@@ -29,7 +58,7 @@
         <a href="/services/create">Nuevo Servicio</a>
     </nav> -->
     <!-- Icons -->
-    <div class="icons">
+    <!-- <div class="icons">
         
         <div> 
             <a href="/services/productCart"><i class="fa-solid fa-cart-shopping" id="cart-btn"></i> </a> 
@@ -37,4 +66,4 @@
         <div> 
             <i class="fa-solid fa-bars" id="allServices-btn"></i> 
         </div>
-    </div>
+    </div> -->

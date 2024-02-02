@@ -12,6 +12,10 @@ let servicesController = {
         res.render('services', {services: services});
     },
     productCart: function(req, res) {
+        //Traemos la informacion del usuario desde el session cuando hacemos el processLogIn desde usercontroller
+        return res.render('productCart', {
+            user: req.session.userLogged
+        })
       res.render('productCart');
     },
     detail: function(req, res) {

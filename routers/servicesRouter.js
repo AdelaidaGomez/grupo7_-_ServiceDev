@@ -4,6 +4,8 @@ const router = express.Router()
 
 // Requerimos el objeto literal para products desde controllers
 const servicesController = require('../controller/servicesController.js');
+// middleWare no esta logheado no habilitar productCart
+let authMiddleware = require("../middlewares/authMiddleware");
 
 // Requerimos multer y lo guardamos en una constante
 const multer = require("multer");
@@ -27,7 +29,7 @@ const uploadFile = multer({storage: storage});
 
 
 router.get('/', servicesController.allProducts); // todos los servicios, recordar que como es otro archivo se inicia con / ya ue definimos en app que tiene /services 
-router.get('/productCart', servicesController.productCart); //Recordar que para entrar a este la ruta debe ser: Servidor/services/productCart
+router.get('/productCart', authMiddleware, servicesController.productCart); //Recordar que para entrar a este la ruta debe ser: Servidor/services/productCart
 
 router.get('/serviceDetail/:id', servicesController.detail)
 

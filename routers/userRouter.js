@@ -11,8 +11,9 @@ const userController = require('../controller/userController.js');
 // Requerimos multer para cargar archvios de imagen desde cliente a servidor
 const multer = require('multer');
 
-// MIDDLEWARES
+// middleWare si esta logheado no habilitar logIn ni register
 let guestMiddleware = require("../middlewares/guestMiddleware");
+
 
 
 //configuración de variable multer donde se especifi    ca ruto de almacenamiento y nombre de archivo
@@ -47,11 +48,11 @@ const validacionesLogin = [
 ] */
 
 router.get('/', guestMiddleware, userController.login); // LOGIN. todos los servicios, recordar que como es otro archivo se inicia con / ya ue definimos en app que tiene /services 
-router.post("/", validacionesLogin, userController.processLogin); // Ruteo de validacion de login
+router.post('/', validacionesLogin, userController.processLogin); // Ruteo de validacion de login
 // router.get('/register', guestMiddleware, userController.register); //Ruta register
+router.get('/', userController.logOut) // Proceso de LogOut
 
-
-router.get('/register', userController.register) // ruta para registro nuevo usuario GET formaulario
+router.get('/register', guestMiddleware, userController.register) // ruta para registro nuevo usuario GET formaulario
 router.post('/create', upload.single('foto_usuario'), userController.createRegister); //se establece el metodo post para enviar los datos registrados en el formulario
 
 

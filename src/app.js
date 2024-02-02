@@ -2,9 +2,12 @@
 const express = require("express");
 const app = express();
 const bycrypt = require('bcryptjs');
-// Para poder usar los metodos PUT y DELETE
-const methodOverride = require("method-override");
+const methodOverride = require("method-override"); // Para poder usar los metodos PUT y DELETE
+const session = require("express-session"); // Requerimos session
+const path = require("path"); // Modulo nativo para manejar las rutas de los archivos
 
+//Middleware para manipular la barra de navegacion
+const userLoggedMiddleware = require('../middlewares/userLoggedMiddleware')
 
 
 //Para tomar los datos del body del formulario (service create form)
@@ -12,13 +15,14 @@ app.use(express.urlencoded({extended: false})); //Tomar datos del body
 app.use(express.json()); //Tomar datos del body
 app.use(methodOverride("_method")); //Para metodos PUT y DELETE
 app.use(express.static('./public')); // Usando recursos estáticos.
+// Usamos el session
+app.use(session({
+    secret: "secreto",
+    resave: false,
+    saveUninitialized: false,
+}));
 
-// Modulo nativo para manejar las rutas de los archivos
-const path = require("path");
-
-// Requerimos session
-const session = require("express-session");
-
+app.use(userLoggedMiddleware) // debe ir aca por que va despues de la sesion
 
 // const publicFolderPath = path.resolve(__dirname, "../public")
 // app.use(express.static(publicFolderPath));
@@ -30,14 +34,6 @@ app.set("views", path.join(__dirname, "views"));
 // 1. variable de las vistas y 
 // 2.motor de plantilla
 app.set("view engine", "ejs");
-
-// Usamos el session
-app.use(session({
-    secret: "secreto",
-    resave: false,
-    saveUninitialized: false,
-}));
-
 
 
 

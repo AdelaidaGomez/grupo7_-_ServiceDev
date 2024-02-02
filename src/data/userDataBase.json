@@ -6,5 +6,21 @@
   "password": "$2a$10$.d.oR/r7sJtYZGRW9FfAQOi3jgbc7uHPmYnCBzcbCzsR.2yzYP/re",
   "confirm_pass": "$2a$10$nn5qVPI86/EAR99b0j9aEOzcBU2SQoNeE5Qg6yEkHw.nEZ97DkWm2",
   "type_user": "ofrecer"
+ },
+ {
+  "id": 2,
+  "name": "Adelaida Gomez 22",
+  "email": "Ejemplo@gmail.com",
+  "password": "$2a$10$RiYMKY92.lTzBBB89lhf1u70/YsFikvLczxvbRvAENs6mez9QO6BK",
+  "confirm_pass": "$2a$10$R9ovafVYTCnOqxXkab0cQufJoaQtxreLeW92uSWhFE/rkq348ivi.",
+  "type_user": "ofrecer"
+ },
+ {
+  "id": 3,
+  "name": "Ejemplo3",
+  "email": "Ejemplo3@gmail.com",
+  "password": "$2a$10$/BfSehRfuKhPrqjv5616TuW7s/DtnknynCA7kNOPYYhavMbtaZXQu",
+  "confirm_pass": "$2a$10$VlS98NOptWSjfo9YqAopD.P4XS5E6lD7CWAcJKUIsm6tcnE0InUdS",
+  "type_user": "ofrecer"
  }
 ]
