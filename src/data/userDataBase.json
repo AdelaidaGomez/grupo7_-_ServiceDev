@@ -17,10 +17,20 @@
  },
  {
   "id": 3,
-  "name": "Ejemplo3",
+  "name": "ejemplo3",
   "email": "Ejemplo3@gmail.com",
-  "password": "$2a$10$/BfSehRfuKhPrqjv5616TuW7s/DtnknynCA7kNOPYYhavMbtaZXQu",
-  "confirm_pass": "$2a$10$VlS98NOptWSjfo9YqAopD.P4XS5E6lD7CWAcJKUIsm6tcnE0InUdS",
-  "type_user": "ofrecer"
+  "password": "$2a$10$KD/1GFY5yntETa9PPf97KeCsGgevLmGXpx8PBlum.qPn8WU.HIFfq",
+  "confirm_pass": "$2a$10$Oau6/V.i32emOucTEsl3se9E5v7ETSTzX9D68L4pjTAjw/EbDFZKu",
+  "type_user": "ofrecer",
+  "avatar": "avatar-1706909640296.jpeg"
+ },
+ {
+  "id": 4,
+  "name": "Adelaida Gomez",
+  "email": "adelaida1@gmail.com",
+  "password": "$2a$10$LlHALAbKTVfehrn/liTNVOUpen2DNZz8ZI2fQl2.FHri5Iw27slDG",
+  "confirm_pass": "$2a$10$zdAVpccGENR9xjOKLOnvg.pHkXuB6cpQTW.RfJBmnomNCKO0eT1MK",
+  "type_user": "ofrecer",
+  "avatar": "avatar-1706912584507.avif"
  }
 ]

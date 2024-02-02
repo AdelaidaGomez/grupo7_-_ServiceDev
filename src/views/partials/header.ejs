@@ -16,12 +16,17 @@
         <div class="icons">
             <div> 
                 <a href="/services/productCart"><i class="fa-solid fa-cart-shopping" id="cart-btn"></i> </a> 
-            </div>
-            <div> 
-                <i class="fa-solid fa-bars" id="allServices-btn"></i> 
+
+                <div class="userInfo">
+                    <img src="/images/fotoPerfilusuarios/<%= locals.userLogged.avatar %>" alt="">
+                    <p><%= locals.userLogged.name%> </p>
+                </div>
             </div>
         </div>
+         
         
+        
+
     <% } else { %>
 
         <nav class="navbar">
@@ -30,40 +35,4 @@
             <a href="/register/register">Registrarse</a>
             <a href="/login">LogIn</a>
         </nav>
-
-        <!-- Icons -->
-        <div class="icons">
-            <div> 
-                <i class="fa-solid fa-bars" id="allServices-btn"></i> 
-            </div>
-        </div>
-
     <% } %>
-
-    
-    
-        <!-- <nav class="navbar">
-            <a href="/">Inicio</a>
-            <a href="/services">Desarrolladores</a>
-            <a href="/services/create">Nuevo Servicio</a>
-            <a href="/services/productCart">Carrito de compras</a>
-            
-        </nav>
-
-    <nav class="navbar">
-        <a href="/">Inicio</a>
-        <a href="/services">Desarrolladores</a>
-        <a href="/register/register">Registrarse</a>
-        <a href="/login">LogIn</a>
-        <a href="/services/create">Nuevo Servicio</a>
-    </nav> -->
-    <!-- Icons -->
-    <!-- <div class="icons">
-        
-        <div> 
-            <a href="/services/productCart"><i class="fa-solid fa-cart-shopping" id="cart-btn"></i> </a> 
-        </div>
-        <div> 
-            <i class="fa-solid fa-bars" id="allServices-btn"></i> 
-        </div>
-    </div> -->

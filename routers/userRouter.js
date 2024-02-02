@@ -7,33 +7,26 @@ const path = require('path');
 
 // Requerimos el objeto literal para products desde controllers
 const userController = require('../controller/userController.js');
-
-// Requerimos multer para cargar archvios de imagen desde cliente a servidor
-const multer = require('multer');
+const multer = require('multer'); // Requerimos multer para cargar archvios de imagen desde cliente a servidor
 
 // middleWare si esta logheado no habilitar logIn ni register
 let guestMiddleware = require("../middlewares/guestMiddleware");
 
 
 
-//configuración de variable multer donde se especifi    ca ruto de almacenamiento y nombre de archivo
+//configuración de variable multer donde se especifica ruto de almacenamiento y nombre de archivo
 const multerStorage = multer.diskStorage({
-    destination: (req, file, storageDestination) => {
-        const folder = path.join(__dirname, '../public/images/registerImage');
-        storageDestination(null, folder)
+    destination: (req, file, cb) => {
+        cb(null, path.join(__dirname, '../public/images/fotoPerfilusuarios'))
     },
-   
-    /*fielname: (req, file, nameImage ) => {
-        const image = file.fieldname + "-" + Date.now() + path.extname(file.originalname);
-        nameImage(null,image);
-    },*/
-    filename: function(req, file, imgName) {
-        // Definimos el nombre que tendrán los archivos
-        imgName(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname));
+    filename: (req, file, cb) => {
+        console.log(file);
+        const newFileName = 'avatar-' + Date.now() + path.extname(file.originalname);
+        cb(null, newFileName);
     }
-}  )
-
-const upload = multer({storage : multerStorage});
+});
+//Ejecutamos la configuracion de multer
+const upload = multer({storage: multerStorage})
 
 // VALIDACIONES
 const {check} = require("express-validator");
@@ -53,7 +46,7 @@ router.post('/', validacionesLogin, userController.processLogin); // Ruteo de va
 router.get('/', userController.logOut) // Proceso de LogOut
 
 router.get('/register', guestMiddleware, userController.register) // ruta para registro nuevo usuario GET formaulario
-router.post('/create', upload.single('foto_usuario'), userController.createRegister); //se establece el metodo post para enviar los datos registrados en el formulario
+router.post('/create', upload.single('avatar'), userController.createRegister); //se establece el metodo post para enviar los datos registrados en el formulario
 
 
 // Exportamos Router

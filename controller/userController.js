@@ -75,7 +75,6 @@ let userController = {
 
         //Buscar si el usuario ya esta registrado para no volverlo a registrar con el metodo findByfield comparando el email de la BD con el email que nos llego del body
         let userInDB = User.findByField('email', req.body.email);
-
         //Hacemos una validacion diciendo que si el usuario ya esta en el registro retornamos un error
         if (userInDB) {
             //Enviamos el error FALTA esto es un template
@@ -94,7 +93,7 @@ let userController = {
             ...req.body,  //Requerimos todo lo del body
             password: bcrypt.hashSync(req.body.password, 10), //Incriptmos la contrasena 
             confirm_pass: bcrypt.hashSync(req.body.password, 10), //Incriptmos la contrasena 
-            foto_usuario: req.file.fileName //Para foto de perfil
+            avatar: req.file.filename //Para foto de perfil
         }
         //Guardamos al usuario que creamos en la variable para usarla despues
         let userCreated = User.create(userToCreate)

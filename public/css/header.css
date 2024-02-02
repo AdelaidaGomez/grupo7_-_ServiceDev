@@ -40,7 +40,7 @@ body {
     border-bottom: .1rem solid #569ddc;
     padding-bottom: .5rem;
 }
-/* Header icons */
+/* Header icon */
 .header .icons {
     display: flex;
 }
@@ -48,10 +48,30 @@ body {
     color: #fff;
     cursor: pointer;
     font-size: 2.0rem;
-    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .header .icons div:hover{
     color: #569ddc;
+}
+.header .icons a {
+    padding-right: 3rem;
+}
+.header .userInfo {
+    display: block;
+    text-align: center;
+}
+.header p {
+    color: white;
+    padding-left: 1rem;
+    font-size: smaller;
+}
+.header img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
 }
 /* esconder logo dependiendo de desktop */
 #allServices.allServices-btn{
