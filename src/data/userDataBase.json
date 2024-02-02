@@ -25,5 +25,23 @@
   "confirm_pass": "$2a$10$fpyvuI.2OEY8Oj3soz1vsuDQkoQS7vD2sP1sx003x6qiESKAqWYai",
   "foto_usuario": "foto_usuario-1705889616394.jpg",
   "type_user": "ofrecer"
+ },
+ {
+  "id": 4,
+  "name": "Adelaida Gomez",
+  "email": "adelaida@gmail.com",
+  "password": "$2a$10$0NRzcWFV6UAhCvKMuX1EeeWHanOiGGMHNvo9CQ2xo.t515dA5wSqa",
+  "confirm_pass": "$2a$10$Yjm4Zt4P3bUzMm/JYKKX0uoftLhfnHtoUOTb/SlILhSl5cF0mSKNO",
+  "foto_usuario": "foto_usuario-1706836810446.svg",
+  "type_user": "ofrecer"
+ },
+ {
+  "id": 5,
+  "name": "Adelaida Gomez 22",
+  "email": "adelaida@gmail.com",
+  "password": "$2a$10$nOZHsID68n97C4aum4JmiuhWgf44oYM4ta187LT7WAALQz05/wBn6",
+  "confirm_pass": "$2a$10$VsfMLZQOPgfb0VQjYJEaT.tm.ZNdu4oIgkg9r8JuChTicsPCgYEz2",
+  "foto_usuario": "foto_usuario-1706841411255.svg",
+  "type_user": "ofrecer"
  }
 ]

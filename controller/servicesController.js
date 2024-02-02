@@ -79,6 +79,18 @@ let servicesController = {
         // Redirecciono a la pagina de productos
         res.redirect("/services");
 
+    },
+    destroy: (req, res) => {
+        let services = JSON.parse(fs.readFileSync(servicesFilePath, 'utf-8'));
+
+        //eliminar
+        services = services.filter(service => {
+            //Creamos un array nuevo menos en el que estamos parados
+            return service.id != req.params.id
+        })
+        fs.writeFileSync(servicesFilePath, JSON.stringify(services, null, " "));
+        //Hacemos el redirect
+        res.redirect('/services')
     }
 };
   

@@ -39,5 +39,7 @@ router.post("/create", uploadFile.single("image"), servicesController.processCre
 router.get("/edit/:id", servicesController.edit) // Para devolverle al usuario el formulario para editar servicio
 router.put("/edit/:id", uploadFile.single("image"), servicesController.processEdit) // Para actualizar el producto editado
 
+router.delete("/delete/:id", servicesController.destroy) //Borrar un servicio
+
 // Exportamos Router
 module.exports = router;

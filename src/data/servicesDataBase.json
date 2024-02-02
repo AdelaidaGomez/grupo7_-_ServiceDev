@@ -57,49 +57,6 @@
   "price": "12.06"
  },
  {
-  "id": 8,
-  "name": "Juan",
-  "description": "estudiante de dH",
-  "image": "image-1705518719925.jpg",
-  "especialidad": "fullstack",
-  "price": "30000"
- },
- {
-  "id": 9,
-  "name": "martin",
-  "description": "estudiante",
-  "image": "image-1705519070062.jpg",
-  "category": "",
-  "price": "30000"
- },
- {
-  "id": 10,
-  "name": "Hola",
-  "description": "",
-  "image": "image-1705519172525.jpg",
-  "category": "",
-  "colors": "",
-  "price": "20000"
- },
- {
-  "id": 11,
-  "name": "Juana",
-  "description": "estudiante",
-  "image": "image-1705519199210.jpg",
-  "category": "",
-  "colors": "",
-  "price": "20000"
- },
- {
-  "id": 12,
-  "name": "Pepep",
-  "description": "lalalala",
-  "image": "image-1706150249677.jpg",
-  "category": "",
-  "especialidad": "SQL",
-  "price": "1000"
- },
- {
   "id": 13,
   "name": "Desarrollador junior back",
   "description": "Ingeniero de Software con especializacion en desarrollo java",
@@ -107,14 +64,5 @@
   "category": "in-sale",
   "colors": "Backend",
   "price": "150"
- },
- {
-  "id": 14,
-  "name": "santiago rojas",
-  "description": "Diseñador UX/UI",
-  "image": "image-1705889226272.jpg",
-  "category": "in-sale",
-  "colors": "Diseñador",
-  "price": "200"
  }
 ]

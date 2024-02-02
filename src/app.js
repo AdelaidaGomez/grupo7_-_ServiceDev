@@ -2,6 +2,16 @@
 const express = require("express");
 const app = express();
 const bycrypt = require('bcryptjs');
+// Para poder usar los metodos PUT y DELETE
+const methodOverride = require("method-override");
+
+
+
+//Para tomar los datos del body del formulario (service create form)
+app.use(express.urlencoded({extended: false})); //Tomar datos del body
+app.use(express.json()); //Tomar datos del body
+app.use(methodOverride("_method")); //Para metodos PUT y DELETE
+app.use(express.static('./public')); // Usando recursos estáticos.
 
 // Modulo nativo para manejar las rutas de los archivos
 const path = require("path");
@@ -9,8 +19,7 @@ const path = require("path");
 // Requerimos session
 const session = require("express-session");
 
-// Usando recursos estáticos.
-app.use(express.static('./public'))
+
 // const publicFolderPath = path.resolve(__dirname, "../public")
 // app.use(express.static(publicFolderPath));
 
@@ -29,13 +38,8 @@ app.use(session({
     saveUninitialized: false,
 }));
 
-//Para tomar los datos del body del formulario (service create form)
-app.use(express.urlencoded({extended: false}));
-app.use(express.json());
 
-// Para poder usar los metodos PUT y DELETE
-const methodOverride = require("method-override");
-app.use(methodOverride("_method"));
+
 
 // Manejando rutas con MVC
 // Requerimos los routers que vamos a necesitar (Uno por cada archivo)

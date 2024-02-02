@@ -13,6 +13,7 @@ const userFilePath = path.join(__dirname, '../src/data/userDataBase.json')
 
 // Requerimos el atributo "validation result" del modulo "express validator" para validaciones login
 const {validationResult} = require("express-validator");
+const { log } = require('console');
 
 // Creamos el objeto literal que nos permite navegar dentro del home en diferentes items
 let userController = {
@@ -45,6 +46,7 @@ let userController = {
             } else {
                 users = JSON.parse(usersJSON);
             } 
+            console.log(users);
             
             for (let i=0; i < userDataBase.length; i++) {
                 if (users[i].email == req.body.email) {
@@ -69,24 +71,25 @@ let userController = {
         res.render('register')
     },
        createRegister: function(req, res) {
-        //res.send(req.body)
-        // Traigo constante de servicios y transformo al JSON en un array
-         const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
-         // Incluyo la info del formulario y creo el objeto literal a sumar al array
-         const newUser = {
-             id: users[users.length - 1].id + 1,   // Tomo el ultimo usuario, consulto su id y le sumo 1.
-             name: req.body.name,
-             email: req.body.email,
-             password: bcrypt.hashSync(req.body.password,10), 
-             confirm_pass: bcrypt.hashSync(req.body.confirm_pass,10),
-             foto_usuario: req.file.filename,
-             type_user: req.body.type_user,
-           
-         }
-         users.push(newUser); // Pusheo el objeto literal al array de usuarios
-         fs.writeFileSync(userFilePath, JSON.stringify(users, null, " ")); // Transformo a JSON y sobreescribo el JSON
-         res.redirect("/"); // Mostramos al usuario la vista principal
-         
+        //Traemos constante del register y lo convertimos en un array
+        const users =JSON.parse(fs.readFileSync(userFilePath, 'utf-8'))
+        //Traemos la informacion del formulario y creamos objeto literal a sumar al array
+        const newUser = {
+            id: users[users.length - 1].id + 1,   // Tomo el ultimo usuario, consulto su id y le sumo 1.
+            name: req.body.name,
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password,10), 
+            confirm_pass: bcrypt.hashSync(req.body.confirm_pass,10),
+            foto_usuario: req.file.filename,
+            type_user: req.body.type_user,
+        }
+        //Pusheamos el objeto literal al array
+        users.push(newUser)
+        //Transformamos a JSON
+        fs.writeFileSync(userFilePath, JSON.stringify(users, null, " "))
+        //Redirect al usuario
+        res.redirect("/services")
+        
     }
  }
 // Exportamos 
