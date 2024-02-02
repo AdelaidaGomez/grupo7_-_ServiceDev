@@ -1,47 +1,10 @@
 [
  {
   "id": 1,
-  "name": "Danna Gallego",
-  "email": "danna@gmail.com",
-  "password": "$2a$10$qOPn9z1zy/lN/Lvu1FAE0eatoHXq1p/ohpKYOIpp3bGmBDkR1oBi6",
-  "confirm_pass": "$2a$10$EoYhtFDjPDC71qvakhkKY.bpIE2qwEUOP4Y0jJTqfrb24SpfIRrv.",
-  "foto_usuario": "68306a3ccde376a7d20121ded26ec1b6",
-  "type_user": "solicitar"
- },
- {
-  "id": 2,
-  "name": "salome lozano",
-  "email": "salome@gmail.com",
-  "password": "$2a$10$FLLRR6qnslXz48M4O1zsQe59aYdF8qkWpbJCH853Oj8BYz1WA8aJO",
-  "confirm_pass": "$2a$10$YXG1Lh03xdHuf7ShrEVj0OVywsXAbru/lowNtUeYuQ7ueRIhuYg7K",
-  "foto_usuario": "3d42b1857d22502e4d0028f0bb291e07",
-  "type_user": "solicitar"
- },
- {
-  "id": 3,
-  "name": "Jimena lago",
-  "email": "jimena@gmail.com",
-  "password": "$2a$10$GmgQniO2/UGRlYQRMpb/wurFdk.oczgcymUjON8KhAAO8KTEDDAxu",
-  "confirm_pass": "$2a$10$fpyvuI.2OEY8Oj3soz1vsuDQkoQS7vD2sP1sx003x6qiESKAqWYai",
-  "foto_usuario": "foto_usuario-1705889616394.jpg",
-  "type_user": "ofrecer"
- },
- {
-  "id": 4,
   "name": "Adelaida Gomez",
   "email": "adelaida@gmail.com",
-  "password": "$2a$10$0NRzcWFV6UAhCvKMuX1EeeWHanOiGGMHNvo9CQ2xo.t515dA5wSqa",
-  "confirm_pass": "$2a$10$Yjm4Zt4P3bUzMm/JYKKX0uoftLhfnHtoUOTb/SlILhSl5cF0mSKNO",
-  "foto_usuario": "foto_usuario-1706836810446.svg",
-  "type_user": "ofrecer"
- },
- {
-  "id": 5,
-  "name": "Adelaida Gomez 22",
-  "email": "adelaida@gmail.com",
-  "password": "$2a$10$nOZHsID68n97C4aum4JmiuhWgf44oYM4ta187LT7WAALQz05/wBn6",
-  "confirm_pass": "$2a$10$VsfMLZQOPgfb0VQjYJEaT.tm.ZNdu4oIgkg9r8JuChTicsPCgYEz2",
-  "foto_usuario": "foto_usuario-1706841411255.svg",
+  "password": "$2a$10$.d.oR/r7sJtYZGRW9FfAQOi3jgbc7uHPmYnCBzcbCzsR.2yzYP/re",
+  "confirm_pass": "$2a$10$nn5qVPI86/EAR99b0j9aEOzcBU2SQoNeE5Qg6yEkHw.nEZ97DkWm2",
   "type_user": "ofrecer"
  }
 ]
