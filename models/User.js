@@ -4,7 +4,6 @@ const fs = require('fs'); //Requerimos libreria fs
 const { all } = require('../routers/mainPageRouter');
 
 
-
 const User = {
     //Traemos el path para userDataBase.json
     fileName: './src/data/userDataBase.json',

@@ -34,6 +34,8 @@ const validacionesLogin = [
     check("email").notEmpty().withMessage("Debe completar el campo de email").bail().isEmail().withMessage("El email no es válido"),
     check("password").notEmpty().withMessage("Debe completar el campo de contraseña").bail().isLength({min: 5})
 ]
+//FALTA validacion register y validacion crear nuevo servicio
+
 /* const {body} = require("express-validator");
 const validacionesLogin = [
     body("email").notEmpty().withMessage("campo vacio"),

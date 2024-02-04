@@ -2,35 +2,10 @@
  {
   "id": 1,
   "name": "Adelaida Gomez",
-  "email": "adelaida@gmail.com",
-  "password": "$2a$10$.d.oR/r7sJtYZGRW9FfAQOi3jgbc7uHPmYnCBzcbCzsR.2yzYP/re",
-  "confirm_pass": "$2a$10$nn5qVPI86/EAR99b0j9aEOzcBU2SQoNeE5Qg6yEkHw.nEZ97DkWm2",
-  "type_user": "ofrecer"
- },
- {
-  "id": 2,
-  "name": "Adelaida Gomez 22",
-  "email": "Ejemplo@gmail.com",
-  "password": "$2a$10$RiYMKY92.lTzBBB89lhf1u70/YsFikvLczxvbRvAENs6mez9QO6BK",
-  "confirm_pass": "$2a$10$R9ovafVYTCnOqxXkab0cQufJoaQtxreLeW92uSWhFE/rkq348ivi.",
-  "type_user": "ofrecer"
- },
- {
-  "id": 3,
-  "name": "ejemplo3",
-  "email": "Ejemplo3@gmail.com",
-  "password": "$2a$10$KD/1GFY5yntETa9PPf97KeCsGgevLmGXpx8PBlum.qPn8WU.HIFfq",
-  "confirm_pass": "$2a$10$Oau6/V.i32emOucTEsl3se9E5v7ETSTzX9D68L4pjTAjw/EbDFZKu",
+  "email": "Adelaida@gmal.com",
+  "password": "$2a$10$OfwtndJE8eqcb01dAp6V5OryuokgUds5I4E5LlJE79q9ZT8iZ74bW",
+  "confirm_pass": "$2a$10$1/zQnsEOa8.Xbq21uai6BehSExvbKpQ/hA30Qk1mi1ePFDmOQnA4q",
   "type_user": "ofrecer",
-  "avatar": "avatar-1706909640296.jpeg"
- },
- {
-  "id": 4,
-  "name": "Adelaida Gomez",
-  "email": "adelaida1@gmail.com",
-  "password": "$2a$10$LlHALAbKTVfehrn/liTNVOUpen2DNZz8ZI2fQl2.FHri5Iw27slDG",
-  "confirm_pass": "$2a$10$zdAVpccGENR9xjOKLOnvg.pHkXuB6cpQTW.RfJBmnomNCKO0eT1MK",
-  "type_user": "ofrecer",
-  "avatar": "avatar-1706912584507.avif"
+  "avatar": "avatar-1707088111829.jpeg"
  }
 ]

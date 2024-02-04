@@ -55,14 +55,5 @@
   "category": "",
   "especialidad": "Desarroladora Seguridad",
   "price": "12.06"
- },
- {
-  "id": 13,
-  "name": "Desarrollador junior back",
-  "description": "Ingeniero de Software con especializacion en desarrollo java",
-  "image": "image-1705875219149.jpg",
-  "category": "in-sale",
-  "colors": "Backend",
-  "price": "150"
  }
 ]

@@ -1,3 +1,4 @@
+//1. Middleware de app global
 //Middleware de aplicacion para modificar el menu de arriba y no mostrar las opciones register, logIn o Productcart
 function userLoggedMiddleware(req, res, next) {
     //Controla si muestra o no alguna parte de la barra de navegacion como una variable local

@@ -41,7 +41,7 @@ let userController = {
             if (isOkThePassword) {
                 //Borramos la propiedad password para no mantener en sesion su password
                 delete userToLogin.password
-                //Guardamos al usuario en session FALTA
+                //Guardamos al usuario en session
                 req.session.userLogged = userToLogin
 
                 return res.redirect('/productCart')
@@ -50,7 +50,7 @@ let userController = {
             return res.render("login", {
                 errors: {
                     email: {
-                        msg: "Las credenciales son incorrectas"
+                        msg: "Contraseña Incorrecta"
                     }
                 }
             })
@@ -59,7 +59,7 @@ let userController = {
         return res.render("login", {
             errors: {
                 email: {
-                    msg: "No se encuentra este emai en nuestra BD"
+                    msg: "Este email no esta registrado"
                 }
             }
         });
@@ -77,13 +77,14 @@ let userController = {
         let userInDB = User.findByField('email', req.body.email);
         //Hacemos una validacion diciendo que si el usuario ya esta en el registro retornamos un error
         if (userInDB) {
-            //Enviamos el error FALTA esto es un template
+            //Enviamos el error
             return res.render('register', {
                 errors: {
                     email: {
                        msg: "Este email ya esta registrado"
                     }
                 },
+                //Recuperar los datos que estaban bien en el registro
                 oldData: req.body
             })
         }
