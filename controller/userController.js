@@ -31,38 +31,50 @@ let userController = {
         //     })
         // }
         
-        //Buscamos al usuario que se quiere loguear
+        //Buscamos al usuario que se quiere loguear y lo guardamos en la variable userToLogin
         let userToLogin = User.findByField('email', req.body.email)
-        //Hacemos una validacion para ver si el usuario que se quiere loguear ya esta registrado
-        if (userToLogin) {
-            //como el password esta haseado debemos compararlo con compareSync
-            let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password)
-            //Si encontramos al usaurio verificamos la contrasena sea correcta
-            if (isOkThePassword) {
-                //Borramos la propiedad password para no mantener en sesion su password
-                delete userToLogin.password
-                //Guardamos al usuario en session
-                req.session.userLogged = userToLogin
+        
+        let errors = validationResult(req);
+        // Si no hay errores en los campos de login, entonces pasamos a la validacion
+        if(errors.isEmpty()) {            
+            //Hacemos la validacion para ver si el usuario que se quiere loguear ya esta registrado
+            if (userToLogin) {
+                //como el password esta haseado debemos compararlo con compareSync
+                let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password)
+                //Si encontramos al usaurio verificamos la contrasena sea correcta
+                if (isOkThePassword) {
+                    //Borramos la propiedad password para no mantener en sesion su password
+                    delete userToLogin.password
+                    //Guardamos al usuario en session
+                    req.session.userLogged = userToLogin
 
-                return res.redirect('/productCart')
+                    return res.redirect('/productCart')
+                }
+                //Si no es a contrasena correcta
+                return res.render("login", {
+                    errors: {
+                        email: {
+                            msg: "Contraseña Incorrecta"
+                        }
+                    }
+                })
             }
-            //Si no es a contrasena correcta
+            //Si no tenemos al usuario registrado mandamos al usuario a la misma vista pero con los errores
             return res.render("login", {
                 errors: {
                     email: {
-                        msg: "Contraseña Incorrecta"
+                        msg: "Este email no esta registrado"
                     }
                 }
+            });
+        } 
+        // Si hay errores en los campos del login, entonces renderizamos la vista de login mostrando el/los mensaje/s de error/es
+        else {
+            res.render("login", {
+                errors: errors.mapped(),
+                old: req.body // Lo que escribió el usuario en el body
             })
         }
-        //Si no tenemos al usuario registrado mandamos al usuario a la misma vista pero con los errores
-        return res.render("login", {
-            errors: {
-                email: {
-                    msg: "Este email no esta registrado"
-                }
-            }
-        });
     },
 
     register: function(req, res) {

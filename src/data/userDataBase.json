@@ -7,5 +7,14 @@
   "confirm_pass": "$2a$10$1/zQnsEOa8.Xbq21uai6BehSExvbKpQ/hA30Qk1mi1ePFDmOQnA4q",
   "type_user": "ofrecer",
   "avatar": "avatar-1707088111829.jpeg"
+ },
+ {
+  "id": 2,
+  "name": "Martin Haimovich",
+  "email": "mhaimov1995@gmail.com",
+  "password": "$2a$10$wE0B5ruvSnCAb55hLtf6G.z.Wd23Ioq8y3wa7vCGktwOubLLWlCIW",
+  "confirm_pass": "$2a$10$Xk/zurCfB1jl/XE0Ag.yQOSLAokGRZZLKlQl1ldBQujfUwKaBCmGS",
+  "type_user": "ofrecer",
+  "avatar": "avatar-1707157827804.jpg"
  }
 ]

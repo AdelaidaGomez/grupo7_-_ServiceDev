@@ -29,10 +29,10 @@ const multerStorage = multer.diskStorage({
 const upload = multer({storage: multerStorage})
 
 // VALIDACIONES
-const {check} = require("express-validator");
+const {body} = require("express-validator");
 const validacionesLogin = [
-    check("email").notEmpty().withMessage("Debe completar el campo de email").bail().isEmail().withMessage("El email no es válido"),
-    check("password").notEmpty().withMessage("Debe completar el campo de contraseña").bail().isLength({min: 5})
+    body("email").notEmpty().withMessage("Debe completar el campo de email").bail().isEmail().withMessage("El email no es válido"),
+    body("password").notEmpty().withMessage("Debe completar el campo de contraseña").bail().isLength({min: 8})
 ]
 //FALTA validacion register y validacion crear nuevo servicio
 
