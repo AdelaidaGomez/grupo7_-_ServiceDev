@@ -33,6 +33,25 @@ const {body} = require("express-validator");
 const validacionesLogin = [
     body("email").notEmpty().withMessage("Debe completar el campo de email").bail().isEmail().withMessage("El email no es válido"),
     body("password").notEmpty().withMessage("Debe completar el campo de contraseña").bail().isLength({min: 8})
+];
+
+const validacionesRegister = [
+    body("name").notEmpty().withMessage("Debe completar el campo de nombre y apellido"),
+    body("confirm_pass").notEmpty().withMessage("Debe completar el campo de contraseña").bail().isLength({min: 8}),
+    body("avatar")
+        .custom((value, {req}) => {
+            let file = req.file;
+            let acceptedExtensions = [".jpg", ".png", ".gif"];
+            if (!file) {
+                throw new Error ("Debe subir una imagen");
+            } else {
+                let fileExtension = path.extname(file.originalname);
+                if (!acceptedExtensions.includes(fileExtension)) {
+                    throw new Error ("Las extensiones permitidas son: .jpg, .png y .gif")
+                }
+            }
+            return true;
+        })
 ]
 //FALTA validacion register y validacion crear nuevo servicio
 
@@ -48,7 +67,7 @@ router.post('/', validacionesLogin, userController.processLogin); // Ruteo de va
 router.get('/', userController.logOut) // Proceso de LogOut
 
 router.get('/register', guestMiddleware, userController.register) // ruta para registro nuevo usuario GET formaulario
-router.post('/create', upload.single('avatar'), userController.createRegister); //se establece el metodo post para enviar los datos registrados en el formulario
+router.post('/create', upload.single('avatar'), validacionesLogin, validacionesRegister, userController.createRegister); //se establece el metodo post para enviar los datos registrados en el formulario
 
 
 // Exportamos Router

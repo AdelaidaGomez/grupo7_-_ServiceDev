@@ -86,32 +86,42 @@ let userController = {
         //Proceso de validacion FALTA
 
         //Buscar si el usuario ya esta registrado para no volverlo a registrar con el metodo findByfield comparando el email de la BD con el email que nos llego del body
-        let userInDB = User.findByField('email', req.body.email);
-        //Hacemos una validacion diciendo que si el usuario ya esta en el registro retornamos un error
-        if (userInDB) {
-            //Enviamos el error
-            return res.render('register', {
-                errors: {
-                    email: {
-                       msg: "Este email ya esta registrado"
-                    }
-                },
-                //Recuperar los datos que estaban bien en el registro
-                oldData: req.body
+        let userInDB = User.findByField('email', req.body.email);               
+        let errors = validationResult(req);
+        // Si no hay errores en los campos de register, entonces pasamos a la validacion
+        if(errors.isEmpty()) {            
+        //Hacemos la validacion diciendo que si el usuario ya esta registrado, retornamos un error        
+            if (userInDB) {
+                //Enviamos el error
+                return res.render('register', {
+                    errors: {
+                        email: {
+                        msg: "Este email ya esta registrado"
+                        }
+                    },
+                    //Recuperar los datos que estaban bien en el registro
+                    oldData: req.body
+                })
+            }
+
+            //Si no esta registrado Creamos nuevo usuario
+            let userToCreate = {
+                ...req.body,  //Requerimos todo lo del body
+                password: bcrypt.hashSync(req.body.password, 10), //Incriptmos la contrasena 
+                confirm_pass: bcrypt.hashSync(req.body.password, 10), //Incriptmos la contrasena 
+                avatar: req.file.filename //Para foto de perfil
+            }
+            //Guardamos al usuario que creamos en la variable para usarla despues
+            let userCreated = User.create(userToCreate)
+
+            return res.redirect('/login')
+        }
+        else {
+            res.render("register", {
+                errors: errors.mapped(),
+                oldData: req.body // Lo que escribió el usuario en el body
             })
         }
-
-        //Si no esta registrado Creamos nuevo usuario
-        let userToCreate = {
-            ...req.body,  //Requerimos todo lo del body
-            password: bcrypt.hashSync(req.body.password, 10), //Incriptmos la contrasena 
-            confirm_pass: bcrypt.hashSync(req.body.password, 10), //Incriptmos la contrasena 
-            avatar: req.file.filename //Para foto de perfil
-        }
-        //Guardamos al usuario que creamos en la variable para usarla despues
-        let userCreated = User.create(userToCreate)
-
-        return res.redirect('/login')
     },
 
     logOut: (req, res) => {

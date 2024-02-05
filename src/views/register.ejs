@@ -39,29 +39,45 @@
                 <h2>Registro Perfil</h2>
                  <div class="espacio">
                     <label><i class="fa-solid fa-user"></i>
-                        <input class="border-input" type="text" name="name" placeholder="Nombre y Apellido" minlength="8"
-                        maxlength="60">
+                        <input class="border-input" type="text" name="name" placeholder="Nombre y Apellido" value="<% locals.oldData ? oldData.name : null %>">
+                        <% if (locals.errors && errors.name) { %>
+                            <div>
+                                <p><%= errors.name.msg  %></p>
+                            </div>
+                        <% } %>
                     </label>
                 </div>
                 
                 <div class="espacio">
                     <label><i class="fa-solid fa-at"></i>
-                        <input class="border-input" type="email" name="email" placeholder="email" required>
-                             
+                        <input class="border-input" type="email" name="email" placeholder="email" value="<% locals.oldData ? oldData.email : null %>">
+                        <% if (locals.errors && errors.email) { %>
+                            <div>
+                                <p><%= errors.email.msg  %></p>
+                            </div>
+                        <% } %>
                     </label>
                 </div>
 
                 <div class="espacio">
                     <label><i class="fa-solid fa-key"></i>  
-                        <input class="border-input" type="password" name="password"  placeholder="Contraseña" minlength="8"
-                        maxlength="12" required >
+                        <input class="border-input" type="password" name="password"  placeholder="Contraseña" value="<% locals.oldData ? oldData.password : null %>" >
+                        <% if (locals.errors && errors.password) { %>
+                            <div>
+                                <p><%= errors.password.msg  %></p>
+                            </div>
+                        <% } %>
                     </label> 
                 </div>
 
                 <div class="espacio">
                     <label><i class="fa-solid fa-key"></i>  
-                        <input class="border-input" type="password" name="confirm_pass"  placeholder="Confirmar contraseña" minlength="8"
-                        maxlength="12" required>
+                        <input class="border-input" type="password" name="confirm_pass"  placeholder="Confirmar contraseña" value="<% locals.oldData ? oldData.confirm_pass : null %>">
+                        <% if (locals.errors && errors.confirm_pass) { %>
+                            <div>
+                                <p><%= errors.confirm_pass.msg  %></p>
+                            </div>
+                        <% } %>
                     </label> 
                 </div>
 
@@ -69,7 +85,12 @@
 
 
                     <label for="foto_usuario"><i class="fa-solid fa-camera"></i>
-                        <input  type="file" name="avatar"  placeholder="Foto perfil">
+                        <input  type="file" name="avatar"  placeholder="Foto perfil" value="<% locals.oldData ? oldData.avatar : null %>">
+                        <% if (locals.errors && errors.avatar) { %>
+                            <div>
+                                <p><%= errors.avatar.msg  %></p>
+                            </div>
+                        <% } %>
                     </label> 
 
 

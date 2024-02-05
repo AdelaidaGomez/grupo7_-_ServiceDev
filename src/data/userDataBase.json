@@ -16,5 +16,22 @@
   "confirm_pass": "$2a$10$Xk/zurCfB1jl/XE0Ag.yQOSLAokGRZZLKlQl1ldBQujfUwKaBCmGS",
   "type_user": "ofrecer",
   "avatar": "avatar-1707157827804.jpg"
+ },
+ {
+  "id": 3,
+  "name": "aaaaaaaa",
+  "email": "haimo100@hotmail.com",
+  "password": "$2a$10$1olHkp9RfOSqtLCFz8U9YenbjBj4tTxwQ678KfwOZSrMxeWOKUjei",
+  "confirm_pass": "$2a$10$fkkYMNmrTsRv65wKo4Haz.5F8zZReAbksPpDdvzGzifoYp47pXmf6",
+  "avatar": "avatar-1707159195980.pdf"
+ },
+ {
+  "id": 4,
+  "name": "Juan",
+  "email": "a@dh.com",
+  "password": "$2a$10$V/frWdf.fOfJymZG1nlsTuE1..bu4WuKou/3wCl0HqUzkoSuyaeda",
+  "confirm_pass": "$2a$10$ou4YyDK0hR.xIxQYnUBYO.6ovHDBNeUxqPZA.h.p7O/TyebipFFai",
+  "type_user": "ofrecer",
+  "avatar": "avatar-1707160657088.jpg"
  }
 ]
