@@ -19,174 +19,30 @@
     </header>
     
     <main class="contenedor">
-        <h1>Hola <%= locals.userLogged.name%> </h1>
-
-        
-
-        <div class="grid">
+        <h1>Hola <%= locals.userLogged.name%> </h1>      
+            <div class="grid">
+            <% services.forEach(service => { %>
                 <div class="items">
-                    <img src="/images/person1.png" alt="Servicio 1">
-                    <div class="informacion">
-                        <nav>
-                        <h3>Developer 1</h3>
-                        <p>Tatiana Mejia</p>
+                    
+                    <img src="/images/<%= service.image %>" class="" alt="">
+                    <div class="informacion">                        
+                        <h3><%= service.name %></h3>
+                        <p><%= service.profesion %></p>
+                        <p><%= service.especialidad %></p>
+                        <p><%= service.category %></p>
                         <div class="precio">
-                            <p>$15.06/H</p>
+                            <p><%= service.price %>$ /H</p>
                         </div>
-                        <i class="fa-solid fa-magnifying-glass">
-                        <div class="comprar-carrito">
-                                <ul class="nav-carrito">
-                                    <li>Imagen</li>
-                                    <li>Nombre</li>
-                                    <li>Precio</li>
-                                    <li>Cantidad</li>
-                                    <li></li>
-                                </ul>
-                                <button>VACIAR CARRITO</button>
-                            </div>
-                        </i>
-                     </nav>
-                    </div>
-                </div>
-                <div class="items">
-                    <img src="/images/person2.png" alt="Servicio 2">
-                    <div class="informacion">
-                        <nav>
-                        <h3>Developer 2</h3>
-                        <p>Mariana Gomez</p>
-                        <div class="precio">
-                            <p>$20.06/H</p>
+                        
+                        <div class="comprar-carrito"> 
+                            <button>CONTRATAR SERVICIO</button>
                         </div>
-                        <i class="fa-solid fa-magnifying-glass">
-                        <div class="comprar-carrito">
-                                <ul class="nav-carrito">
-                                    <li>Imagen</li>
-                                    <li>Nombre</li>
-                                    <li>Precio</li>
-                                    <li>Cantidad</li>
-                                </ul>
-                                <button>VACIAR CARRITO</button>
-                            </div>
-                        </i>
-                     </nav>
+                        </i>                   
                     </div>
+
                 </div>
-                <div class="items">
-                    <img src="/images/person3.png" alt="Servicio 3">
-                    <div class="informacion">
-                        <nav>
-                            <h3>Developer 3</h3>
-                            <p>Juan Duque</p>
-                            <div class="precio">
-                                <p>$35/H</p>
-                            </div>
-                            <i class="fa-solid fa-magnifying-glass">
-                            <div class="comprar-carrito">
-                                    <ul class="nav-carrito">
-                                        <li>Imagen</li>
-                                        <li>Nombre</li>
-                                        <li>Precio</li>
-                                        <li>Cantidad</li>
-                                    </ul>
-                                    <button>VACIAR CARRITO</button>
-                                </div>
-                            </i>
-                         </nav>
-                    </div>
-                </div>
-                <div class="items">
-                    <img src="/images/person4.png" alt="Servicio 4">
-                    <div class="informacion">
-                        <nav>
-                            <h3>Developer 4</h3>
-                            <p>Juan Camilo Mejia</p>
-                            <div class="precio">
-                                <p>$22.45/H</p>
-                            </div>
-                            <i class="fa-solid fa-magnifying-glass">
-                            <div class="comprar-carrito">
-                                    <ul class="nav-carrito">
-                                        <li>Imagen</li>
-                                        <li>Nombre</li>
-                                        <li>Precio</li>
-                                        <li>Cantidad</li>
-                                    </ul>
-                                    <button>VACIAR CARRITO</button>
-                                </div>
-                            </i>
-                         </nav>
-                    </div>
-                </div>
-                <div class="items">
-                    <img src="/images/person5.png" alt="Servicio 5">
-                    <div class="informacion">
-                        <nav>
-                            <h3>Developer 5</h3>
-                            <p>Melissa Vasquez</p>
-                            <div class="precio">
-                                <p>$28.09/H</p>
-                            </div>
-                            <i class="fa-solid fa-magnifying-glass">
-                            <div class="comprar-carrito">
-                                    <ul class="nav-carrito">
-                                        <li>Imagen</li>
-                                        <li>Nombre</li>
-                                        <li>Precio</li>
-                                        <li>Cantidad</li>
-                                    </ul>
-                                    <button>VACIAR CARRITO</button>
-                                </div>
-                            </i>
-                         </nav>
-                    </div>
-                </div>
-                <div class="items">
-                    <img src="/images/person6.png" alt="Servicio 6">
-                    <div class="informacion">
-                        <nav>
-                            <h3>Developer 1</h3>
-                            <p>Laura Acevedo</p>
-                            <div class="precio">
-                                <p>$33.06/H</p>
-                            </div>
-                            <i class="fa-solid fa-magnifying-glass">
-                            <div class="comprar-carrito">
-                                    <ul class="nav-carrito">
-                                        <li>Imagen</li>
-                                        <li>Nombre</li>
-                                        <li>Precio</li>
-                                        <li>Cantidad</li>
-                                    </ul>
-                                    <button>VACIAR CARRITO</button>
-                                </div>
-                            </i>
-                         </nav>
-                    </div>
-                </div>
-                <div class="items">
-                    <img src="/images/person7.png" alt="Servicio 7">
-                    <div class="informacion">
-                        <nav>
-                            <h3>Developer 7</h3>
-                            <p>Paulina Vieco</p>
-                            <div class="precio">
-                                <p>$12.06/H</p>
-                            </div>
-                            <i class="fa-solid fa-magnifying-glass">
-                            <div class="comprar-carrito">
-                                    <ul class="nav-carrito">
-                                        <li>Imagen</li>
-                                        <li>Nombre</li>
-                                        <li>Precio</li>
-                                        <li>Cantidad</li>
-                                    </ul>
-                                    <button>VACIAR CARRITO</button>
-                                </div>
-                            </i>
-                         </nav>
-                    </div>
-                </div>
-        </div>
+                <% }); %>
+            </div>
     </main>
 
     <footer>

@@ -12,11 +12,11 @@ let servicesController = {
         res.render('services', {services: services});
     },
     productCart: function(req, res) {
-        //Traemos la informacion del usuario desde el session cuando hacemos el processLogIn desde usercontroller
-        return res.render('productCart', {
+        const services = JSON.parse(fs.readFileSync(servicesFilePath, 'utf-8'))
+        //Traemos la informacion del usuario desde el session cuando hacemos el processLogIn desde usercontroller       
             user: req.session.userLogged
-        })
-      res.render('productCart');
+            
+            res.render("productCart", {services})
     },
     detail: function(req, res) {
         const services = JSON.parse(fs.readFileSync(servicesFilePath, 'utf-8'))
