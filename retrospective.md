@@ -85,3 +85,27 @@ de las entregas.
 
 **5. Dejar de hacer.**
 - Incluir aspectos adicionales sin antes haber finalizado con los items propios del sprint
+
+**Retrospective Sprint 5**
+
+**1.Comenzar a hacer.**
+- Al iniciar el manejo de base datos, tener la precaución en el diseño las sentencias para el manejo de datos y tener ciudado de no eliminar  el modelo
+- Hacer uso de la herramienta de discord para preguntas y validaciones con los profesores sobre el proyecto
+
+
+**2. Hacer más.**
+- Avances semanales continuos a pesar de tener más tiempo en los ultimos sprint
+
+
+**3. Continuar haciendo.**
+- Reuniones semanales 
+- Distribucion de tareas de acuerdo a las habilidades de cada uno
+- Comunicación y poyo continua
+
+**4. Hacer menos.**
+- Acumular muchas actividades al final de los sprint
+
+
+**5. Dejar de hacer.**
+- Incluir actividades de mejora sin antes haber finalizado con los items obligatorios del sprint
+- Pasar una semana sin avances 
