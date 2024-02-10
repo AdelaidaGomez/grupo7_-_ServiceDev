@@ -8,14 +8,6 @@
   "image": "person1.png"
  },
  {
-  "id": 2,
-  "name": "Mariana Gómez",
-  "price": 20.06,
-  "description": "Desarrolladora front-end altamente hábil con enfoque en tecnologías JavaScript. Especializada en la creación de interfaces de usuario atractivas y altamente interactivas. Profundo conocimiento de frameworks modernos como React y Angular, con experiencia en optimización de rendimiento y diseño centrado en el usuario (UX/UI).",
-  "profesion": "Desarroladora Front-End",
-  "image": "person2.png"
- },
- {
   "id": 3,
   "name": "Juan Duque",
   "price": 35,
@@ -55,5 +47,14 @@
   "category": "",
   "especialidad": "Desarroladora Seguridad",
   "price": "12.06"
+ },
+ {
+  "id": 8,
+  "name": "Danna Gallego",
+  "price": "65",
+  "description": "Programadora Ruby",
+  "especialidad": "Ingeniero Informatico",
+  "image": "persona8.png",
+  "category": "otra"
  }
 ]

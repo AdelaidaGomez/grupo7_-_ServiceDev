@@ -63,7 +63,7 @@ const Service = {
         //se carga al array con un push e insertamos la informacion (service)
         allServices.push(newService)
         //Escribir en el archivo json
-        fs.writeFileSync(this.fileName, JSON.stringify(allServices, null, ' '));
+        fs.writeFileSync(this.filename, JSON.stringify(allServices, null, ' '));
         return newService
 
     },
@@ -75,7 +75,7 @@ const Service = {
         //Devolvemos todos los servicios menos el servicio que el id en la BD coincida con el id que nos llego
         let finalServices = allServices.filter(oneService => oneService.id !== id);
         //Volvemos  escribir ela archivo JSON
-        fs.writeFileSync(this.fileName, JSON.stringify(finalServices, null, ' '))
+        fs.writeFileSync(this.filename, JSON.stringify(finalServices, null, ' '))
         return true
         },
     }
@@ -86,4 +86,6 @@ const Service = {
 //console.log(Service.getService());
 //console.log(Service.findByPk(3));
 //console.log(Service.findByField('name','Mariana Gómez'));
-console.log(Service.createService({name: 'Danna Gallego', price: '65', description: 'Programadora Ruby', especialidad: 'Ingeniero Informatico', image: 'persona8.png',category:'otra'}));
+//console.log(Service.createService({name: 'Danna Gallego', price: '65', description: 'Programadora Ruby', especialidad: 'Ingeniero Informatico', image: 'persona8.png',category:'otra'}));
+
+//console.log(Service.delete(2))
