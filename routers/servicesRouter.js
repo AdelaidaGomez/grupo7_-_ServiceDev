@@ -11,6 +11,7 @@ let authMiddleware = require("../middlewares/authMiddleware");
 const multer = require("multer");
 
 const path = require("path");
+const services = require('../models/services') //requerimos el archivo services con todas las funcionalidades crud para utilizar cada metodo;
 
 // MULTER
 const storage = multer.diskStorage({
