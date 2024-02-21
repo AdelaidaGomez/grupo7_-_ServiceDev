@@ -33,5 +33,14 @@
   "confirm_pass": "$2a$10$ou4YyDK0hR.xIxQYnUBYO.6ovHDBNeUxqPZA.h.p7O/TyebipFFai",
   "type_user": "ofrecer",
   "avatar": "avatar-1707160657088.jpg"
+ },
+ {
+  "id": 5,
+  "name": "Adelaida Gomez",
+  "email": "Adelaida@gmail.com",
+  "password": "$2a$10$qGGmXM8wsE1OYaIISAIzxeYqJqt2.VK1S3.acqPHJTgqG8ciSII7e",
+  "confirm_pass": "$2a$10$HrRdoHII79OdXnYD1c3WTesLQouzwF51em7RMSQ7Xu2u1mbPNaP82",
+  "type_user": "solicitar",
+  "avatar": "avatar-1708482826580.png"
  }
 ]
