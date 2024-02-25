@@ -3,6 +3,7 @@ const fs = require('fs');
 
 const path = require('path') // Modulo nativo para manejar las rutas de los archivos html con sendFile
 const User = require('../models/User') //requerimos el archivo User con todas las funcionalidades crud para utilizar cada metodo
+let db = require("../src/database/models")
 const bcrypt = require('bcryptjs'); // Requerir el modulo de encriptamiento para password
 
 // Trabajando con el archivo JSON 
@@ -21,16 +22,6 @@ let userController = {
     },
 
     processLogin: function(req, res) {
-        // if (errors.isEmpty()) {     // Si tenemos errores, entonces convertimos el resultado a un objeto literal y se lo pasamos a la vista (formulario + mensaje del error)
-        //     res.render("login", {old: req.body});
-        // }
-        // else {
-        //     res.render("login", {
-        //         errors: errors.mapped(),
-        //         old: req.body // Lo que escribió el usuario en el body
-        //     })
-        // }
-        
         //Buscamos al usuario que se quiere loguear y lo guardamos en la variable userToLogin
         let userToLogin = User.findByField('email', req.body.email)
         
@@ -83,45 +74,58 @@ let userController = {
     },
 
     createRegister: function(req, res) {
-        //Proceso de validacion FALTA
+        db.Users.create({
+            name: req.body.name,
+            email: req.body.email,
+            password: req.body.password,
+            avatar: req.body.avatar,
+            type_users_id: req.body.type_user, //Confirmar como es esta relacion
+        })
+
+        return res.redirect('/login')
+
+
+
+
+
 
         //Buscar si el usuario ya esta registrado para no volverlo a registrar con el metodo findByfield comparando el email de la BD con el email que nos llego del body
-        let userInDB = User.findByField('email', req.body.email);               
-        let errors = validationResult(req);
-        // Si no hay errores en los campos de register, entonces pasamos a la validacion
-        if(errors.isEmpty()) {            
-        //Hacemos la validacion diciendo que si el usuario ya esta registrado, retornamos un error        
-            if (userInDB) {
-                //Enviamos el error
-                return res.render('register', {
-                    errors: {
-                        email: {
-                        msg: "Este email ya esta registrado"
-                        }
-                    },
-                    //Recuperar los datos que estaban bien en el registro
-                    oldData: req.body
-                })
-            }
+        // let userInDB = User.findByField('email', req.body.email);               
+        // let errors = validationResult(req);
+        // // Si no hay errores en los campos de register, entonces pasamos a la validacion
+        // if(errors.isEmpty()) {            
+        // //Hacemos la validacion diciendo que si el usuario ya esta registrado, retornamos un error        
+        //     if (userInDB) {
+        //         //Enviamos el error
+        //         return res.render('register', {
+        //             errors: {
+        //                 email: {
+        //                 msg: "Este email ya esta registrado"
+        //                 }
+        //             },
+        //             //Recuperar los datos que estaban bien en el registro
+        //             oldData: req.body
+        //         })
+        //     }
 
-            //Si no esta registrado Creamos nuevo usuario
-            let userToCreate = {
-                ...req.body,  //Requerimos todo lo del body
-                password: bcrypt.hashSync(req.body.password, 10), //Incriptmos la contrasena 
-                confirm_pass: bcrypt.hashSync(req.body.password, 10), //Incriptmos la contrasena 
-                avatar: req.file.filename //Para foto de perfil
-            }
-            //Guardamos al usuario que creamos en la variable para usarla despues
-            let userCreated = User.create(userToCreate)
+        //     //Si no esta registrado Creamos nuevo usuario
+        //     let userToCreate = {
+        //         ...req.body,  //Requerimos todo lo del body
+        //         password: bcrypt.hashSync(req.body.password, 10), //Incriptmos la contrasena 
+        //         confirm_pass: bcrypt.hashSync(req.body.password, 10), //Incriptmos la contrasena 
+        //         avatar: req.file.filename //Para foto de perfil
+        //     }
+        //     //Guardamos al usuario que creamos en la variable para usarla despues
+        //     let userCreated = User.create(userToCreate)
 
-            return res.redirect('/login')
-        }
-        else {
-            res.render("register", {
-                errors: errors.mapped(),
-                oldData: req.body // Lo que escribió el usuario en el body
-            })
-        }
+        //     return res.redirect('/login')
+        // }
+        // else {
+        //     res.render("register", {
+        //         errors: errors.mapped(),
+        //         oldData: req.body // Lo que escribió el usuario en el body
+        //     })
+        // }
     },
 
     logOut: (req, res) => {

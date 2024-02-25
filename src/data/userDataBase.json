@@ -1,14 +1,5 @@
 [
  {
-  "id": 1,
-  "name": "Adelaida Gomez",
-  "email": "Adelaida@gmal.com",
-  "password": "$2a$10$OfwtndJE8eqcb01dAp6V5OryuokgUds5I4E5LlJE79q9ZT8iZ74bW",
-  "confirm_pass": "$2a$10$1/zQnsEOa8.Xbq21uai6BehSExvbKpQ/hA30Qk1mi1ePFDmOQnA4q",
-  "type_user": "ofrecer",
-  "avatar": "avatar-1707088111829.jpeg"
- },
- {
   "id": 2,
   "name": "Martin Haimovich",
   "email": "mhaimov1995@gmail.com",
@@ -33,14 +24,5 @@
   "confirm_pass": "$2a$10$ou4YyDK0hR.xIxQYnUBYO.6ovHDBNeUxqPZA.h.p7O/TyebipFFai",
   "type_user": "ofrecer",
   "avatar": "avatar-1707160657088.jpg"
- },
- {
-  "id": 5,
-  "name": "Adelaida Gomez",
-  "email": "Adelaida@gmail.com",
-  "password": "$2a$10$qGGmXM8wsE1OYaIISAIzxeYqJqt2.VK1S3.acqPHJTgqG8ciSII7e",
-  "confirm_pass": "$2a$10$HrRdoHII79OdXnYD1c3WTesLQouzwF51em7RMSQ7Xu2u1mbPNaP82",
-  "type_user": "solicitar",
-  "avatar": "avatar-1708482826580.png"
  }
 ]

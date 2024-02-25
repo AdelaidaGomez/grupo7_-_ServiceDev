@@ -16,8 +16,8 @@ module.exports = (sequelize, dataTypes) => {
     };
     const TypeUser = sequelize.define(alias, cols, config);
     
-    TypeUsers.associate = (models) => {
-        TypeUsers.hasMany(models.Users, {
+    TypeUser.associate = (models) => {
+        TypeUser.hasMany(models.Users, {
             as: "users", // preguntar
             foreignKey: "type_users_id"
         })
