@@ -14,18 +14,19 @@ const path = require("path");
 const services = require('../models/services') //requerimos el archivo services con todas las funcionalidades crud para utilizar cada metodo;
 
 // MULTER
+//configuración de variable multer donde se especifica ruto de almacenamiento y nombre de archivo
 const storage = multer.diskStorage({
-    destination: function(req, file, cb) {
-        // Definimos donde guardamos los archivos
-        cb(null, "public/images")
+    destination: (req, file, cb) => {
+        cb(null, path.join(__dirname, '../public/images/fotoPerfilServicios'))
     },
-    filename: function(req, file, cb) {
-        // Definimos el nombre que tendrán los archivos
-        cb(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname));
+    filename: (req, file, cb) => {
+        console.log(file);
+        const newFileName = 'avatar-' + Date.now() + path.extname(file.originalname);
+        cb(null, newFileName);
     }
-})
-// Asignamos en una constante a la ejecucion de multer
-const uploadFile = multer({storage: storage});
+});
+//Ejecutamos la configuracion de multer
+const uploadFile = multer({storage: storage})
 
 
 

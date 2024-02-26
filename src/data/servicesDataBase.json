@@ -56,5 +56,29 @@
   "especialidad": "Ingeniero Informatico",
   "image": "persona8.png",
   "category": "otra"
+ },
+ {
+  "id": 9,
+  "name": "qq",
+  "description": "qq",
+  "image": "image-1708954857246.jpg",
+  "especialidad": "qq",
+  "price": "12"
+ },
+ {
+  "id": 10,
+  "name": "qq",
+  "description": "qq",
+  "image": "avatar-1708955079855.jpg",
+  "especialidad": "qq",
+  "price": "11"
+ },
+ {
+  "id": 11,
+  "name": "probando",
+  "description": "probando",
+  "image": "avatar-1708957018224.jpg",
+  "especialidad": "oka",
+  "price": "asd"
  }
 ]

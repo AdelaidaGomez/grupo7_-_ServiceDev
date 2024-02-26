@@ -42,5 +42,14 @@
   "confirm_pass": "$2a$10$HrRdoHII79OdXnYD1c3WTesLQouzwF51em7RMSQ7Xu2u1mbPNaP82",
   "type_user": "solicitar",
   "avatar": "avatar-1708482826580.png"
+ },
+ {
+  "id": 6,
+  "name": "Eduardo condori",
+  "email": "laloush95@gmail.com",
+  "password": "$2a$10$iA4uTpGK1gGfUsxKCwe5deiF.rztNBHPhO/d8.OSJu5Y8r2zSZrHm",
+  "confirm_pass": "$2a$10$xwkzTIEF58xNvMe3JY1hteDehPQ6mBeH2qRVTlmrqszWtOh8n1dYy",
+  "type_user": "ofrecer",
+  "avatar": "avatar-1708954622442.jpg"
  }
 ]
