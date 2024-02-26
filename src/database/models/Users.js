@@ -32,14 +32,14 @@ module.exports = (sequelize, dataTypes) => {
     const User = sequelize.define(alias, cols, config);
     
     User.associate = (models) => {
-        Users.belongsTo(models.TypeUsers, {
+        User.belongsTo(models.TypeUsers, {
             as: "typeUsers", // preguntar
             foreignKey: "type_users_id"
         })
     }
 
     User.associate = (models) => {
-        User.belongsTo(models.Service, {
+        User.belongsTo(models.Services, {
             as: "service", // preguntar
             foreignKey: "users_id"
         })
