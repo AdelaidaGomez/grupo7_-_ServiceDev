@@ -12,7 +12,7 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         tableName: "type_users",
-        timeStamps: false
+        timestamps: false
     };
     const TypeUser = sequelize.define(alias, cols, config);
     
