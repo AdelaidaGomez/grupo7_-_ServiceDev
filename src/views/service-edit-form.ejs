@@ -43,20 +43,20 @@
 
                 <div class="form-information-childs">
 
-                    <h2>Usted se encuentra editando a: <i><%=serviceToEdit.name%></i></h2>
+                    <h2>Usted se encuentra editando a: <i><%=services.name%></i></h2>
 
-                    <form action="/services/edit/<%= serviceToEdit.id %>?_method=PUT" method="POST" class="form" enctype="multipart/form-data">
+                    <form action="/services/edit/<%= services.id %>?_method=PUT" method="POST" class="form" enctype="multipart/form-data">
 
                         <!-- Nombre del servicio -->
 
                         <label>Nombre del servicio  
-                            <input type="text" name="name" placeholder="Nombre del servicio" class="control" value="<%=serviceToEdit.name%>">
+                            <input type="text" name="name" placeholder="Nombre del servicio" class="control" value="<%=services.name%>">
                         </label>
                           
 
                     <!-- Descripcion -->
                         <label>Descripción
-                            <input type="textarea" name="description" id="description" class="form-input" value="<%=serviceToEdit.description%>"></input>
+                            <input type="textarea" name="description" id="description" class="form-input" value="<%=services.description%>"></input>
                         </label>
 
 
@@ -79,13 +79,13 @@
                     <!-- Especialidad -->
 
                         <label>Especialidad
-                            <input type="text" name="especialidad" placeholder="Ej: fullstack, SQL, etc" class="control" value="<%=serviceToEdit.especialidad%>">
+                            <input type="text" name="especialidad" placeholder="Ej: fullstack, SQL, etc" class="control" value="<%=services.especialidad%>">
                         </label>
 
                     <!-- Precio -->
 
                         <label>Precio
-                            <input type="tel" name="price" placeholder="Precio" class="control" value="<%=serviceToEdit.price%>">
+                            <input type="tel" name="price" placeholder="Precio" class="control" value="<%=services.price%>">
                         </label>
                     
                     <!-- Boton editar producto -->

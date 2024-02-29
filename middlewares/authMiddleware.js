@@ -2,7 +2,7 @@
 function authMiddleware(req, res, next) {
     //Si no tenemos a nadie en sesion entonces queremos que se redirija al logIn
     if (!req.session.userLogged) {
-        return res.redirect('/login')
+        return res.render('index')
     }
     //Si tenemos a alguien en sesion entonces que lo deje acceder a productCart
     next()

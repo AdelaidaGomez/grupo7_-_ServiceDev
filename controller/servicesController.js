@@ -34,9 +34,7 @@ let servicesController = {
     //    res.render('serviceDetail', {singleService: singleService})
     //},
     detail: function(req, res) {
-        db.Services.findByPk(req.params.id, {
-            include: [{association: users}]
-            })
+        db.Services.findByPk(req.params.id)
         .then(function (services) {
             res.render("serviceDetail", {services: services});
         })

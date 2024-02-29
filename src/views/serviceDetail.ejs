@@ -29,19 +29,19 @@
                             <div> <i class="fa-solid fa-cart-shopping" id="cart-btn"></i> </div>
 
 
-                            <form action="/services/delete/<%= singleService.id %>?_method=DELETE" method="POST">
+                            <form action="/services/delete/<%= services.id %>?_method=DELETE" method="POST">
                                 <button type="submit" class="fa-solid fa-trash-can">Borrar Servicio</button>
                             </form>
 
 
 
                         </div>
-                        <h3><%= singleService.name %></h3>
-                        <div class="price"><%= singleService.especialidad %></div>
-                        <img src="/images/<%= singleService.image %>" class="profilePhoto" alt="Profile Photo"> 
+                        <h3><%= services.name %></h3>
+                        <div class="price"><%= services.especialidad %></div>
+                        <img src="/images/<%= services.image %>" class="profilePhoto" alt="Profile Photo"> 
                         <br>
-                        <p><%= singleService.description %></p>
-                        <div class="price"><%= singleService.price %> /h</div>
+                        <p><%= services.description %></p>
+                        <div class="price"><%= services.price %> /h</div>
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -49,7 +49,7 @@
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star-half-stroke"></i>
                         </div>
-                        <a href="/services/edit/<%= singleService.id %>" class="action-button-edit">Editar perfil</a>
+                        <a href="/services/edit/<%= services.id %>" class="action-button-edit">Editar perfil</a>
                     </div>
             </div>
         </section>
