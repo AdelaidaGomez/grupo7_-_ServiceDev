@@ -76,45 +76,45 @@ let userController = {
 
     createRegister: function(req, res) {
         //CODIGO CON BD
-        // let errors = validationResult(req)
-        // //Buscar si el usuario ya esta registrado para no volverlo a registrar a partir del emai
-        // db.Users.findOne({where: {email: req.body.email }})
-        //     .then((usuarioInDB) => {
-        //         // Validando si no hay errores en el proceso de register (Como email vacio)
-        //         if(errors.isEmpty()){
-        //             //Hacemos otra validacion diciendo que si el usuario ya esta registrado, retornamos un error 
-        //             if(usuarioInDB) {
-        //                 //Enviamos error
-        //                 return res.render('register', {
-        //                     errors: {
-        //                         email: {
-        //                             msg: "Este Email ya esta registrado"
-        //                         }
-        //                     },
-        //                     //Recuperar los datos que estaban bien en el registro
-        //                     oldData: req.body
-        //                 })
-        //             }
+        let errors = validationResult(req)
+        //Buscar si el usuario ya esta registrado para no volverlo a registrar a partir del emai
+        db.Users.findOne({where: {email: req.body.email }})
+            .then((usuarioInDB) => {
+                // Validando si no hay errores en el proceso de register (Como email vacio)
+                if(errors.isEmpty()){
+                    //Hacemos otra validacion diciendo que si el usuario ya esta registrado, retornamos un error 
+                    if(usuarioInDB) {
+                        //Enviamos error
+                        return res.render('register', {
+                            errors: {
+                                email: {
+                                    msg: "Este Email ya esta registrado"
+                                }
+                            },
+                            //Recuperar los datos que estaban bien en el registro
+                            oldData: req.body
+                        })
+                    }
                     
         //             //Si no esta registrado creamos un nuevo usuario
-        //             db.Users.create({
-        //                 name: req.body.name,
-        //                 email: req.body.email,
-        //                 password: req.body.password,
-        //                 avatar: req.body.avatar,
-        //                 type_users_id: req.body.type_user, //Confirmar como es esta relacion
-        //             })
+                    db.Users.create({
+                        name: req.body.name,
+                        email: req.body.email,
+                        password: req.body.password,
+                        avatar: req.body.avatar,
+                        type_users_id: req.body.type_user, //Confirmar como es esta relacion
+                    })
 
-        //             return res.redirect('/login')
+                    return res.redirect('/login')
 
-        //         } else {
-        //             res.render("register", {
-        //                 errors: errors.mapped(),
-        //                 oldData: req.body // Lo que escribió el usuario en el body
-        //             })
-        //         }
+                } else {
+                    res.render("register", {
+                        errors: errors.mapped(),
+                        oldData: req.body // Lo que escribió el usuario en el body
+                    })
+                }
 
-        //     })
+            })
 
         //CODIGO CON JSON
         //Buscar si el usuario ya esta registrado para no volverlo a registrar con el metodo findByfield comparando el email de la BD con el email que nos llego del body

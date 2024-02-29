@@ -20,9 +20,9 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(20),
             allowNull: false
         },
-        avatar: {
-            type: dataTypes.STRING(500)
-        },
+        // avatar: {
+        //     type: dataTypes.STRING(500)
+        // },
         type_users_id: {
             type: dataTypes.INTEGER(11)
         }
@@ -40,12 +40,12 @@ module.exports = (sequelize, dataTypes) => {
         })
     }
 
-    User.associate = (models) => {
-        User.belongsTo(models.Services, {
-            as: "service", // preguntar
-            foreignKey: "users_id"
-        })
-    }
+    // User.associate = (models) => {
+    //     User.belongsTo(models.Services, {
+    //         as: "service", // preguntar
+    //         foreignKey: "users_id"
+    //     })
+    // }
 
     return User;
 }
