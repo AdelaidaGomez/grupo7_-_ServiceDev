@@ -109,3 +109,29 @@ de las entregas.
 **5. Dejar de hacer.**
 - Incluir actividades de mejora sin antes haber finalizado con los items obligatorios del sprint
 - Pasar una semana sin avances 
+
+**Retrospective Sprint 6**
+
+**1.Comenzar a hacer.**
+- Depurar archivos que ya no se utilicen en el proyecto o pasa a directorio de temporales
+
+
+
+**2. Hacer más.**
+- Cerrar tareas pendientes de sprint anteriores
+- Mayor comunicación y consultas en el grupo de discord
+- Trabajo y avances en conjunto con todo el equipo
+
+
+**3. Continuar haciendo.**
+- Reuniones semanales 
+- Distribucion de tareas de acuerdo a las habilidades de cada uno
+- Comunicación y apoyo continuo
+
+**4. Hacer menos.**
+- No dejar tareas prioritarios sin hacer desde el inicio y que son requisitos para avanzar en el sprint
+
+
+**5. Dejar de hacer.**
+- Incluir actividades de mejora sin antes haber finalizado con los items obligatorios del sprint
+
