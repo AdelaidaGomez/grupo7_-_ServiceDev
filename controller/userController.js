@@ -101,7 +101,7 @@ let userController = {
                         name: req.body.name,
                         email: req.body.email,
                         password: req.body.password,
-                        avatar: req.body.avatar,
+                        avatar: req.file.filename,
                         type_users_id: req.body.type_user, //Confirmar como es esta relacion
                     })
 
