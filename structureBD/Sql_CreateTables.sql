@@ -11,13 +11,13 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema service_proj
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `service` DEFAULT CHARACTER SET utf8 ;
+CREATE SCHEMA IF NOT EXISTS `service_proj` DEFAULT CHARACTER SET utf8 ;
 USE `service` ;
 
 -- -----------------------------------------------------
 -- Table `service_proj`.`type_users`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `service`.`type_users` (
+CREATE TABLE IF NOT EXISTS `service_proj`.`type_users` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `type_users` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`id`))
@@ -27,7 +27,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `service_proj`.`users`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `service`.`users` (
+CREATE TABLE IF NOT EXISTS `service_proj`.`users` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(200) NOT NULL,
   `email` VARCHAR(100) NOT NULL,
@@ -47,7 +47,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `service_proj`.`services`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `service`.`services` (
+CREATE TABLE IF NOT EXISTS `service_proj`.`services` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NULL,
   `price` DOUBLE NOT NULL,
