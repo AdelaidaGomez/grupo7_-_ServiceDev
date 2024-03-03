@@ -11,6 +11,7 @@
     margin-top: 10px;
     justify-content: center;
     background-color: #000;
+    text-transform: none;
 }
 .sub-main-footer-section {
     display: inline-block;
@@ -22,17 +23,20 @@
     color: #fff;
     padding-top: 10px;
     margin-bottom: 10px;
+    text-transform: none;
 }
 .main-container-footer h4{
     color: #fff;
     font-size: 15px;
     margin-bottom: 10px;
+    text-transform: none;
 }
 .main-container-footer p{
     color: #fff;
     font-size: 10px;
     margin-bottom: 5px;
     text-align: left;
+    text-transform: none;
 }
 /* Footer Icons */
 .fa-handshake{

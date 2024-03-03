@@ -31,10 +31,12 @@ main {
     padding: 0;
     box-sizing: border-box;
     font-family: 'EB Garamond', serif;
+    text-transform: none;
 }
 
 h2 {
     text-align: center;
+    text-transform: none;
 }
 
 /* MAIN */
@@ -49,6 +51,7 @@ form {
     margin-bottom: 15px;
     border-radius: 20px;
     padding: 0 10px;
+    text-transform: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, rgba(0, 0, 0, .1));
 }
 
@@ -62,6 +65,7 @@ form {
     color: black;
     margin-left: 10px;
     margin-right: 0px;
+    text-transform: none;
 }
 .section-datos1 {
    max-width: 50%;

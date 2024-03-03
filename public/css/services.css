@@ -4,6 +4,7 @@
     text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear;
+    text-transform: none;
 }
 
 body {
@@ -178,7 +179,9 @@ body {
     color: #fff;
 
 }
-
+* {
+    text-transform: none;
+}
 
 /* Footer */
 

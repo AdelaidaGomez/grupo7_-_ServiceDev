@@ -44,17 +44,20 @@ body main {
 .info-childs {
     width: 100%;
     padding: 0 30px;
+    text-transform: none;
 }
 
 .info-childs h2 {
     font-size: 2.5rem;
     color: white;
+    text-transform: none;
 }
 
 .info-childs p {
     margin: 5px;
     color: white;
     font-size: 2rem;
+    text-transform: none;
 }
 
 /* TEXTO DERECHA */
@@ -78,10 +81,12 @@ body main {
 .form-information-childs h2 {
     color: white;
     font-size: 2rem;
+    text-transform: none;
 }
 
 .form-information-childs p {
     color: white;
+    text-transform: none;
 }
 /* -------------------------------Iconos----------------------------- */
 .iconito {
@@ -127,6 +132,7 @@ form {
     border-radius: 20px;
     padding: 0 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, rgba(0, 0, 0, .1));
+    text-transform: none;
 }
 
 .form label input {
@@ -139,6 +145,7 @@ form {
     color: black;
     margin-left: 10px;
     margin-right: 0px;
+    text-transform: none;
 }
 
 /* Boton recordar usuario */

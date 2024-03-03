@@ -36,10 +36,10 @@
            
             <section class="section-datos2">
                 
-                <h2>Registro Perfil</h2>
+                <h2>Registro perfil</h2>
                  <div class="espacio">
                     <label><i class="fa-solid fa-user"></i>
-                        <input class="border-input" type="text" name="name" placeholder="Nombre y Apellido" value="<% locals.oldData ? oldData.name : null %>">
+                        <input class="border-input" type="text" name="name" placeholder="nombre y apellido" value="<% locals.oldData ? oldData.name : null %>">
                         <% if (locals.errors && errors.name) { %>
                             <div>
                                 <p><%= errors.name.msg  %></p>
@@ -61,7 +61,7 @@
 
                 <div class="espacio">
                     <label><i class="fa-solid fa-key"></i>  
-                        <input class="border-input" type="password" name="password"  placeholder="Contraseña" value="<% locals.oldData ? oldData.password : null %>" >
+                        <input class="border-input" type="password" name="password"  placeholder="contraseña" value="<% locals.oldData ? oldData.password : null %>" >
                         <% if (locals.errors && errors.password) { %>
                             <div>
                                 <p><%= errors.password.msg  %></p>
@@ -72,7 +72,7 @@
 
                 <div class="espacio">
                     <label><i class="fa-solid fa-key"></i>  
-                        <input class="border-input" type="password" name="confirm_pass"  placeholder="Confirmar contraseña" value="<% locals.oldData ? oldData.confirm_pass : null %>">
+                        <input class="border-input" type="password" name="confirm_pass"  placeholder="confirmar contraseña" value="<% locals.oldData ? oldData.confirm_pass : null %>">
                         <% if (locals.errors && errors.confirm_pass) { %>
                             <div>
                                 <p><%= errors.confirm_pass.msg  %></p>
@@ -99,9 +99,9 @@
                 <div>
                     <label>
                         <input type="radio" name="type_user" value="1">
-                        Ofrecer Servicio
+                        Ofrecer servicio
                         <input type="radio" name="type_user" value="2">
-                        Solicitar Servicio
+                        Solicitar servicio
                     </label>
 
                 </div>
