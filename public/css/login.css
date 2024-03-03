@@ -140,6 +140,14 @@ form {
     margin-left: 10px;
     margin-right: 0px;
 }
+
+/* Boton recordar usuario */
+.remember {
+    color: white;
+    display: flex;
+    align-items:baseline
+}
+
 /* Boton registrarse */
 .form input[type="submit"] {
     background-color: #313438;

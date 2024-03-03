@@ -5,6 +5,7 @@ const bycrypt = require('bcryptjs');
 const methodOverride = require("method-override"); // Para poder usar los metodos PUT y DELETE
 const session = require("express-session"); // Requerimos session
 const path = require("path"); // Modulo nativo para manejar las rutas de los archivos
+const cookies = require("cookie-parser");
 
 //Middleware para manipular la barra de navegacion
 const userLoggedMiddleware = require('../middlewares/userLoggedMiddleware')
@@ -21,6 +22,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }));
+app.use(cookies());
 
 app.use(userLoggedMiddleware) // debe ir aca por que va despues de la sesion
 

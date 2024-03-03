@@ -40,6 +40,11 @@ let userController = {
                     //Guardamos al usuario en session
                     req.session.userLogged = userToLogin
 
+                    // Defino qué ocurre cuando clickeo opcion "recordar usuario" y que ocurre cuando la destildo
+                    if(req.body.remember_user){
+                        res.cookie("userEmail", req.body.email, {maxAge: (1000 * 60) * 10}) // La cookie durará 10 minutos
+                    }
+
                     return res.redirect('/productCart')
                 }
                 //Si no es a contrasena correcta
@@ -157,6 +162,8 @@ let userController = {
     },
 
     logOut: (req, res) => {
+        // Borramos la cookie userEmail
+        res.clearCookie("userEmail");
         //Borramos todo lo que esta en sesion
         req.session.destroy()
         //Redireccionamos a la home
