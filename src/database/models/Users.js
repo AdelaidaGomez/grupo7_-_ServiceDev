@@ -40,12 +40,12 @@ module.exports = (sequelize, dataTypes) => {
         })
     }
 
-    // User.associate = (models) => {
-    //     User.belongsTo(models.Services, {
-    //         as: "service", // preguntar
-    //         foreignKey: "users_id"
-    //     })
-    // }
+    User.associate = (models) => {
+        User.belongsTo(models.Services, {
+            as: "service", // preguntar
+            foreignKey: "users_id"
+        })
+    }
 
     return User;
 }

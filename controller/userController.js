@@ -24,7 +24,10 @@ let userController = {
 
     processLogin: function(req, res) {
         //Buscamos al usuario que se quiere loguear y lo guardamos en la variable userToLogin
-        let userToLogin = User.findByField('email', req.body.email)
+        let userToLogin = db.Users.findByField('email', req.body.email)
+        //let userToLogin = db.Users.findOne({ where: { email: req.body.email } }); //otra opcion para solucionar error findByField
+        //let userToLogin = db.Users.findBy({ 'email', mail: req.body.email }); //otra opcion para solucionar error findByField
+
         
         let errors = validationResult(req);
         // Si no hay errores en los campos de login, entonces pasamos a la validacion
@@ -105,7 +108,7 @@ let userController = {
                     db.Users.create({
                         name: req.body.name,
                         email: req.body.email,
-                        password: req.body.password,
+                        password: bcrypt.hashSync(req.body.password, 10),
                         avatar: req.file.filename,
                         type_users_id: req.body.type_user, //Confirmar como es esta relacion
                     })
