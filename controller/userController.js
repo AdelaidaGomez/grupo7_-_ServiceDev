@@ -24,9 +24,15 @@ let userController = {
 
     processLogin: function(req, res) {
         //Buscamos al usuario que se quiere loguear y lo guardamos en la variable userToLogin
-        let userToLogin = db.Users.findByField('email', req.body.email)
+        //let userToLogin = db.Users.findByField('email', req.body.email)
         //let userToLogin = db.Users.findOne({ where: { email: req.body.email } }); //otra opcion para solucionar error findByField
         //let userToLogin = db.Users.findBy({ 'email', mail: req.body.email }); //otra opcion para solucionar error findByField
+        let userToLogin = db.Users.findOne({ 
+            where: { 
+                email: req.body.email 
+            } 
+        }
+        )
 
         
         let errors = validationResult(req);
@@ -36,6 +42,7 @@ let userController = {
             if (userToLogin) {
                 //como el password esta haseado debemos compararlo con compareSync
                 let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password)
+                //let isOkThePassword = req.body.password == userToLogin.password
                 //Si encontramos al usaurio verificamos la contrasena sea correcta
                 if (isOkThePassword) {
                     //Borramos la propiedad password para no mantener en sesion su password
@@ -109,6 +116,7 @@ let userController = {
                         name: req.body.name,
                         email: req.body.email,
                         password: bcrypt.hashSync(req.body.password, 10),
+                        //password: (req.body.password, 10),
                         avatar: req.file.filename,
                         type_users_id: req.body.type_user, //Confirmar como es esta relacion
                     })

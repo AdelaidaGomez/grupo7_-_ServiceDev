@@ -41,7 +41,7 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     User.associate = (models) => {
-        User.belongsTo(models.Services, {
+        User.hasMany(models.Services, {
             as: "service", // preguntar
             foreignKey: "users_id"
         })
