@@ -29,8 +29,8 @@ let userController = {
         //let userToLogin = db.Users.findBy({ 'email', mail: req.body.email }); //otra opcion para solucionar error findByField
         let userToLogin = db.Users.findOne({ 
             where: { 
-                email: req.body.email 
-            } 
+                    email: req.body.email 
+                    } 
         }
         )
 

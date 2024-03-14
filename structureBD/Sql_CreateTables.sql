@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `service_proj`.`users` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(200) NOT NULL,
   `email` VARCHAR(100) NOT NULL,
-  `password` VARCHAR(20) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
   `avatar` VARCHAR(500) NULL,
   `type_users_id` INT NOT NULL,
   PRIMARY KEY (`id`),
