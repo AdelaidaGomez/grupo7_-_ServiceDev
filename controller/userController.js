@@ -22,12 +22,14 @@ let userController = {
         res.render("login");
     },
 
-    processLogin: function(req, res) {
+    processLogin: async(req, res) => {
         //Buscamos al usuario que se quiere loguear y lo guardamos en la variable userToLogin
         //let userToLogin = db.Users.findByField('email', req.body.email)
         //let userToLogin = db.Users.findOne({ where: { email: req.body.email } }); //otra opcion para solucionar error findByField
         //let userToLogin = db.Users.findBy({ 'email', mail: req.body.email }); //otra opcion para solucionar error findByField
-        let userToLogin = db.Users.findOne({ 
+       
+       try {
+        let userToLogin = await db.Users.findOne({ 
             where: { 
                     email: req.body.email 
                     } 
@@ -81,6 +83,10 @@ let userController = {
                 errors: errors.mapped(),
                 old: req.body // Lo que escribió el usuario en el body
             })
+        }
+        
+    }catch(error){
+        res.json(error)
         }
     },
 
