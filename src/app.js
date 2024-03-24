@@ -44,6 +44,8 @@ app.set("view engine", "ejs");
 const mainPageRouter = require('../routers/mainPageRouter.js');
 const userRouter = require('../routers/userRouter.js');
 const servicesRouter = require('../routers/servicesRouter.js'); //Ruta para los Servicios
+//APIs routes
+const servicesApiRoutes = require("./api/routers/servicesApiRoutes.js");
 
 
 
@@ -53,6 +55,8 @@ app.use('/register', userRouter);
 app.use('/login', userRouter);
 app.use('/services', servicesRouter);
 app.use('/productCart', servicesRouter);
+// APIs routes
+app.use("/api/services", servicesApiRoutes);
 
 // Ponemos a escuchar el servidor
 app.listen(3050, () => {
