@@ -7,6 +7,7 @@ const session = require("express-session"); // Requerimos session
 const path = require("path"); // Modulo nativo para manejar las rutas de los archivos
 const cookies = require("cookie-parser");
 
+
 //Middleware para manipular la barra de navegacion
 const userLoggedMiddleware = require('../middlewares/userLoggedMiddleware')
 
@@ -16,6 +17,8 @@ app.use(express.urlencoded({extended: false})); //Tomar datos del body
 app.use(express.json()); //Tomar datos del body
 app.use(methodOverride("_method")); //Para metodos PUT y DELETE
 app.use(express.static('./public')); // Usando recursos estáticos.
+
+
 // Usamos el session
 app.use(session({
     secret: "secreto",
@@ -46,6 +49,7 @@ const userRouter = require('../routers/userRouter.js');
 const servicesRouter = require('../routers/servicesRouter.js'); //Ruta para los Servicios
 //APIs routes
 const servicesApiRoutes = require("./api/routers/servicesApiRoutes.js");
+const usersApiRouter = require("./api/routers/usersApiRouter.js");
 
 
 
@@ -57,6 +61,7 @@ app.use('/services', servicesRouter);
 app.use('/productCart', servicesRouter);
 // APIs routes
 app.use("/api/services", servicesApiRoutes);
+app.use("/api/users", usersApiRouter); 
 
 // Ponemos a escuchar el servidor
 app.listen(3050, () => {
