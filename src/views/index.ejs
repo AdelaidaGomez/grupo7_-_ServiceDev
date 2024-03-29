@@ -42,10 +42,34 @@
         </div>
         
         <div>
-        <% if (locals.usuarioLogueado) { %>
-            <div>
-                <h3>Hola <%=locals.usuarioLogueado.name%>!</h3>
+        <!-- Si el cliente esta logueado -->
+        <% if (locals.isLogged) { %>
+            <div class="icons">
+                <div class="userInfo2">
+                    <img class="imagenPerfil" src="/images/fotoPerfilusuarios/<%= locals.userLogged.avatar %>" alt="">
+                    <p>Hola <%= locals.userLogged.name%> </p>
+                </div>
             </div>
+        </div>
+            <!-- Menú principal definido por la siguiente lista -->
+            <div>
+                <ul class="lista-home">
+                    <li> <a href="/"> Inicio</a></li>
+                    <li> <a href="/services"> Desarrolladores</a></li>
+                    <li><a href="/services/create">Nuevo Servicio</a></li>
+                    <li> <a href="/productCart"> <i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </div>
+        <!-- Si el cliente NO esta logueado -->
+        <% } else { %>
+            <!-- Menú principal definido por la siguiente lista -->
+            <ul class="lista-home">
+                <li> <a href="/"> Inicio</a></li>
+                <li> <a href="/services"> Desarrolladores</a></li>
+                <li> <a href="/register/register"> Registrarse</a></li>
+                <li> <a href="/login"> LogIn</a></li>
+            </ul>
         <% } %>
         </div>
 
@@ -54,15 +78,6 @@
             <i class="fa-solid fa-bars"></i>
         </div>
 
-
-        <!-- Menú principal definido por la siguiente lista -->
-        <ul class="lista-home">
-            <li> <a href="/"> Inicio</a></li>
-            <li> <a href="/services"> Desarrolladores</a></li>
-            <li> <a href="/register/register"> Registrarse</a></li>
-            <li> <a href="/login"> LogIn</a></li>
-            <li> <a href="/productCart"> <i class="fa-solid fa-cart-shopping"></i></a></li>
-        </ul>
     </main>
 
     <!-- FOOTER -->

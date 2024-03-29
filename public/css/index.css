@@ -22,6 +22,7 @@ main{
     margin: auto;
     padding-block: 16px;
     padding-inline: 16px;
+    margin-bottom: 90px;
 }
 
 .logo{
@@ -76,6 +77,22 @@ p{
 /* Menu */
 .lista-home{
     display: none;
+}
+
+.userInfo2 {
+    display: flex;
+    text-align: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.imagenPerfil{
+    width: 30px;
+    height: 30px;
 }
 
 /* VISTA TABLET */
@@ -147,6 +164,10 @@ h3{
 }
 p{
     font-size: 25px;
+}
+
+.userInfo2 {
+    margin-top: 40px;
 }
 
 .lista-home{

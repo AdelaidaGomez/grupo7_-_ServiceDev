@@ -11,6 +11,7 @@
             <a href="/">Inicio</a>
             <a href="/services">Desarrolladores</a>
             <a href="/services/create">Nuevo Servicio</a>
+            
         </nav>
         <!-- Icons -->
         <div class="icons">
@@ -19,8 +20,11 @@
 
                 <div class="userInfo">
                     <img src="/images/fotoPerfilusuarios/<%= locals.userLogged.avatar %>" alt="">
-                    <p><%= locals.userLogged.name%> </p>
+                    <p>Hola <%= locals.userLogged.name%> </p>
                 </div>
+            </div>
+            <div class="navbar">
+                <a href="/logout">Logout</a>
             </div>
         </div>
 

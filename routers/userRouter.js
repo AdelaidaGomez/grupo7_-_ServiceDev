@@ -64,7 +64,7 @@ const validacionesLogin = [
 router.get('/', guestMiddleware, userController.login); // LOGIN. todos los servicios, recordar que como es otro archivo se inicia con / ya ue definimos en app que tiene /services 
 router.post('/', validacionesLogin, userController.processLogin); // Ruteo de validacion de login
 // router.get('/register', guestMiddleware, userController.register); //Ruta register
-router.get('/', userController.logOut) // Proceso de LogOut
+router.get('/logout', userController.logOut) // Proceso de LogOut
 
 router.get('/register', guestMiddleware, userController.register) // ruta para registro nuevo usuario GET formaulario
 router.post('/create', upload.single('avatar'), validacionesLogin, validacionesRegister, userController.createRegister); //se establece el metodo post para enviar los datos registrados en el formulario
