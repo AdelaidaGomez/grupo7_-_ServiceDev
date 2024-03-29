@@ -61,7 +61,7 @@
                     <!-- Imagen -->
 
                         <label>Imagen
-                            <input type="file" name="image" accept=".jpg">
+                            <input type="file" id="image" name="image" accept=".jpg">
                         </label>
 
                     <!-- Categoria -->
@@ -76,9 +76,13 @@
 
                     <!-- Especialidad -->
 
-                        <label>Especialidad
-                            <input type="text" name="especialidad" placeholder="Ej: fullstack, SQL, etc" class="control">
-                        </label>
+                    <label>Especialidad:
+						<select name="especialidad" id="especialidad" class="form-input">
+							<option value="backend">Backend</option>
+							<option value="frontend">Frontend</option>
+							<option value="basedatos">Base de datos</option>
+						</select>
+                    </label>
 
                     <!-- Precio -->
 

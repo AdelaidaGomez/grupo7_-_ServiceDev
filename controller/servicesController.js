@@ -46,15 +46,34 @@ let servicesController = {
         })
     },
     processCreate: function(req, res) {
-        db.Services.create({
-            name: req.body.name,
-            description: req.body.description,
-            image: req.file.filename,
-            // category: req.body.category
-            especialidad: req.body.especialidad,
-            price: req.body.price
+        const { name, price, description, profession } = req.body;
+            
+        db.Users.findByPk(req.params.id)
+        .then(user => {
+            if (!user) {
+                return res.status(404).send({ message: 'El usuario no existe' });
+            }
+    
+            // Crear el servicio
+            db.Services.create({
+                name,
+                price,
+                description,
+                profession,
+                users_id
+            })
+            .then(service => {
+                res.status(201).send(service);
+            })
+            .catch(error => {
+                console.error("Error al crear el servicio:", error);
+                res.status(500).send({ message: 'Error al crear el servicio' });
+            });
+        })
+        .catch(error => {
+            console.error("Error al buscar el usuario:", error);
+            res.status(500).send({ message: 'Error al buscar el usuario' });
         });
-        res.redirect("/services");
     },
     edit: function(req, res) {
         let pedidoServices = db.Services.findByPk(req.params.id);

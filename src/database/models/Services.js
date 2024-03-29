@@ -4,10 +4,11 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             type: dataTypes.INTEGER(11),
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
+            allowNull: false,
         },
         name: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.STRING(200),
             allowNull: false
         },
         price: {
@@ -21,9 +22,9 @@ module.exports = (sequelize, dataTypes) => {
         profession: {
             type: dataTypes.STRING(100)
         },
-        image: {
-            type: dataTypes.STRING(500)
-        },
+        //image: {
+            //type: dataTypes.STRING(500)
+        //},
         users_id: {
             type: dataTypes.INTEGER(11)
         }
@@ -36,8 +37,8 @@ module.exports = (sequelize, dataTypes) => {
     
     Service.associate = (models) => {
         Service.belongsTo(models.Users, {
-            as: "users", // preguntar
-            foreignKey: "users_id"
+            as: "user", // preguntar
+            foreignKey: 'users_id'
         })
     }
 

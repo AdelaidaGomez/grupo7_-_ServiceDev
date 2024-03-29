@@ -37,13 +37,10 @@ module.exports = (sequelize, dataTypes) => {
         User.belongsTo(models.TypeUsers, {
             as: "typeUsers", // preguntar
             foreignKey: "type_users_id"
-        })
-    }
-
-    User.associate = (models) => {
+        });
         User.hasMany(models.Services, {
             as: "service", // preguntar
-            foreignKey: "users_id"
+            foreignKey: 'users_id'
         })
     }
 
