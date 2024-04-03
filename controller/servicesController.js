@@ -65,7 +65,8 @@ let servicesController = {
                 users_id: userId
             })
             .then(service => {
-                res.status(201).send(service);
+                //res.status(201).send(service);
+                res.redirect("/services");
             })
             .catch(error => {
                 console.error("Error al crear el servicio:", error);

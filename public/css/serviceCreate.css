@@ -131,6 +131,7 @@ form {
 }
 
 .form label input {
+    text-transform: none;
     width: 100%;
     padding: 10px;
     background-color: rgb(231, 231, 231);
