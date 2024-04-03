@@ -1,4 +1,4 @@
-const fs = require('fs'); //Requerimos libreria fs
+/* const fs = require('fs'); //Requerimos libreria fs
 
 
 //Representacion del json serviceDataBase
@@ -88,4 +88,4 @@ const Service = {
 //console.log(Service.findByField('name','Mariana Gómez'));
 //console.log(Service.createService({name: 'Danna Gallego', price: '65', description: 'Programadora Ruby', especialidad: 'Ingeniero Informatico', image: 'persona8.png',category:'otra'}));
 
-//console.log(Service.delete(2))
+//console.log(Service.delete(2)) */

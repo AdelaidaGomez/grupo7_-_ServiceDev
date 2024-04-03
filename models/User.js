@@ -1,4 +1,4 @@
-//Creo modelo de usuarios para implementar posteriormente la BD
+/* //Creo modelo de usuarios para implementar posteriormente la BD
 //Representacion de userDataBase.json
 const fs = require('fs'); //Requerimos libreria fs
 const { all } = require('../routers/mainPageRouter');
@@ -79,4 +79,4 @@ const User = {
 //Exportamos el modelo
 module.exports = User
 
-// console.log(User.delete(5));
+// console.log(User.delete(5)); */

@@ -57,7 +57,7 @@ let userController = {
                         res.cookie("userEmail", req.body.email, {maxAge: (1000 * 60) * 1}) // La cookie durará 1 minuto
                     }
 
-                    return res.redirect('/productCart')
+                    return res.redirect('/services/productCart')
                 }
                 //Si no es a contrasena correcta
                 return res.render("login", {
