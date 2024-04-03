@@ -22,7 +22,6 @@ let servicesController = {
         const services = JSON.parse(fs.readFileSync(servicesFilePath, 'utf-8'))
         //Traemos la informacion del usuario desde el session cuando hacemos el processLogIn desde usercontroller       
             user: req.session.userLogged
-            
             res.render("productCart", {services})
     },
     //detail: function(req, res) {
@@ -47,9 +46,12 @@ let servicesController = {
     },
     processCreate: function(req, res) {
         const { name, price, description, profession } = req.body;
-            
-        db.Users.findByPk(req.params.id)
+        const userId = req.session.userLogged.id;
+        console.log(userId);    
+        db.Users.findByPk(userId)
         .then(user => {
+            console.log("user: ")
+            console.log(user);
             if (!user) {
                 return res.status(404).send({ message: 'El usuario no existe' });
             }
@@ -60,7 +62,7 @@ let servicesController = {
                 price,
                 description,
                 profession,
-                users_id
+                users_id: userId
             })
             .then(service => {
                 res.status(201).send(service);
@@ -87,9 +89,9 @@ let servicesController = {
         db.Services.update({
             name: req.body.name,
             description: req.body.description,
-            image: req.file.filename,
+            //image: req.file.filename,
             // category: req.body.category
-            especialidad: req.body.especialidad,
+            profession: req.body.profession,
             price: req.body.price
         }, {
             // Solo editamos el servicio del ID que aparece en la URL
