@@ -6,6 +6,8 @@ const methodOverride = require("method-override"); // Para poder usar los metodo
 const session = require("express-session"); // Requerimos session
 const path = require("path"); // Modulo nativo para manejar las rutas de los archivos
 const cookies = require("cookie-parser");
+const cors = require('cors')
+
 
 
 //Middleware para manipular la barra de navegacion
@@ -17,6 +19,7 @@ app.use(express.urlencoded({extended: false})); //Tomar datos del body
 app.use(express.json()); //Tomar datos del body
 app.use(methodOverride("_method")); //Para metodos PUT y DELETE
 app.use(express.static('./public')); // Usando recursos estáticos.
+app.use(cors());
 
 
 // Usamos el session
