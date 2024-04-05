@@ -133,22 +133,30 @@ let servicesController = {
         }
     }, */
 
-    processEdit: function(req, res) {
-        db.Services.update({
-            name: req.body.name,
-            description: req.body.description,
-            //image: req.file.filename,
-            // category: req.body.category
-            profession: req.body.profession,
-            price: req.body.price
-        }, {
-            // Solo editamos el servicio del ID que aparece en la URL
-            where: {
-                id: req.params.id
-            }
-        });
-        // Redireccionamos a la pagina de servicios
-        res.redirect("/services");
+    processEdit: async (req, res) => {
+        try {
+            const servicio = await db.Services.findByPk(req.params.id);
+            const service = await db.Services.update({
+                name: req.body.name,
+                description: req.body.description,
+                image: req.file ? req.file.filename : servicio.image,
+                profession: req.body.profession ? req.body.profession : servicio.profession,
+                profession: req.body.profession,
+                price: req.body.price
+            }, {
+                // Solo editamos el servicio del ID que aparece en la URL
+                where: {
+                    id: req.params.id
+                }
+            });
+            // Redireccionamos a la pagina de servicios
+            //res.redirect("/services");
+            res.redirect("/services");
+        }
+        catch (error) {
+            console.error("error al editar un servicio", error);
+            res.redirect("/services");
+        }
     },
 
     destroy: function(req, res) {
