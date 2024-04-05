@@ -5,11 +5,15 @@ let db = require("../src/database/models");
 // Trabajando con el archivo JSON 
 const servicesFilePath = path.join(__dirname, '../src/data/servicesDataBase.json')
 
+// Traemos express-validator para validaciones desde el backend
+const {validationResult} = require("express-validator");
+
 // Creamos el objeto literal que nos permite navegar dentro del home en diferentes items
 let servicesController = {
     allProducts: function(req, res) {
         db.Services.findAll()
         .then(function(services) {
+            console.log(services);
             res.render("services", {services: services})
         })
     },
@@ -55,23 +59,34 @@ let servicesController = {
             if (!user) {
                 return res.status(404).send({ message: 'El usuario no existe' });
             }
-    
-            // Crear el servicio
-            db.Services.create({
-                name,
-                price,
-                description,
-                profession,
-                users_id: userId
-            })
-            .then(service => {
-                //res.status(201).send(service);
-                res.redirect("/services");
-            })
-            .catch(error => {
-                console.error("Error al crear el servicio:", error);
-                res.status(500).send({ message: 'Error al crear el servicio' });
-            });
+            
+            const resultValidation = validationResult(req);
+            if (resultValidation.errors.length > 0) {
+                res.render("service-create-form", {
+                    errorsObjeto: resultValidation.mapped(),
+                    oldData: req.body
+                })
+            }
+            else {
+                // Crear el servicio
+                db.Services.create({
+                    name,
+                    price,
+                    description,
+                    profession,
+                    users_id: userId,
+                    image: req.file.filename
+                })
+                .then(service => {
+                    //res.status(201).send(service);
+                    res.redirect("/services");
+                })
+                .catch(error => {
+                    console.error("Error al crear el servicio:", error);
+                    res.status(500).send({ message: 'Error al crear el servicio' });
+                });
+                }
+            
         })
         .catch(error => {
             console.error("Error al buscar el usuario:", error);
@@ -86,6 +101,38 @@ let servicesController = {
                 res.render("service-edit-form", {services: services, users: users});
             })
     },
+    /* processEdit: function(req, res) {
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            res.render("service-edit-form", {
+                errorsObjeto: resultValidation.mapped(),
+                oldData: req.body
+            });
+        } else {
+            // Actualiza los datos del servicio
+            db.Services.update({
+                name: req.body.name,
+                description: req.body.description,
+                profession: req.body.profession,
+                price: req.body.price
+            }, {
+                // Especifica qué servicio editar utilizando la ID proporcionada en la URL
+                where: {
+                    id: req.params.id
+                }
+            })
+            .then(() => {
+                // Redirecciona a la página de servicios después de la actualización exitosa
+                res.redirect("/services");
+            })
+            .catch(error => {
+                // Maneja cualquier error que pueda ocurrir durante la actualización
+                console.error("Error al actualizar el servicio:", error);
+                res.redirect("/services"); // Redirige a la página de servicios en caso de error
+            });
+        }
+    }, */
+
     processEdit: function(req, res) {
         db.Services.update({
             name: req.body.name,
@@ -103,6 +150,7 @@ let servicesController = {
         // Redireccionamos a la pagina de servicios
         res.redirect("/services");
     },
+
     destroy: function(req, res) {
         db.Services.destroy({
             where: {
@@ -117,76 +165,7 @@ let servicesController = {
 
 
     
-    /* create: function(req, res) {
-        res.render("service-create-form");
-    }, */
-    //processCreate: function(req, res) {
-        // Traigo constante de servicios y transformo al JSON en un array
-    //    const services = JSON.parse(fs.readFileSync(servicesFilePath, 'utf-8'));
-        // Incluyo la info del formulario y creo el objeto literal a sumar al array
-    //    console.log(req.body);
-    //    const newService = {
-    //        id: services[services.length - 1].id + 1,   // Tomo el ultimo servicio, agarro su id y le sumo 1.
-    //        name: req.body.name,
-    //        description: req.body.description,
-    //        image: req.file.filename,
-            /* category: req.body.category, */
-    //        especialidad: req.body.especialidad,
-    //        price: req.body.price
-    //    }
-    //    services.push(newService); // Pusheo el objeto literal al array
-    //    fs.writeFileSync(servicesFilePath, JSON.stringify(services, null, " ")); // Transformo a JSON y sobreescribo el JSON
-    //    res.redirect("/services"); // Mostramos al usuario la vista principal
-    //},
-    //edit: function (req, res) {
-        // Traigo constante de servicios y transformo al JSON en un array
-    //    const services = JSON.parse(fs.readFileSync(servicesFilePath, "utf-8"));
-        // Busco el producto con el mismo id
-    //    const serviceToEdit = services.find(service => {
-    //        return service.id == req.params.id;         
-//});
-        // Muestro la vista del formulario utilizando como parametro el objeto literal serviceToEdit
-    //    res.render("service-edit-form", {serviceToEdit});
-//},
-    //processEdit: function(req, res) {
-    //    const services = JSON.parse(fs.readFileSync(servicesFilePath, "utf-8"));
-        // Busco el servicio que debe ser editado
-    //    const id = req.params.id;
-    //    let serviceToEdit = services.find(service => service.id == id);
-        // Creo el producto "nuevo" que va a reemplazar al anterior
-    //    serviceToEdit = {
-    //        id: serviceToEdit.id,
-    //        name: req.body.name,
-    //        description: req.body.description,
-    //        image: req.file != undefined ? req.file.filename : serviceToEdit.image,
-            /* category: req.body.category, */
-    //        especialidad: req.body.especialidad,
-    //        price: req.body.price,
-    //    }
-        // Buscamos la posicion del producto a editar
-    //    let indice = services.findIndex(service => {
-    //        return service.id == id;
-    //    });
-        // Reemplazamos
-    //    services[indice] = serviceToEdit;
-        // Sobreescribo el JSON
-    //    fs.writeFileSync(servicesFilePath, JSON.stringify(services, null, " "));
-        // Redirecciono a la pagina de productos
-    //    res.redirect("/services");
-
-    //},
-    //destroy: (req, res) => {
-    //    let services = JSON.parse(fs.readFileSync(servicesFilePath, 'utf-8'));
-
-        //eliminar
-    //    services = services.filter(service => {
-            //Creamos un array nuevo menos en el que estamos parados
-    //        return service.id != req.params.id
-    //    })
-    //    fs.writeFileSync(servicesFilePath, JSON.stringify(services, null, " "));
-        //Hacemos el redirect
-    //    res.redirect('/services')
-    //}
+    
 };
   
   // Exportamos 

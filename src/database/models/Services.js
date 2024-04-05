@@ -22,9 +22,9 @@ module.exports = (sequelize, dataTypes) => {
         profession: {
             type: dataTypes.STRING(100)
         },
-        //image: {
-            //type: dataTypes.STRING(500)
-        //},
+        image: {
+            type: dataTypes.STRING(500)
+        },
         users_id: {
             type: dataTypes.INTEGER(11)
         }

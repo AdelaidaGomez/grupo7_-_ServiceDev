@@ -51,12 +51,22 @@
 
                         <label>Nombre del servicio  
                             <input type="text" name="name" placeholder="Nombre del servicio" class="control" value="<%=services.name%>">
+                            <% if (locals.errorsObjeto && errorsObjeto.name) { %>
+                                <div>
+                                    <p><%= errorsObjeto.name.msg  %></p>
+                                </div>
+                            <% } %>
                         </label>
                           
 
                     <!-- Descripcion -->
                         <label>Descripción
                             <input type="textarea" name="description" id="description" class="form-input" value="<%=services.description%>"></input>
+                            <% if (locals.errorsObjeto && errorsObjeto.description) { %>
+                                <div>
+                                    <p><%= errorsObjeto.description.msg  %></p>
+                                </div>
+                            <% } %>
                         </label>
 
 
@@ -64,6 +74,11 @@
 
                     <label>Imagen
                         <input type="file" id="image" name="image" accept=".jpg">
+                        <% if (locals.errorsObjeto && errorsObjeto.image) { %>
+                            <div>
+                                <p><%= errorsObjeto.image.msg  %></p>
+                            </div>
+                        <% } %>
                     </label>
 
                     <!-- Categoria -->
@@ -90,6 +105,11 @@
 
                         <label>Precio
                             <input type="tel" name="price" placeholder="Precio" class="control" value="<%=services.price%>">
+                            <% if (locals.errorsObjeto && errorsObjeto.price) { %>
+                                <div>
+                                    <p><%= errorsObjeto.price.msg  %></p>
+                                </div>
+                            <% } %>
                         </label>
                     
                     <!-- Boton editar producto -->

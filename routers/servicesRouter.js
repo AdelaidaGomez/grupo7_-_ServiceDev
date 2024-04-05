@@ -28,6 +28,29 @@ const storage = multer.diskStorage({
 //Ejecutamos la configuracion de multer
 const uploadFile = multer({storage: storage})
 
+// VALIDACIONES CREATE
+// VALIDACIONES:
+const {body} = require("express-validator");
+const validacionesCreate = [
+    body("name").notEmpty().withMessage("Debe completar el campo de nombre del servicio"),
+    body("description").notEmpty().withMessage("Debe completar el campo de descripcion"),
+    body("price").notEmpty().withMessage("Debe completar el campo de precio").isNumeric().withMessage("Debes poner un numero como precio"),
+    body("image")
+        .custom((value, {req}) => {
+            let file = req.file;
+            let acceptedExtensions = [".jpg", ".png", ".gif"];
+            if (!file) {
+                throw new Error ("Debe subir una imagen");
+            } else {
+                let fileExtension = path.extname(file.originalname);
+                if (!acceptedExtensions.includes(fileExtension)) {
+                    throw new Error ("Las extensiones permitidas son: .jpg, .png y .gif")
+                }
+            }
+            return true;
+        })
+]
+
 // LEER SERVICIOS
 router.get('/', servicesController.allProducts); // todos los servicios, recordar que como es otro archivo se inicia con / ya que definimos en app que tiene /services 
 router.get('/productCart', authMiddleware, servicesController.productCart); //Recordar que para entrar a este la ruta debe ser: Servidor/services/productCart
@@ -36,11 +59,11 @@ router.get('/serviceDetail/:id', servicesController.detail)
 
 // CREAR SERVICIO
 router.get("/create", servicesController.create) // Para devolverle al usuario el formulario para crear servicio
-router.post("/create", uploadFile.single("image"), servicesController.processCreate) // Para agregar el servicio creado
+router.post("/create", uploadFile.single("image"), validacionesCreate, servicesController.processCreate) // Para agregar el servicio creado
 
 // EDITAR SERVICIO
 router.get("/edit/:id", servicesController.edit) // Para devolverle al usuario el formulario para editar servicio
-router.put("/edit/:id", uploadFile.single("image"), servicesController.processEdit) // Para actualizar el producto editado
+router.put("/edit/:id", uploadFile.single("image"), validacionesCreate, servicesController.processEdit) // Para actualizar el producto editado
 
 // ELIMINAR SERVICIO
 router.delete("/delete/:id", servicesController.destroy) //Borrar un servicio
