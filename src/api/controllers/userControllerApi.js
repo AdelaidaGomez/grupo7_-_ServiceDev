@@ -24,7 +24,7 @@ alls: async (req, res) => {
                 id: user.id,
                 name: user.name,
                 email: user.email,
-                dbRelations: ["type_users_id"], // Asignar dbRelations al nuevo objeto JSON
+                avatar: user.avatar, // Asignar dbRelations al nuevo objeto JSON
                 detailURL: `/public/images/fotoPerfilusuarios/${user.avatar}` // Asignar detailURL al nuevo objeto JSON
             };
             return userData;
