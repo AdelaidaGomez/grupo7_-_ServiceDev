@@ -20,9 +20,9 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(255),
             allowNull: false
         },
-        // avatar: {
-        //     type: dataTypes.STRING(500)
-        // },
+        avatar: {
+            type: dataTypes.STRING(500)
+        },
         type_users_id: {
             type: dataTypes.INTEGER(11)
         }
