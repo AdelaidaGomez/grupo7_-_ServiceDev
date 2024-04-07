@@ -160,12 +160,19 @@ let servicesController = {
     },
 
     destroy: function(req, res) {
+        if (!req.session.userLogged) {
+            res.redirect("/services")
+        }
         db.Services.destroy({
             where: {
                 id: req.params.id
             }
-        });
-        res.redirect("/services")
+        }).then(() => {
+            res.redirect("/services");
+        }).catch((error) => {
+            res.status(500).json({ error: 'Internal Server Error' });
+        })
+        
     }
 
     

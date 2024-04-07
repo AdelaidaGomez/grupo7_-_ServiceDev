@@ -7,6 +7,9 @@ const servicesController = require('../controller/servicesController.js');
 // middleWare no esta logheado no habilitar productCart
 let authMiddleware = require("../middlewares/authMiddleware");
 
+// middleware esta logueado, habilita la creacion, edicion y eliminacion de servicio
+let adminMiddleware = require("../middlewares/adminMiddleware");
+
 // Requerimos multer y lo guardamos en una constante
 const multer = require("multer");
 
@@ -62,11 +65,11 @@ router.get("/create", servicesController.create) // Para devolverle al usuario e
 router.post("/create", uploadFile.single("image"), validacionesCreate, servicesController.processCreate) // Para agregar el servicio creado
 
 // EDITAR SERVICIO
-router.get("/edit/:id", servicesController.edit) // Para devolverle al usuario el formulario para editar servicio
+router.get("/edit/:id", adminMiddleware, servicesController.edit) // Para devolverle al usuario el formulario para editar servicio
 router.put("/edit/:id", uploadFile.single("image"), validacionesCreate, servicesController.processEdit) // Para actualizar el producto editado
 
 // ELIMINAR SERVICIO
-router.delete("/delete/:id", servicesController.destroy) //Borrar un servicio
+router.delete("/delete/:id", adminMiddleware, servicesController.destroy) //Borrar un servicio
 
 // Exportamos Router
 module.exports = router;
