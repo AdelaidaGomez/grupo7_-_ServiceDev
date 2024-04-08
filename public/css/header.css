@@ -6,10 +6,6 @@
     transition: .2s linear;
 }
 
-body {
-    background-color: black;
-}
-
 /* Header */
 .header {
     display: flex;
@@ -27,7 +23,7 @@ body {
 }
 /* NavBar Header */
 .header .navbar {
-    display: none;
+    display: flex;
 }
 .header .navbar a {
     display: block;
@@ -89,6 +85,7 @@ body {
         padding: 1.5rem 7%;
     }
     .header .navbar a {
+        display: flex;
         margin: 0 1rem;
         font-size: 1.6rem;
         color: #fff;

@@ -6,6 +6,7 @@
     <title>Service Dev - Home</title>
     <!-- CSS -->
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
     <!-- tipografias google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,69 +17,177 @@
 </head>
 
 <body>
-    <header></header>
-    <!-- MAIN -->
-    <main>
-        <!-- Logo -->
-        <div class="logo">
-            <img class="imagen" src="/images/logo-principal.png" alt="logo">
+
+    <header class="header">
+
+        <%- include('./partials/header') %>
+
+        <div class="header-content container">
+            <h1>ServiceDev</h1>
+            <h2>Sobre nosotros</h2>
+            <p>Nos enfocamos en buscar al mejor desarrollador para tus proyectos. A través de nosotros 
+                podrás encontrar desarrolladores no solo con experiencia en el campo de la 
+                programación, sino también con un bagaje de conocimientos previos en distintas disciplinas 
+                proporcionando un valor agregado a cada uno de los perfiles, podrás buscar en nuestra 
+                sección de desarrolladores el perfil que más se acople a los requerimientos de tu proyecto 
+                y clientes.</p>
         </div>
-        <!-- Titulo y texto con logo de fondo -->       
-        <div class="titulo-texto">            
-            <h1>ServDev</h1>
-            <h2>ServDev se enfoca en buscar el mejor desarrollador para tus proyectos.</h3>
-        <!-- Nosotros -->
-        <div class="nosotros">
-        <h3>Nosotros</h3>
-        <p>
-            Nos enfocamos en buscar al mejor desarrollador para tus proyectos. A través de nosotros 
-            podrás encontrar desarrolladores no solo con experiencia en el campo de la 
-            programación, sino también con un bagaje de conocimientos previos en distintas disciplinas 
-            proporcionando un valor agregado a cada uno de los perfiles, podrás buscar en nuestra 
-            sección de desarrolladores el perfil que más se acople a los requerimientos de tu proyecto 
-            y clientes.
-        </p>
-        </div>
-        </div>
-        
-        <div>
-        <!-- Si el cliente esta logueado -->
-        <% if (locals.isLogged) { %>
-            <div class="icons">
-                <div class="userInfo2">
-                    <img class="imagenPerfil" src="/images/fotoPerfilusuarios/<%= locals.userLogged.avatar %>" alt="">
-                    <p>Hola <%= locals.userLogged.name%> </p>
+
+<!--         <img src="/public/images/fondo-negro.jpg" alt=""> -->
+    </header>
+
+                                                        <!-- Beneficios para emp y des -->
+        <section class="busqueda">
+
+            <!-- <img class="busqueda-img" src="/images/benefi.jpg" alt="Foto"> --> <!-- VER QUE IMAGEN VA -->
+
+            <div class="busqueda-content container">
+
+                <h2>Encontrá lo que buscás</h2>
+                <p class="txt-p">
+                    Si eres una EMPRESA consigue al desarrollador que se adapte a tu necesidad <br>
+                    Si eras un DESARROLLADOR presentate y destaca para que seas elegido entre miles de empresa
+                </p>
+
+                <div class="busqueda-group">
+<!-- PARA DESARROLADOR -->
+                    <div class="busqueda-1">
+                        <img src="/images/desarrollador.jpg" alt="Foto 2"> 
+                        <h3>Desarrollador</h3>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores facilis provident facere optio pariatur cumque ipsa ullam sed ratione atque officiis fugit minus, repudiandae ducimus. Deserunt assumenda ad minima optio.
+
+                        </p>
+                    </div>
+<!-- PARA EMPRESA -->
+                    <div class="busqueda-1">
+                        <img src="/images/empresa.jpg" alt="Foto 2">
+                        <h3>Empresa</h3>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores facilis provident facere optio pariatur cumque ipsa ullam sed ratione atque officiis fugit minus, repudiandae ducimus. Deserunt assumenda ad minima optio.
+
+                        </p>
+                    </div>
+
                 </div>
+                    <a href="#" class="btn-1">Informacion</a><!-- Este veremos que mas informacion nos da sino sacarlo -->
             </div>
-        </div>
-            <!-- Menú principal definido por la siguiente lista -->
-            <div>
-                <ul class="lista-home">
-                    <li> <a href="/"> Inicio</a></li>
-                    <li> <a href="/services"> Desarrolladores</a></li>
-                    <li><a href="/services/create">Nuevo Servicio</a></li>
-                    <li> <a href="/services/productCart"> <i class="fa-solid fa-cart-shopping"></i></a></li>
-                    <li><a href="/login/logout">Logout</a></li>
-                </ul>
+
+        </section>
+
+
+                                                <!-- Modalidad de trabajo -->
+        <main class="services">
+
+            <div class="services-content container">
+
+                <h2>Modalidad de trabajo</h2>
+
+                <div class="services-group">
+<!-- Presencial --> <!-- EN LAS FOTOS IRIAN ICONOS -->
+                    <div class="services-1">
+                        <img src="/images/presencial2.png" alt="Front">
+                        <h3>Presencial</h3>
+                    </div>
+<!-- Remoto -->
+                    <div class="services-1">
+                        <img src="/images/homeoffice.jpg" alt="Front">
+                        <h3>Remoto</h3>
+                    </div>
+<!-- Hibrido -->
+                    <div class="services-1">
+                        <img src="/images/hibrido.jpg" alt="Front">
+                        <h3>Hibrido</h3>
+                    </div>
+                    
+                </div>
+
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet porro delectus sapiente laboriosam similique, nihil ipsum inventore, atque accusamus eos eius sed debitis nisi odio, ullam alias. Ducimus, quasi deserunt!</p>
+
+
             </div>
-        <!-- Si el cliente NO esta logueado -->
-        <% } else { %>
-            <!-- Menú principal definido por la siguiente lista -->
-            <ul class="lista-home">
-                <li> <a href="/"> Inicio</a></li>
-                <li> <a href="/services"> Desarrolladores</a></li>
-                <li> <a href="/register/register"> Registrarse</a></li>
-                <li> <a href="/login"> LogIn</a></li>
-            </ul>
-        <% } %>
-        </div>
 
-        <!-- Hamburguesa -->
-        <div class="hamburguesa">
-            <i class="fa-solid fa-bars"></i>
-        </div>
+        </main>
 
-    </main>
+                                                                <!-- Desarrolladores -->
+<!-- Front -->
+        <section class="general">
+
+            <div class="general-1">
+                <h2>Desarrollador Front End</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quasi eius. Delectus ex adipisci voluptates ratione id, nesciunt quis consectetur ab veniam voluptatem, eveniet soluta odio fugiat labore placeat facilis?
+                </p>
+                <a href="btn-1">Informacion</a> <!-- VER SI VA -->
+            </div>
+            
+            <div class="general-2"> </div>
+
+        </section>
+<!-- Back -->
+        <section class="general">
+
+            <div class="general-3"> </div>
+
+            <div class="general-1">
+                <h2>Desarrollador Back End</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quasi eius. Delectus ex adipisci voluptates ratione id, nesciunt quis consectetur ab veniam voluptatem, eveniet soluta odio fugiat labore placeat facilis?
+                </p>
+                <a href="btn-1">Informacion</a> <!-- VER SI VA -->
+            </div>
+            
+        </section>
+
+<!-- Base -->
+        <section class="general">
+
+            <div class="general-1">
+                <h2>Base de datos</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quasi eius. Delectus ex adipisci voluptates ratione id, nesciunt quis consectetur ab veniam voluptatem, eveniet soluta odio fugiat labore placeat facilis?
+                </p>
+                <a href="btn-1">Informacion</a> <!-- VER SI VA -->
+            </div>
+            
+            <div class="general-4"> </div>
+
+        </section>
+
+                                                <!-- Ejemplo de desarrolladores -->
+        <section class="blog container">
+            <h2>Candidatos</h2>
+            <p>Algunos de los posibles desarrolladores que estas buscando</p>
+
+            <div class="blog-content">
+<!-- img 1 -->
+                <div class="blog-1">
+                    <img src="/images/prueba1.jpg" alt="prueba 1">
+                    <h3>Jorge - Argentina</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt ad doloremque rerum ipsa, magnam molestiae omnis non aspernatur? Repudiandae maxime unde numquam ratione quas quae. Laborum quia eveniet dolor harum.
+                    </p>
+                </div>
+<!-- img 2 -->
+                <div class="blog-1">
+                    <img src="/images/prueba2.jpeg" alt="prueba 2">
+                    <h3>Guido - Estados Unidos</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt ad doloremque rerum ipsa, magnam molestiae omnis non aspernatur? Repudiandae maxime unde numquam ratione quas quae. Laborum quia eveniet dolor harum.
+                    </p>
+                </div>
+<!-- img 3 -->
+                <div class="blog-1">
+                    <img src="/images/prueba4.png" alt="prueba 3">
+                    <h3>Maria - Alemania</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt ad doloremque rerum ipsa, magnam molestiae omnis non aspernatur? Repudiandae maxime unde numquam ratione quas quae. Laborum quia eveniet dolor harum.
+                    </p>
+                </div>
+
+            </div>
+            <a href="/register">Crea tu cuenta acá</a>
+        </section>
 
     <!-- FOOTER -->
     <footer>
