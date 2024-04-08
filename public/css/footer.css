@@ -8,10 +8,11 @@
 .main-container-footer{
     
     text-align: center;
-    margin-top: 10px;
+/*     margin-top: 10px; */
     justify-content: center;
-    background-color: #000;
+    /* background-color: #000; */
     text-transform: none;
+    background-color: black;
 }
 .sub-main-footer-section {
     display: inline-block;
@@ -65,7 +66,7 @@
         text-align: center;
         margin: 24px;
         justify-content: center;
-        background-color: #000;
+/*         background-color: #000; */
     }
     .sub-main-footer-section div {
         margin: 20px;
