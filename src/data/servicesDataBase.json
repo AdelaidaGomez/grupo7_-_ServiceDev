@@ -5,7 +5,7 @@
   "price": 15.06,
   "description": "Experimentada desarrolladora full-stack con amplia experiencia en el ecosistema de Python. Especializada en la creación de aplicaciones escalables y eficientes, desde el back-end hasta el front-end. Destrezas adicionales incluyen la gestión de bases de datos y la implementación de soluciones de seguridad.",
   "profesion": "Backend",
-  "image": "person1.png"
+  "image": "avatar-1712592357745.jpg"
  },
  {
   "id": 3,
@@ -13,7 +13,7 @@
   "price": 35,
   "description": "Apasionado desarrollador iOS con experiencia destacada en SwiftUI. Capaz de crear experiencias de usuario fluidas y modernas en el ecosistema de Apple. Amplios conocimientos en desarrollo de aplicaciones móviles, así como en diseño de interfaces y experiencia de usuario.",
   "profesion": "Frontend",
-  "image": "person3.png"
+  "image": "avatar-1707080020746.jpg"
  },
  {
   "id": 4,
@@ -21,7 +21,7 @@
   "price": 22.45,
   "description": "Profesional en desarrollo de software con experiencia probada en liderazgo de equipos. Habilidades para coordinar y dirigir proyectos de principio a fin. Especializado en fomentar un ambiente de trabajo colaborativo y eficiente, asegurando entregas de alta calidad dentro de plazos establecidos.",
   "profesion": "Frontend",
-  "image": "person4.png"
+  "image": "avatar-1707088111829.jpeg"
  },
  {
   "id": 5,
@@ -29,7 +29,7 @@
   "price": 28.09,
   "description": "Arquitecta de sistemas con enfoque en desarrollo back-end y diseño de infraestructuras robustas. Experiencia en la creación de soluciones escalables y de alto rendimiento. Competente en el manejo de bases de datos complejas y optimización de consultas.",
   "profesion": "Backend",
-  "image": "person1.png"
+  "image": "avatar-1712592510024.jpg"
  },
  {
   "id": 6,
@@ -37,13 +37,13 @@
   "price": 33.06,
   "description": "Desarrolladora móvil versátil con experiencia en React Native, abordando tanto plataformas iOS como Android. Especializada en el desarrollo eficiente de aplicaciones multiplataforma, con habilidades destacadas en la optimización del rendimiento y la integración de API.",
   "profesion": "Frontend",
-  "image": "person6.png"
+  "image": "avatar-1712592737354.jpg"
  },
  {
   "id": 7,
   "name": "Paulina Vieco",
   "description": "Desarrolladora web con fuerte enfoque en la seguridad. Especializado en la creación de aplicaciones web seguras y resistentes a ataques. Amplios conocimientos en frameworks como Django y Express, con experiencia en pruebas de penetración y aseguramiento de la calidad del código.",
-  "image": "person7.png",
+  "image": "avatar-1712592357745.jpg",
   "category": "",
   "especialidad": "Base de datos",
   "price": "12.06"
@@ -54,14 +54,14 @@
   "price": "65",
   "description": "Programadora Ruby",
   "especialidad": "Base de datos",
-  "image": "person6.png",
+  "image": "avatar-1712592737354.jpg",
   "category": "otra"
  },
  {
   "id": 9,
   "name": "Martin Haimovich",
   "description": "Estudiante de ingenieria de sonido",
-  "image": "image-1706150249677.jpg",
+  "image": "avatar-1707160657088.jpg",
   "especialidad": "Base de datos",
   "price": "12"
  },
@@ -69,7 +69,7 @@
   "id": 10,
   "name": "Jorge",
   "description": "qq",
-  "image": "person3.png",
+  "image": "avatar-1707080020746.jpg",
   "especialidad": "Backend",
   "price": "11"
  },
@@ -77,7 +77,7 @@
   "id": 11,
   "name": "Juana",
   "description": "probando",
-  "image": "person7.png",
+  "image": "avatar-1712592357745.jpg",
   "especialidad": "Frontend",
   "price": "50"
  }
