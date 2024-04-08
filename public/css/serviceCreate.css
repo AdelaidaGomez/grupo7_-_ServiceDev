@@ -160,6 +160,14 @@ form {
     color: white
 } 
 
+.errores{
+    color:#e00e1f;
+    background-color: white;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
 /* ------------------------------Media queries------------------------------- */
 
 

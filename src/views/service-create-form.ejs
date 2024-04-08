@@ -46,6 +46,9 @@
 
                     <form action="/services/create" method="POST" class="form" enctype="multipart/form-data">
 
+                        <ul class="errores">
+                        </ul>
+                        
                         <!-- Nombre del servicio -->
 
                         <label>Nombre del servicio  
@@ -129,6 +132,7 @@
     <footer>
         <%- include('./partials/footer') %>
     </footer>
+    <script src="/js/service-create-form.js"></script>
 </body>
 </html>
 
