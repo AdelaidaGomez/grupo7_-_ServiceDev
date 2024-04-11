@@ -258,16 +258,26 @@ p {
 
 /* Desktop */
 @media(max-width: 770px) {
-    .header{
-        padding: 1.5rem 7%;
+    .menu {
+        padding: 30px;
     }
-    .header .navbar a {
-        display: flex;
-        margin: 0 1rem;
-        font-size: 1.6rem;
-        color: #fff;
+    .menu-label {
+        display: initial;
     }
-}
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: black;
+        display: none;
+    }
+    .menu .navbar ul li {
+        width: 100%;
+    }
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
 
     .header {
         min-height: 0vh;
@@ -351,5 +361,5 @@ p {
     .blog-1 {
         padding: 0;
     }
-
+}
 

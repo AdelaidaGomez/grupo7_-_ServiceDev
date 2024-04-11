@@ -6,6 +6,10 @@
     transition: .2s linear;
 }
 
+/* body {
+    background-color: black;
+} */
+
 /* Header */
 .header {
     display: flex;
@@ -23,7 +27,7 @@
 }
 /* NavBar Header */
 .header .navbar {
-    display: flex;
+    display: none;
 }
 .header .navbar a {
     display: block;
@@ -71,6 +75,7 @@
     border-radius: 50%;
     object-fit: cover;
 }
+
 /* esconder logo dependiendo de desktop */
 #allServices.allServices-btn{
     display: inline-block;
@@ -91,9 +96,28 @@
         color: #fff;
     }
 }
-/* DeskTop */
+
+/*                  MEDIA QUERYS                 */
+
 @media(min-width: 1024px){
     .header .navbar {
         display: flex;
+    }
+}
+
+/* TABLET */
+@media (min-width: 425px) and (max-width: 768px) {
+    .header .navbar {
+        display: flex;
+        /* margin: 0 1rem; */
+        font-size: 1rem;
+        background-color: #fff;
+    }
+}
+
+/* MOVILES */
+@media (max-width: 425px) {
+    .header .navbar {
+        display: none;
     }
 }
