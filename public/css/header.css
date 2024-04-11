@@ -2,7 +2,7 @@
     margin: 0; padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    text-transform: capitalize;
+    text-transform: none;
     transition: .2s linear;
 }
 
@@ -33,8 +33,9 @@
     display: block;
     margin: 1.5rem;
     padding: .5rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-transform: none;
+    color: white;
 }
 .header .navbar a:hover {
     color: #569ddc;
@@ -67,11 +68,12 @@
 .header p {
     color: white;
     padding-left: 1rem;
-    font-size: smaller;
+    font-size: 18px;
+    /* font-size: smaller; */
 }
 .header img {
     height: 3rem;
-    width: 3rem;
+    /* width: 3rem; */
     border-radius: 50%;
     object-fit: cover;
 }
@@ -84,8 +86,19 @@
 
 /* Media queries */
 
+
+/*                  MEDIA QUERYS                 */
+
+/* DeskTop */
+@media (min-width: 768px){
+    .header .navbar {
+        display: flex;
+    }
+}
+
 /* Tablet */
-@media(min-width: 768px){
+
+@media (min-width: 425px) and (max-width: 768px){
     .header{
         padding: 1.5rem 7%;
     }
@@ -97,27 +110,8 @@
     }
 }
 
-/*                  MEDIA QUERYS                 */
 
-@media(min-width: 1024px){
-    .header .navbar {
-        display: flex;
-    }
-}
+/* Mobile */
+@media (max-width: 425px){
 
-/* TABLET */
-@media (min-width: 425px) and (max-width: 768px) {
-    .header .navbar {
-        display: flex;
-        /* margin: 0 1rem; */
-        font-size: 1rem;
-        background-color: #fff;
-    }
-}
-
-/* MOVILES */
-@media (max-width: 425px) {
-    .header .navbar {
-        display: none;
-    }
 }

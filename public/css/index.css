@@ -68,7 +68,7 @@ body {
 }
 
 .busqueda {
-    padding: 100px 0;
+    padding: 30px;
     background-color: white;
     position: relative;
     text-align: center;
@@ -127,7 +127,7 @@ body {
     background-repeat: no-repeat;  /* no repetir imagen */
     background-size: cover; /* para que cubra todo ancho y altura */
     background-attachment: fixed; /* para que la imagen quede fija mientras subis o bajas */
-    padding: 100px 0;
+    padding: 10px;
 }
 
 .services-content {
@@ -150,7 +150,7 @@ body {
 }
 
 .services-content p {
-    font-size: 16px;
+    font-size: 18px;
     color: grey;
     margin-bottom: 50px;
     padding: 0 100px;
@@ -188,7 +188,7 @@ body {
 .general-1 {
     width: 50%;
     padding: 30px 30px; /*  Agrandar o achicar la caja de front,back, base */
-    background-color: grey;
+    background-color: #B0B5B3;
 }
 
 .general-2 {
@@ -218,13 +218,13 @@ body {
 h2 {
     font-size: 30px;
     line-height: 70px;
-    color: black;
+    /* color: black; */
     text-transform: uppercase;
     margin-bottom: 20px;
 }
 
 p {
-    font-size: 16px;
+    font-size: 18px;
     color: black;
     margin: 25px 0 45px 0;
 }
@@ -232,15 +232,18 @@ p {
 .blog {
     padding: 100px 0;
     text-align: center;
+    background-color: white;
+    color: black;
 }
 
 .blog-content {
     display: flex;
     justify-content: space-between;
+    color: black;
 }
 
 .blog-1 {
-    /* padding: 15px 55px; */
+    /* padding: 30px; */
 }
 
 .blog-1 img {
@@ -324,12 +327,15 @@ p {
     }
 
     .services-content p {
+        display: none;
         padding: 0;
     }
 
     .services-group {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
         margin-bottom: 0;
+        flex-wrap: wrap;;
     }
 
     .services-1 {
