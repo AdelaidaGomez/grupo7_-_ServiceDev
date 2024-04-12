@@ -54,7 +54,7 @@ let userController = {
 
                     // Defino qué ocurre cuando clickeo opcion "recordar usuario" y que ocurre cuando la destildo
                     if(req.body.remember_user){
-                        res.cookie("userEmail", req.body.email, {maxAge: (1000 * 60) * 10}) // La cookie durará 10 minutos
+                        res.cookie("userEmail", req.body.email, {maxAge: (1000 * 60) * 60}) // La cookie durará una hora
                     }
 
                     return res.redirect('/services/productCart')

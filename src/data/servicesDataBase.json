@@ -2,7 +2,7 @@
  {
   "id": 1,
   "name": "Tatiana Mejia",
-  "price": 15.06,
+  "price": 1,
   "description": "Experimentada desarrolladora full-stack con amplia experiencia en el ecosistema de Python. Especializada en la creación de aplicaciones escalables y eficientes, desde el back-end hasta el front-end. Destrezas adicionales incluyen la gestión de bases de datos y la implementación de soluciones de seguridad.",
   "profesion": "Backend",
   "image": "avatar-1712592357745.jpg"
@@ -10,7 +10,7 @@
  {
   "id": 3,
   "name": "Juan Duque",
-  "price": 35,
+  "price": 3,
   "description": "Apasionado desarrollador iOS con experiencia destacada en SwiftUI. Capaz de crear experiencias de usuario fluidas y modernas en el ecosistema de Apple. Amplios conocimientos en desarrollo de aplicaciones móviles, así como en diseño de interfaces y experiencia de usuario.",
   "profesion": "Frontend",
   "image": "avatar-1707080020746.jpg"
@@ -18,7 +18,7 @@
  {
   "id": 4,
   "name": "Juan Camilo Mejia",
-  "price": 22.45,
+  "price": 2.50,
   "description": "Profesional en desarrollo de software con experiencia probada en liderazgo de equipos. Habilidades para coordinar y dirigir proyectos de principio a fin. Especializado en fomentar un ambiente de trabajo colaborativo y eficiente, asegurando entregas de alta calidad dentro de plazos establecidos.",
   "profesion": "Frontend",
   "image": "avatar-1707088111829.jpeg"
@@ -26,7 +26,7 @@
  {
   "id": 5,
   "name": "Melissa Vasquez",
-  "price": 28.09,
+  "price": 2,
   "description": "Arquitecta de sistemas con enfoque en desarrollo back-end y diseño de infraestructuras robustas. Experiencia en la creación de soluciones escalables y de alto rendimiento. Competente en el manejo de bases de datos complejas y optimización de consultas.",
   "profesion": "Backend",
   "image": "avatar-1712592510024.jpg"
@@ -34,7 +34,7 @@
  {
   "id": 6,
   "name": "Laura Acevedo",
-  "price": 33.06,
+  "price": 3,
   "description": "Desarrolladora móvil versátil con experiencia en React Native, abordando tanto plataformas iOS como Android. Especializada en el desarrollo eficiente de aplicaciones multiplataforma, con habilidades destacadas en la optimización del rendimiento y la integración de API.",
   "profesion": "Frontend",
   "image": "avatar-1712592737354.jpg"
@@ -46,12 +46,12 @@
   "image": "avatar-1712592357745.jpg",
   "category": "",
   "especialidad": "Base de datos",
-  "price": "12.06"
+  "price": "1"
  },
  {
   "id": 8,
   "name": "Danna Gallego",
-  "price": "65",
+  "price": "5",
   "description": "Programadora Ruby",
   "especialidad": "Base de datos",
   "image": "avatar-1712592737354.jpg",
@@ -63,7 +63,7 @@
   "description": "Estudiante de ingenieria de sonido",
   "image": "avatar-1707160657088.jpg",
   "especialidad": "Base de datos",
-  "price": "12"
+  "price": "2"
  },
  {
   "id": 10,
@@ -71,7 +71,7 @@
   "description": "qq",
   "image": "avatar-1707080020746.jpg",
   "especialidad": "Backend",
-  "price": "11"
+  "price": "1"
  },
  {
   "id": 11,
@@ -79,6 +79,6 @@
   "description": "probando",
   "image": "avatar-1712592357745.jpg",
   "especialidad": "Frontend",
-  "price": "50"
+  "price": "5"
  }
 ]

@@ -19,6 +19,18 @@ window.addEventListener("load", function() {
       errorsList.push("El nombre y apellido debe tener al menos 2 caracteres")
    }
 
+   //VALIDACIONES CAMPO EMAIL
+
+     // creacion cariable para definir expresion regular q debe cumpli el email
+     let regexEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+
+     if(form.email.value == "" ) {
+      errorsList.push("El email no debe estar vacio")
+     } else if (!regexEmail.test(form.email.value)) {
+      errorsList.push("El email debe tener un formato válido");
+     }   
+
    //VALIDACIONES CAMPO CONTRASEÑA
    if(form.password.value == "" ) {
       errorsList.push("La contraseña es obligatoria")
@@ -31,19 +43,12 @@ window.addEventListener("load", function() {
       errorsList.push("La confirmacion de contraseña es obligatoria")
    } 
    
-   
+   //VALIDACIONES IMAGEN
+   if (form.avatar.value == "") {
+      errorsList.push("Debes subir una imagen")
+   }
 
-     //VALIDACIONES CAMPO EMAIL
-
-     // creacion cariable para definir expresion regular q debe cumpli el email
-     let regexEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-
-
-     if(form.email.value == "" ) {
-      errorsList.push("El email no debe estar vacio")
-     } else if (!regexEmail.test(form.email.value)) {
-      errorsList.push("El email debe tener un formato válido");
-     }
+     
 
     
     
